@@ -1,0 +1,12 @@
+{
+  "id": "tree_fireflies",
+  "name": "蛍の木",
+  "sprite": "tree_fireflies",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

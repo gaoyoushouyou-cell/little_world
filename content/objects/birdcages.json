@@ -1,0 +1,12 @@
+{
+  "id": "birdcages",
+  "name": "重なった鳥かご",
+  "sprite": "birdcages",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

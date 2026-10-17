@@ -1,0 +1,12 @@
+{
+  "id": "dresser",
+  "name": "引き出し",
+  "sprite": "dresser",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

@@ -1,0 +1,36 @@
+{
+  "palette": {".":null,"a":"#1a1426","b":"#3a1424","c":"#2e211f","d":"#1f3d55","e":"#4a3532","f":"#3e3a48","g":"#13606a","h":"#6a4c44","i":"#8a3f5c","j":"#6a6478","k":"#8f6a58","l":"#b85a7a","m":"#e0607a","n":"#9a94aa","o":"#6fd1d9","p":"#f4eef7"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/furniture_sheet2_living_surreal_packed.png"},
+  "animations": {
+    "idle": [
+      [
+        "cccccccccccccc",
+        "ckkkkkkkkkkkkc",
+        "chhhhhhhhhhhhc",
+        "cccccccccccccc",
+        "clmiogjlmiogjc",
+        "clmiogjlmiogjc",
+        "cilbgdfilbgdfc",
+        "cccccccccccccc",
+        "cognjlmognjlmc",
+        "cognjlmognjlmc",
+        "cgdjfilgdjfilc",
+        "cccccccccccccc",
+        "cmignappangimc",
+        "cmignapoangimc",
+        "clbdjappajdblc",
+        "cccccccccccccc",
+        "cnjmiognjmiogc",
+        "cnjmiognjmiogc",
+        "cjflbgdjflbgdc",
+        "cccccccccccccc",
+        "chhhhhhhhhhhhc",
+        "ceeeeeeeeeeeec",
+        "cccccccccccccc",
+        "ce............",
+        "cc............"
+      ]
+    ]
+  }
+}

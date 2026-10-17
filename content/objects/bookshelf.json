@@ -1,0 +1,12 @@
+{
+  "id": "bookshelf",
+  "name": "本棚",
+  "sprite": "bookshelf",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

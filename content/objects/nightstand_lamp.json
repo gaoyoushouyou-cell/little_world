@@ -1,0 +1,12 @@
+{
+  "id": "nightstand_lamp",
+  "name": "灯りの載った台",
+  "sprite": "nightstand_lamp",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

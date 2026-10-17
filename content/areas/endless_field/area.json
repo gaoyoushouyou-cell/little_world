@@ -1,0 +1,22 @@
+{
+  "id": "endless_field",
+  "name": "終わらない野原",
+  "view": "top",
+  "size": [36, 24],
+  "depth": 1,
+  "physics": {
+    "friction": 0.85,
+    "maxSpeed": 1.6,
+    "wrap": "both"
+  },
+  "layers": [
+    { "type": "tiles", "id": "floor" },
+    { "type": "tiles", "id": "deco" },
+    { "type": "tiles", "id": "rocks", "collide": true },
+    { "type": "particles", "count": 40, "colors": ["#ffc2d6", "#ffffff", "#ffe7a0"], "size": 1, "velocity": [12, 5], "wobble": 8, "alpha": 0.8, "seed": "petals" },
+    { "type": "fog", "color": "#10081c", "density": 0.14, "drift": [6, 2] }
+  ],
+  "spawns": {
+    "center": [18, 12]
+  }
+}

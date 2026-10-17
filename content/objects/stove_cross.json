@@ -1,0 +1,12 @@
+{
+  "id": "stove_cross",
+  "name": "十字の暖炉",
+  "sprite": "stove_cross",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

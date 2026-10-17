@@ -1,0 +1,136 @@
+{
+  "tilesets": [
+    {
+      "out": "inbox_grass",
+      "items": [
+        { "id": "grass_a", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (1).jpg", "crop": [20, 24, 152, 170], "size": [16, 16], "bg": "none", "colors": 6 },
+        { "id": "grass_b", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (1).jpg", "crop": [188, 210, 158, 166], "size": [16, 16], "bg": "none", "colors": 6 },
+        { "id": "grass_patchy", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (1).jpg", "crop": [22, 392, 152, 176], "size": [16, 16], "bg": "none", "colors": 6 }
+      ]
+    },
+    {
+      "out": "inbox_stone",
+      "items": [
+        { "id": "stone_plain_a", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg", "crop": [25, 25, 166, 172], "size": [16, 16], "bg": "none", "colors": 6, "solid": true },
+        { "id": "stone_plain_b", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg", "crop": [191, 25, 166, 172], "size": [16, 16], "bg": "none", "colors": 6, "solid": true },
+        { "id": "stone_crack_a", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg", "crop": [884, 25, 166, 172], "size": [16, 16], "bg": "none", "colors": 6, "solid": true },
+        { "id": "stone_crack_b", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg", "crop": [1216, 197, 166, 172], "size": [16, 16], "bg": "none", "colors": 6, "solid": true },
+        { "id": "stone_broken", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg", "crop": [25, 398, 166, 170], "size": [16, 16], "bg": "none", "colors": 6, "solid": true }
+      ]
+    },
+    {
+      "out": "inbox_water",
+      "items": [
+        { "id": "water_plain", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (3).jpg", "crop": [24, 24, 210, 204], "size": [16, 16], "bg": "none", "colors": 4, "solid": true },
+        { "id": "water_wave", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (3).jpg", "crop": [258, 24, 206, 204], "size": [16, 16], "bg": "none", "colors": 5, "solid": true },
+        { "id": "sand_plain", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (3).jpg", "crop": [1174, 24, 210, 204], "size": [16, 16], "bg": "none", "colors": 4 },
+        { "id": "sand_pebbles", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (3).jpg", "crop": [944, 580, 206, 164], "size": [16, 16], "bg": "none", "colors": 6 }
+      ]
+    },
+    {
+      "out": "inbox_earth",
+      "items": [
+        { "id": "earth_dark", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg", "crop": [11, 11, 235, 235], "size": [16, 16], "bg": "none", "colors": 5, "solid": true },
+        { "id": "earth_crack_a", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg", "crop": [266, 11, 236, 235], "size": [16, 16], "bg": "none", "colors": 6, "solid": true },
+        { "id": "earth_crack_b", "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg", "crop": [266, 266, 236, 236], "size": [16, 16], "bg": "none", "colors": 6, "solid": true }
+      ]
+    },
+    {
+      "out": "inbox_flora",
+      "items": [
+        { "id": "weed_bush", "source": "art/inbox/natural_weeds_preview.png", "crop": [0, 0, 128, 128], "size": [16, 16], "bg": "#1e2a36,#1a242f", "bgTolerance": 4, "colors": 8 },
+        { "id": "weed_dandelion", "source": "art/inbox/natural_weeds_preview.png", "crop": [128, 0, 128, 128], "size": [16, 16], "bg": "#1e2a36,#1a242f", "bgTolerance": 4, "colors": 8 },
+        { "id": "weed_bud", "source": "art/inbox/natural_weeds_preview.png", "crop": [256, 0, 128, 128], "size": [16, 16], "bg": "#1e2a36,#1a242f", "bgTolerance": 4, "colors": 8 },
+        { "id": "weed_spiky", "source": "art/inbox/natural_weeds_preview.png", "crop": [384, 0, 128, 128], "size": [16, 16], "bg": "#1e2a36,#1a242f", "bgTolerance": 4, "colors": 8 },
+        { "id": "weed_sprout", "source": "art/inbox/natural_weeds_preview.png", "crop": [0, 128, 128, 128], "size": [16, 16], "bg": "#1e2a36,#1a242f", "bgTolerance": 4, "colors": 8 },
+        { "id": "weed_outline", "source": "art/inbox/natural_weeds_preview.png", "crop": [128, 128, 128, 128], "size": [16, 16], "bg": "#1e2a36,#1a242f", "bgTolerance": 4, "colors": 8 },
+        { "id": "weed_mound", "source": "art/inbox/natural_weeds_preview.png", "crop": [256, 128, 128, 128], "size": [16, 16], "bg": "#1e2a36,#1a242f", "bgTolerance": 4, "colors": 8 },
+        { "id": "weed_eyes", "source": "art/inbox/natural_weeds_preview.png", "crop": [384, 128, 128, 128], "size": [16, 16], "bg": "#1e2a36,#1a242f", "bgTolerance": 4, "colors": 8 },
+        { "id": "deco_tuft", "source": "art/inbox/nature_decorations_preview.png", "crop": [0, 0, 128, 128], "size": [16, 16], "bg": "#1a1030", "bgTolerance": 4, "colors": 8 },
+        { "id": "deco_tall_grass", "source": "art/inbox/nature_decorations_preview.png", "crop": [128, 0, 128, 128], "size": [16, 16], "bg": "#1a1030", "bgTolerance": 4, "colors": 8 },
+        { "id": "deco_sunflower", "source": "art/inbox/nature_decorations_preview.png", "crop": [256, 0, 128, 128], "size": [16, 16], "bg": "#1a1030", "bgTolerance": 4, "colors": 8 },
+        { "id": "deco_eye_flower", "source": "art/inbox/nature_decorations_preview.png", "crop": [384, 0, 128, 128], "size": [16, 16], "bg": "#1a1030", "bgTolerance": 4, "colors": 8 },
+        { "id": "deco_mossy_rock", "source": "art/inbox/nature_decorations_preview.png", "crop": [512, 0, 128, 128], "size": [16, 16], "bg": "#1a1030", "bgTolerance": 4, "colors": 8, "solid": true },
+        { "id": "deco_stump", "source": "art/inbox/nature_decorations_preview.png", "crop": [0, 128, 128, 128], "size": [16, 16], "bg": "#1a1030", "bgTolerance": 4, "colors": 8, "solid": true },
+        { "id": "deco_mushrooms", "source": "art/inbox/nature_decorations_preview.png", "crop": [128, 128, 128, 128], "size": [16, 16], "bg": "#1a1030", "bgTolerance": 4, "colors": 8 },
+        { "id": "deco_vine", "source": "art/inbox/nature_decorations_preview.png", "crop": [256, 128, 128, 128], "size": [16, 16], "bg": "#1a1030", "bgTolerance": 4, "colors": 8 },
+        { "id": "deco_crystal", "source": "art/inbox/nature_decorations_preview.png", "crop": [384, 128, 128, 128], "size": [16, 16], "bg": "#1a1030", "bgTolerance": 4, "colors": 8 },
+        { "id": "deco_bush", "source": "art/inbox/nature_decorations_preview.png", "crop": [512, 128, 128, 128], "size": [16, 16], "bg": "#1a1030", "bgTolerance": 4, "colors": 8 }
+      ]
+    }
+  ],
+  "sprites": [
+    { "id": "bed_violet", "source": "art/inbox/furniture_sheet1_bedroom_packed.png", "crop": [4, 0, 16, 29], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "wardrobe_small", "source": "art/inbox/furniture_sheet1_bedroom_packed.png", "crop": [34, 0, 14, 26], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "mirror_cyan", "source": "art/inbox/furniture_sheet1_bedroom_packed.png", "crop": [66, 1, 6, 18], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "nightstand_lamp", "source": "art/inbox/furniture_sheet1_bedroom_packed.png", "crop": [82, 1, 8, 19], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "bed_pink", "source": "art/inbox/furniture_sheet1_bedroom_packed.png", "crop": [2, 49, 14, 26], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "dresser", "source": "art/inbox/furniture_sheet1_bedroom_packed.png", "crop": [2, 82, 14, 25], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "bed_cyan", "source": "art/inbox/furniture_sheet1_bedroom_packed.png", "crop": [34, 49, 14, 26], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "bed_frame", "source": "art/inbox/furniture_sheet1_bedroom_packed.png", "crop": [66, 49, 14, 26], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "bed_vine", "source": "art/inbox/furniture_sheet1_bedroom_packed.png", "crop": [98, 49, 14, 26], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "bookcase_small", "source": "art/inbox/furniture_sheet2_living_surreal_packed.png", "crop": [2, 0, 14, 25], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "clock_thin", "source": "art/inbox/furniture_sheet2_living_surreal_packed.png", "crop": [34, 0, 8, 25], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "piano", "source": "art/inbox/furniture_sheet2_living_surreal_packed.png", "crop": [50, 0, 22, 15], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "stove_cross", "source": "art/inbox/furniture_sheet2_living_surreal_packed.png", "crop": [98, 1, 14, 13], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "armchair_pink", "source": "art/inbox/furniture_sheet2_living_surreal_packed.png", "crop": [2, 49, 14, 18], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "stool_pink", "source": "art/inbox/furniture_sheet2_living_surreal_packed.png", "crop": [6, 81, 16, 13], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "desk_small", "source": "art/inbox/furniture_sheet2_living_surreal_packed.png", "crop": [34, 49, 20, 18], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "tv_checker", "source": "art/inbox/furniture_sheet2_living_surreal_packed.png", "crop": [66, 49, 14, 17], "bg": "alpha", "scale": 1, "colors": 16 },
+    { "id": "table_face", "source": "art/inbox/furniture_sheet2_living_surreal_packed.png", "crop": [100, 49, 15, 17], "bg": "alpha", "scale": 1, "colors": 16 },
+
+    { "id": "door_eye", "source": "art/inbox/Gemini_Generated_Image_73iub173iub173iu.jpg", "crop": [476, 29, 457, 698], "bg": "magenta", "height": 48 },
+    { "id": "gate_faces", "source": "art/inbox/Gemini_Generated_Image_73iub173iub173iu (1).jpg", "crop": [10, 10, 1004, 1014], "bg": "magenta", "height": 64 },
+    { "id": "statue_weeping", "source": "art/inbox/Gemini_Generated_Image_73iub173iub173iu (2).jpg", "crop": [0, 4, 848, 1260], "bg": "magenta", "height": 56 },
+    { "id": "stele_runes", "source": "art/inbox/Gemini_Generated_Image_73iub173iub173iu (3).jpg", "crop": [344, 49, 700, 719], "bg": "magenta", "height": 36 },
+    { "id": "kettle_set", "source": "art/inbox/Gemini_Generated_Image_c8av0ec8av0ec8av.jpg", "crop": [10, 82, 1004, 912], "bg": "magenta", "height": 36 },
+    { "id": "bench_rust", "source": "art/inbox/Gemini_Generated_Image_c8av0ec8av0ec8av (1).jpg", "crop": [41, 92, 942, 830], "bg": "magenta", "height": 28 },
+    { "id": "lamp_tall", "source": "art/inbox/Gemini_Generated_Image_c8av0ec8av0ec8av (2).jpg", "crop": [228, 64, 264, 1392], "bg": "magenta", "height": 56, "colors": 12 },
+
+    { "id": "bed_iso", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si.jpg", "crop": [35, 29, 387, 341], "bg": "magenta", "height": 28 },
+    { "id": "chair_wood", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si.jpg", "crop": [492, 35, 188, 323], "bg": "magenta", "height": 26 },
+    { "id": "table_wood", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si.jpg", "crop": [733, 58, 417, 276], "bg": "magenta", "height": 22 },
+    { "id": "clock_tall_a", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si.jpg", "crop": [1208, 29, 124, 346], "bg": "magenta", "height": 40 },
+    { "id": "clock_tall_b", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si.jpg", "crop": [469, 398, 153, 370], "bg": "magenta", "height": 40 },
+    { "id": "floor_lamp", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si.jpg", "crop": [792, 392, 147, 370], "bg": "magenta", "height": 32 },
+    { "id": "cabinet_wood", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si.jpg", "crop": [1068, 422, 306, 340], "bg": "magenta", "height": 28 },
+
+    { "id": "melting_clocks", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (1).jpg", "crop": [24, 70, 140, 598], "bg": "magenta", "height": 48 },
+    { "id": "tv_static", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (1).jpg", "frames": [[182, 94, 217, 290], [182, 388, 217, 280]], "bg": "magenta", "height": 24 },
+    { "id": "mirror_tall", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (1).jpg", "crop": [417, 88, 160, 580], "bg": "magenta", "height": 44 },
+    { "id": "sofa_red", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (1).jpg", "crop": [585, 105, 365, 280], "bg": "magenta", "height": 22 },
+    { "id": "birdcages", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (1).jpg", "crop": [968, 94, 123, 574], "bg": "magenta", "height": 46 },
+    { "id": "wardrobe_keys", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (1).jpg", "crop": [1109, 112, 275, 556], "bg": "magenta", "height": 42 },
+
+    { "id": "bookshelf", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (2).jpg", "crop": [10, 10, 450, 755], "bg": "magenta", "height": 44 },
+    { "id": "chest_locked", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (2).jpg", "crop": [478, 20, 365, 330], "bg": "magenta", "height": 18 },
+    { "id": "glass_cabinet", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (2).jpg", "crop": [885, 10, 265, 395], "bg": "magenta", "height": 30 },
+    { "id": "eye_plant", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (2).jpg", "crop": [1158, 8, 240, 382], "bg": "magenta", "height": 28 },
+    { "id": "desk_letters", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (2).jpg", "crop": [468, 368, 490, 395], "bg": "magenta", "height": 26 },
+    { "id": "bathtub_steam", "source": "art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (2).jpg", "crop": [960, 405, 443, 360], "bg": "magenta", "height": 30 },
+
+    { "id": "tree_fireflies", "source": "art/inbox/large_trees_preview.png", "crop": [51, 105, 231, 266], "bg": "#0a0716", "bgTolerance": 4, "scale": 3 },
+    { "id": "tree_dead_eye", "source": "art/inbox/large_trees_preview.png", "crop": [336, 96, 240, 270], "bg": "#0a0716", "bgTolerance": 4, "scale": 3 },
+    { "id": "tree_teal_eye", "source": "art/inbox/large_trees_preview.png", "crop": [627, 105, 228, 266], "bg": "#0a0716", "bgTolerance": 4, "scale": 3 },
+    { "id": "tree_pink", "source": "art/inbox/large_trees_preview.png", "crop": [54, 447, 222, 272], "bg": "#0a0716", "bgTolerance": 4, "scale": 3 },
+    { "id": "tree_willow", "source": "art/inbox/large_trees_preview.png", "crop": [366, 462, 180, 257], "bg": "#0a0716", "bgTolerance": 4, "scale": 3 },
+
+    {
+      "id": "traveler",
+      "note": "旅人。Designer (12) の待機（1コマ）と歩き（4コマ）。左は右の反転、横視点は右向きで代用",
+      "source": "art/inbox/Designer (12).png",
+      "bg": "alpha",
+      "height": 24,
+      "colors": 16,
+      "frameSteps": 9,
+      "animations": {
+        "idle_down": [[305, 70, 120, 118]],
+        "idle_right": [[555, 70, 120, 118]],
+        "idle_up": [[680, 70, 120, 118]],
+        "walk_down": [[950, 75, 110, 120], [1060, 75, 110, 120], [1170, 75, 110, 120], [1280, 75, 110, 120]],
+        "walk_right": [[950, 335, 110, 120], [1060, 335, 110, 120], [1170, 335, 110, 120], [1280, 335, 110, 120]],
+        "walk_up": [[950, 460, 110, 120], [1060, 460, 110, 120], [1170, 460, 110, 120], [1280, 460, 110, 120]]
+      }
+    }
+  ]
+}

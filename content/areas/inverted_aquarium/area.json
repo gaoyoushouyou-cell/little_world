@@ -1,0 +1,27 @@
+{
+  "id": "inverted_aquarium",
+  "name": "逆さの水族館",
+  "view": "side",
+  "size": [60, 30],
+  "depth": 3,
+  "physics": {
+    "gravity": [0, -0.3],
+    "jump": 5.5,
+    "maxSpeed": 1.8,
+    "airFriction": 0.97,
+    "timeScale": 0.7
+  },
+  "layers": [
+    { "type": "gradient", "colors": ["#13606a", "#0b3b52", "#06243a", "#020a14"], "steps": 8 },
+    { "type": "silhouette", "kind": "towers", "color": "#08202f", "accent": "#6fd1d9", "scroll": 0.15, "height": 150, "baseline": 1.0, "period": 512, "alpha": 0.8 },
+    { "type": "silhouette", "kind": "hills", "color": "#04121e", "scroll": 0.35, "height": 60, "baseline": 1.02 },
+    { "type": "particles", "count": 50, "colors": ["#bff6ff", "#7fe0ea"], "velocity": [0, 12], "wobble": 4, "scroll": 0.8, "alpha": 0.55, "seed": "bubbles" },
+    { "type": "tiles", "id": "deco" },
+    { "type": "tiles", "id": "ground", "collide": true },
+    { "type": "fog", "color": "#061a2a", "density": 0.3, "drift": [-3, 1] }
+  ],
+  "spawns": {
+    "west": [2, 20],
+    "ceiling": [40, 4]
+  }
+}

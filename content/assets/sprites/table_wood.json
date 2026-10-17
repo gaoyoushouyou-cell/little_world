@@ -1,0 +1,33 @@
+{
+  "palette": {".":null,"a":"#250402","b":"#2c0704","c":"#32050e","d":"#401e18","e":"#4e2c24","f":"#830f6d","g":"#5a382f","h":"#5f3c33","i":"#765040","j":"#8c684f","k":"#9a7457","l":"#a57c60","m":"#b28769"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si.jpg"},
+  "animations": {
+    "idle": [
+      [
+        ".............bbfkbbb.............",
+        "..........baakkkkkkabb...........",
+        ".......akkkkkkkkkkkkkkiac........",
+        "....cikkkkkkkkkkkkkkkkkkkia......",
+        ".cbkkkkkkkkkkkkkkkkkkkkkkkkib....",
+        "alkkkkkkkkkkkkkkkkkkkkkkkkkkkkbc.",
+        "bgakkkkkkkkkkkkkkkkkkkkkkkkkkkmmg",
+        "agggbkkkkkkkkkkkkkkkkkkkkmmbbaggh",
+        ".bbdggghbkkkkkkkkkkmmmmmaggggghga",
+        ".cedbbggggabkkkmmbaggghhgggbbcgb.",
+        ".cjgb..cgggggagghhgggggabb..bhjb.",
+        ".cjgb....faggbggggbcb.adgb..bgja.",
+        ".cjgb......aabb.......bgja..bgja.",
+        ".cjgb......bgg........ahja..bhja.",
+        ".cjga......ajh........agja..agja.",
+        ".cjgb......ajh........agja..bhja.",
+        ".baab......ajh........agja..bgja.",
+        "...........bjh........bgja....b..",
+        "...........bja........bbbb.......",
+        "...........bjh...................",
+        "...........bjh...................",
+        "...........bab..................."
+      ]
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "tiles": {
+    "grass_a": {
+      "solid": false,
+      "color": "#021809",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (1).jpg",
+      "art": {
+        "palette": {".":null,"a":"#021809","b":"#0c2914","c":"#18391f","d":"#224628","e":"#315d33","f":"#3d6a3e"},
+        "pixels": [
+          "eccaeadfceaccada",
+          "daaaccabacfaafae",
+          "dbedadcfadbedadd",
+          "dbceaafaefabeaaf",
+          "cceafbdfacefaeba",
+          "bacabacaebfdffac",
+          "eaceaeafdfccccdc",
+          "eeaeaaccbeaaeaad",
+          "eddafcdaceaddaca",
+          "caaaccacadfaafae",
+          "daebaedfaaaedaec",
+          "cbcedacaebbcadaa",
+          "fdfabeaebeafaeee",
+          "bdcaeaccfaecebaa",
+          "eacbafaededcccfb",
+          "ddaeaacdaeaaeaac"
+        ]
+      }
+    },
+    "grass_b": {
+      "solid": false,
+      "color": "#3a663b",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (1).jpg",
+      "art": {
+        "palette": {".":null,"a":"#000e03","b":"#041b0a","c":"#0f2c16","d":"#1c3d21","e":"#2c532f","f":"#3a663b"},
+        "pixels": [
+          "bafafeafcecabfdb",
+          "aebbbfafebbdcffd",
+          "ffbfdaaabfffcabe",
+          "bdabfaffcfbaccad",
+          "ddddbabfacdfdcfc",
+          "bcbfbfaafafbefff",
+          "cacdfbfadbfaffcc",
+          "edfaecafceddfacc",
+          "dffbfcdeefebeacb",
+          "fdffedfaffdfbfaa",
+          "faaffafbdaffcdff",
+          "fedfaffdfdbfaafb",
+          "fffafaffbdffbfcf",
+          "efadfbffbdfafbbb",
+          "aaffbfddcfffddbe",
+          "bfdfaedcbebdcbdd"
+        ]
+      }
+    },
+    "grass_patchy": {
+      "solid": false,
+      "color": "#376035",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (1).jpg",
+      "art": {
+        "palette": {".":null,"a":"#041607","b":"#1a1f15","c":"#1a391c","d":"#294b2a","e":"#376035","f":"#416a3e"},
+        "pixels": [
+          "eeeeebdcfcfedcbe",
+          "eeaceceaaedeaeee",
+          "aeebefffdeceaeee",
+          "efaadffaafedfaae",
+          "acaaebebdaedbeea",
+          "eceeccbbeacffaaf",
+          "aeaabbbbcbbafaac",
+          "acecfbbbbbabfaea",
+          "aaffbbfbbbaeacce",
+          "ecaafabbafbbbefc",
+          "ccaebbbbbfcefeda",
+          "eeaabbfbcfadaafe",
+          "eeeefbfbfabeafce",
+          "decbafeeaecbfcfe",
+          "ceeaedeeafadffda",
+          "cccdedcaaeaeeaea"
+        ]
+      }
+    }
+  }
+}

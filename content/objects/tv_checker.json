@@ -1,0 +1,12 @@
+{
+  "id": "tv_checker",
+  "name": "市松模様のテレビ",
+  "sprite": "tv_checker",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

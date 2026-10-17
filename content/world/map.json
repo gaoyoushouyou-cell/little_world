@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "start": { "area": "bed_room", "spawn": "start" },
+  "player": { "sprite": "traveler" },
+  "areas": [
+    { "id": "bed_room", "pos": [0, 0] },
+    { "id": "sunken_promenade", "pos": [20, -16] },
+    { "id": "inverted_aquarium", "pos": [110, -16] },
+    { "id": "endless_field", "pos": [-60, 30] }
+  ],
+  "warps": [
+    {
+      "id": "bed_to_field",
+      "from": { "area": "bed_room", "at": [4, 1] },
+      "to": { "area": "endless_field", "at": [18, 12] },
+      "bidirectional": true
+    },
+    {
+      "id": "aquarium_to_bed",
+      "from": { "area": "inverted_aquarium", "at": [50, 4] },
+      "to": { "area": "bed_room", "at": [16, 10] }
+    }
+  ],
+  "seeds": []
+}

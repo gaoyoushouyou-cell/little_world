@@ -1,0 +1,12 @@
+{
+  "id": "mirror_cyan",
+  "name": "水色の鏡",
+  "sprite": "mirror_cyan",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

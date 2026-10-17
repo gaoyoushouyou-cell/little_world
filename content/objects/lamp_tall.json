@@ -1,0 +1,12 @@
+{
+  "id": "lamp_tall",
+  "name": "背の高い街灯",
+  "sprite": "lamp_tall",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

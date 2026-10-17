@@ -1,0 +1,12 @@
+{
+  "id": "wardrobe_keys",
+  "name": "鍵穴だらけの衣装棚",
+  "sprite": "wardrobe_keys",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

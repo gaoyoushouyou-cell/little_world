@@ -1,0 +1,12 @@
+{
+  "id": "glass_cabinet",
+  "name": "硝子の戸棚",
+  "sprite": "glass_cabinet",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

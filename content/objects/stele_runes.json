@@ -1,0 +1,12 @@
+{
+  "id": "stele_runes",
+  "name": "紋様の石碑",
+  "sprite": "stele_runes",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

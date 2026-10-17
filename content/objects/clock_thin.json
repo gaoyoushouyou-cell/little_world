@@ -1,0 +1,12 @@
+{
+  "id": "clock_thin",
+  "name": "細い柱時計",
+  "sprite": "clock_thin",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

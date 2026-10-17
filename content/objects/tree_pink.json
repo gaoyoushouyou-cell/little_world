@@ -1,0 +1,12 @@
+{
+  "id": "tree_pink",
+  "name": "桃色の木",
+  "sprite": "tree_pink",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

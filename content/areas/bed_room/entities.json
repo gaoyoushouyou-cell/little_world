@@ -1,0 +1,20 @@
+[
+  {"object":"bed_violet","at":[2,11]},
+  {"object":"nightstand_lamp","at":[3,10]},
+  {"object":"wardrobe_small","at":[1,2]},
+  {"object":"dresser","at":[2,2]},
+  {"object":"bookcase_small","at":[6,2]},
+  {"object":"clock_thin","at":[7,2]},
+  {"object":"piano","at":[9,2]},
+  {"object":"tv_checker","at":[12,2]},
+  {"object":"stove_cross","at":[14,2]},
+  {"object":"mirror_cyan","at":[16,2]},
+  {"object":"melting_clocks","at":[17,2]},
+  {"object":"birdcages","at":[18,3]},
+  {"object":"bed_frame","at":[9,9]},
+  {"object":"tv_static","at":[9,12]},
+  {"object":"desk_small","at":[12,12]},
+  {"object":"armchair_pink","at":[14,12]},
+  {"object":"table_face","at":[16,12]},
+  {"object":"stool_pink","at":[1,12]}
+]

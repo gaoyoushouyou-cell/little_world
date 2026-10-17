@@ -1,0 +1,12 @@
+{
+  "id": "bed_violet",
+  "name": "すみれ色のベッド",
+  "sprite": "bed_violet",
+  "collision": {
+    "top": [
+      1,
+      2
+    ]
+  },
+  "provisional": true
+}

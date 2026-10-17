@@ -1,0 +1,7 @@
+{
+  "id": "door_eye",
+  "name": "目のある扉",
+  "sprite": "door_eye",
+  "collision": {},
+  "provisional": false
+}

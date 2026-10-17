@@ -1,0 +1,136 @@
+:root {
+  --ui-fg: #f1e9ff;
+  --ui-dim: #a99cc4;
+  --ui-bg: rgba(12, 8, 24, 0.82);
+  --ui-line: #4b3d6e;
+  --ui-error: #ff7a8a;
+  --ui-warn: #ffd27a;
+  /* 画面の拡大率（main.ts が設定する）。UI の大きさはこれの倍数にする */
+  --z: 2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ui-monospace, 'MS Gothic', 'Osaka-Mono', monospace;
+  color: var(--ui-fg);
+}
+
+#stage {
+  position: relative;
+}
+
+#game canvas {
+  display: block;
+  image-rendering: pixelated;
+}
+
+#ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-size: calc(var(--z) * 6px);
+  line-height: 1.4;
+}
+
+.area-title {
+  position: absolute;
+  top: calc(var(--z) * 18px);
+  left: 0;
+  right: 0;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-size: calc(var(--z) * 9px);
+  text-shadow: 0 0 calc(var(--z) * 3px) #000;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.area-title.visible {
+  opacity: 1;
+}
+
+.area-title small {
+  display: block;
+  font-size: calc(var(--z) * 5px);
+  color: var(--ui-dim);
+  letter-spacing: 0.3em;
+}
+
+.prompt {
+  position: absolute;
+  bottom: calc(var(--z) * 14px);
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-shadow: 0 0 calc(var(--z) * 2px) #000;
+}
+
+.prompt kbd {
+  display: inline-block;
+  padding: 0 calc(var(--z) * 2px);
+  margin-right: calc(var(--z) * 2px);
+  border: 1px solid var(--ui-fg);
+  font-family: inherit;
+}
+
+.debug {
+  position: absolute;
+  top: calc(var(--z) * 3px);
+  left: calc(var(--z) * 3px);
+  padding: calc(var(--z) * 2px) calc(var(--z) * 3px);
+  background: var(--ui-bg);
+  border: 1px solid var(--ui-line);
+  font-size: calc(var(--z) * 4.5px);
+  white-space: pre;
+}
+
+.issues {
+  position: absolute;
+  right: calc(var(--z) * 3px);
+  bottom: calc(var(--z) * 3px);
+  max-width: 70%;
+  max-height: 60%;
+  overflow: auto;
+  padding: calc(var(--z) * 2px) calc(var(--z) * 3px);
+  background: var(--ui-bg);
+  border: 1px solid var(--ui-line);
+  font-size: calc(var(--z) * 4.5px);
+  pointer-events: auto;
+}
+
+.issues.fatal {
+  inset: calc(var(--z) * 6px);
+  max-width: none;
+  max-height: none;
+}
+
+.issues h2 {
+  margin: 0 0 calc(var(--z) * 2px);
+  font-size: 1.1em;
+}
+
+.issues .error {
+  color: var(--ui-error);
+}
+
+.issues .warning {
+  color: var(--ui-warn);
+}
+
+.issues code {
+  color: var(--ui-dim);
+}

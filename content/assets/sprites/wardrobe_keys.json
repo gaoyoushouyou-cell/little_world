@@ -1,0 +1,53 @@
+{
+  "palette": {".":null,"a":"#09090e","b":"#12121c","c":"#16161f","d":"#211b22","e":"#2d252a","f":"#32272d","g":"#3e3439","h":"#4b3c3f","i":"#5b5752","j":"#827057","k":"#bb9965","l":"#cfbc93","m":"#eddeb0","n":"#fbf2c9"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_d0sibwd0sibwd0si (1).jpg"},
+  "animations": {
+    "idle": [
+      [
+        "bgggggggggeeefeeeefcc",
+        "befffffffffffffffffcb",
+        ".fffffbbbfbbbfffffcc.",
+        ".fchfhffhahfffffhccc.",
+        ".ffcfffchahefffccccc.",
+        ".ffffffchahffffffccc.",
+        ".ffffffchahffkfffccc.",
+        ".ffffffchahffjfffccc.",
+        ".ffffffchjhffffffccc.",
+        ".fffjffchjhffffffccc.",
+        ".fffjffchjhffffffccc.",
+        ".ffffffchmhfegffffcc.",
+        ".ffffffchnhfgifkfccc.",
+        ".ffffffchnhffffaffcc.",
+        ".ffffffchnhffffjeccc.",
+        ".ffffffchnhffffffccc.",
+        ".ffffijchnhfffffffcc.",
+        ".ffffijchnhffffffccc.",
+        ".fffffhchnhffhffffcc.",
+        ".ffffffchnhffffifccc.",
+        ".ffffffchnhffffghfcc.",
+        ".ffkaffkhnhkfffggccc.",
+        ".ffekffchnhdfffffccc.",
+        ".ffffffchnhffffffccc.",
+        ".ffffffchmhfffffffcc.",
+        ".fffhffchmhfffifffcc.",
+        ".ffffffchmhfffiffccc.",
+        ".ffffffchmhfffffffcc.",
+        ".ffffifbhlhfffffffcc.",
+        ".fffffichlhffkjfffcc.",
+        ".ffffffbhlhffkjfffcc.",
+        ".ffffffbhbhfffffffcc.",
+        ".ffffffbhbhfffffffcc.",
+        ".ffffffbhbhffffffccc.",
+        ".ffbfffchbhffffbbfcc.",
+        ".ffffffchbhffffeebcc.",
+        ".ffffbbfhehffbbddfcb.",
+        ".cbbbcccbbcccbbbbbbcb",
+        "cbffbffffffffffffbbcb",
+        "cdbcc............dfcb",
+        "bf.c.............bfbb",
+        "cf...............bf.."
+      ]
+    ]
+  }
+}

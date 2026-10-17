@@ -1,0 +1,7 @@
+{
+  "id": "gate_faces",
+  "name": "顔の門",
+  "sprite": "gate_faces",
+  "collision": {},
+  "provisional": false
+}

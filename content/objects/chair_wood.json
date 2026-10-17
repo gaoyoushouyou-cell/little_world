@@ -1,0 +1,12 @@
+{
+  "id": "chair_wood",
+  "name": "木の椅子",
+  "sprite": "chair_wood",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

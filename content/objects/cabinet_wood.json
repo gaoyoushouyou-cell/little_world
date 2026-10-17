@@ -1,0 +1,12 @@
+{
+  "id": "cabinet_wood",
+  "name": "木の戸棚",
+  "sprite": "cabinet_wood",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

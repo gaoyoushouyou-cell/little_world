@@ -1,0 +1,12 @@
+{
+  "id": "sofa_red",
+  "name": "赤いソファ",
+  "sprite": "sofa_red",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

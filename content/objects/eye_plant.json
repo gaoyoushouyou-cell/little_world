@@ -1,0 +1,12 @@
+{
+  "id": "eye_plant",
+  "name": "目の鉢植え",
+  "sprite": "eye_plant",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

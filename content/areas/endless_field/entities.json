@@ -1,0 +1,11 @@
+[
+  {"object":"tree_fireflies","at":[5,8]},
+  {"object":"tree_dead_eye","at":[15,3]},
+  {"object":"tree_pink","at":[28,6]},
+  {"object":"tree_teal_eye","at":[8,19]},
+  {"object":"tree_willow","at":[30,20]},
+  {"object":"bench_rust","at":[22,16]},
+  {"object":"stele_runes","at":[10,12]},
+  {"object":"eye_plant","at":[25,10]},
+  {"object":"lamp_tall","at":[21,9]}
+]

@@ -1,0 +1,12 @@
+{
+  "id": "bed_iso",
+  "name": "ずれたベッド",
+  "sprite": "bed_iso",
+  "collision": {
+    "top": [
+      2,
+      2
+    ]
+  },
+  "provisional": true
+}

@@ -1,0 +1,12 @@
+{
+  "id": "statue_weeping",
+  "name": "泣く像",
+  "sprite": "statue_weeping",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

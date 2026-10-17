@@ -1,0 +1,12 @@
+{
+  "id": "armchair_pink",
+  "name": "桃色の椅子",
+  "sprite": "armchair_pink",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

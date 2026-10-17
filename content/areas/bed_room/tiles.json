@@ -1,0 +1,37 @@
+{
+  "legend": {".":null,"#":"wall_violet","a":"stone_plain_a","b":"stone_plain_b","c":"stone_crack_a","d":"stone_crack_b","r":"rug"},
+  "layers": {
+    "floor": [
+      "babababababababababa",
+      "abababababababababab",
+      "babababababababababa",
+      "ababacababababababab",
+      "babababrrrrrrabacaba",
+      "abadabarrrrrrbababab",
+      "babababrrrrrrabababa",
+      "abababarrrrrrbababab",
+      "babababrrrrrrabababa",
+      "abababarrrrrrbdbabab",
+      "babababababababababa",
+      "ababababdbababababab",
+      "babababababababababa",
+      "abababababababababab"
+    ],
+    "walls": [
+      "####################",
+      "#..................#",
+      "#..................#",
+      "#..................#",
+      "#..................#",
+      "#..................#",
+      "#...................",
+      "#...................",
+      "#..................#",
+      "#..................#",
+      "#..................#",
+      "#..................#",
+      "#..................#",
+      "####################"
+    ]
+  }
+}

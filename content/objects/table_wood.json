@@ -1,0 +1,12 @@
+{
+  "id": "table_wood",
+  "name": "木の机",
+  "sprite": "table_wood",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

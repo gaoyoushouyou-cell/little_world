@@ -1,0 +1,12 @@
+{
+  "id": "tree_teal_eye",
+  "name": "青い目の木",
+  "sprite": "tree_teal_eye",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

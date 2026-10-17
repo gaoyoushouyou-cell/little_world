@@ -1,0 +1,47 @@
+{
+  "palette": {".":null,"a":"#090513","b":"#130c1b","c":"#170e20","d":"#231e2a","e":"#302c36","f":"#414149","g":"#5c585d","h":"#656165","i":"#696d6f","j":"#618378","k":"#8a9592","l":"#a0aaa6","m":"#abb6b1"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_73iub173iub173iu (3).jpg"},
+  "animations": {
+    "idle": [
+      [
+        "................ff.................",
+        "...........ccbifmjfbc..............",
+        ".........cimmmmfjjfmmmmccc.........",
+        "......cimmmmmmmeffeimmmmmmmc.......",
+        ".....cmmmmmmmmmieeiimmmmmmmeb......",
+        ".....mkkkemmmmmmmmmmmmmieeeee......",
+        "....ckkkkekkkmmmmmmmeheeeeeeec.....",
+        "....bkkkkekkkkkkmhhheeeeeeeeec.....",
+        "....bkkkkekkkkkklhheeeeeeeeeec.....",
+        "....bkkeeiikkkkkkhheeeeeadaeec.....",
+        "....ckkkeiiiiikkkkheeaddddaeec.....",
+        ".....bkkeiieiiikkkheeddaadaeec.....",
+        ".....ckkeeeieeikkkeeeddaadaeec.....",
+        ".....bkkeeieieikkkeeeddddaaeec.....",
+        ".....ckkeieeieikkkeeedadaaaeec.....",
+        ".....bkkeiiiiiikkkeeedadaddaeb.....",
+        ".....bkkeeeiiiikkkheeddddadaeb.....",
+        "....ckkkiiieeeikkhheeddaafdaeb.....",
+        "....bekeiieiikikkhheeddddadaee.....",
+        "....cikeiikieiikkhheeddddadaeeb....",
+        "....bikeieieeiikkhheeddaddddeeb....",
+        "....cieieiekeiikkhheedddadddeeb....",
+        "...ciieieiiiieiikhheeddddddaeeb....",
+        "...biieiikeeieiiihheeddddheeeeeb...",
+        "...iiiikiiiikkiiikkeedaeeeeeeeeb...",
+        ".clfiiiiiiliiiiiikeeeeegeeeeecbbhb.",
+        "bllllcbiiiiiilliikeeeeeeeebbhhhhad.",
+        "biikllllbcbiiiiiikeeeeeebbhhhhddddb",
+        "ciiiiilllllcbbiiikeeebchhhfhddddddb",
+        "ciiiiiiiiiellllbcbcbhhhhhefdddddddb",
+        "bbiiieiiiieiilllhhhhheeeeeddddddbb.",
+        ".cbieeiiiiiiiiilllleeeeeeeedddbbc..",
+        ".....cbiiiiiiiiiifeeeeeeeeebb......",
+        "........bbiiiiiiifeeeeeebb.........",
+        "...........bbiiiieeeebb............",
+        ".............bcbieebb.............."
+      ]
+    ]
+  }
+}

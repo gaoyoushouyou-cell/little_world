@@ -1,0 +1,12 @@
+{
+  "id": "melting_clocks",
+  "name": "溶けた時計",
+  "sprite": "melting_clocks",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

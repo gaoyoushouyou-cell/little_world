@@ -1,0 +1,12 @@
+{
+  "id": "clock_tall_a",
+  "name": "柱時計",
+  "sprite": "clock_tall_a",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

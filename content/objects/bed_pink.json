@@ -1,0 +1,12 @@
+{
+  "id": "bed_pink",
+  "name": "桃色のベッド",
+  "sprite": "bed_pink",
+  "collision": {
+    "top": [
+      1,
+      2
+    ]
+  },
+  "provisional": true
+}

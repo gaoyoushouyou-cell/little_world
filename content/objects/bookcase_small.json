@@ -1,0 +1,12 @@
+{
+  "id": "bookcase_small",
+  "name": "小さな本棚",
+  "sprite": "bookcase_small",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

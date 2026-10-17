@@ -1,0 +1,12 @@
+{
+  "id": "bed_vine",
+  "name": "蔓の模様のベッド",
+  "sprite": "bed_vine",
+  "collision": {
+    "top": [
+      1,
+      2
+    ]
+  },
+  "provisional": true
+}

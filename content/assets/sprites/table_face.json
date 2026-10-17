@@ -1,0 +1,28 @@
+{
+  "palette": {".":null,"a":"#1a1426","b":"#2e211f","c":"#4a3532","d":"#6a4c44","e":"#8a3f5c","f":"#8f6a58","g":"#b85a7a","h":"#6fd1d9","i":"#f4eef7"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/furniture_sheet2_living_surreal_packed.png"},
+  "animations": {
+    "idle": [
+      [
+        "...bbb......bbb",
+        "...beb......beb",
+        "...bbb......bbb",
+        "...............",
+        ".bbbbbbbbbbb...",
+        "bffffffffffb...",
+        "bffdihidfffb...",
+        "bdddiaiddddb...",
+        "bddddddddddb...",
+        "bccccccccccb...",
+        ".bbbbbbbbbbb...",
+        "......bd....db.",
+        "......bc....cb.",
+        "......bb....bb.",
+        "...bbb......bbb",
+        "...bgb......bgb",
+        "...bbb......bbb"
+      ]
+    ]
+  }
+}

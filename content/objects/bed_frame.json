@@ -1,0 +1,12 @@
+{
+  "id": "bed_frame",
+  "name": "額のかかったベッド",
+  "sprite": "bed_frame",
+  "collision": {
+    "top": [
+      1,
+      2
+    ]
+  },
+  "provisional": true
+}

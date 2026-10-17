@@ -1,0 +1,14 @@
+[
+  {"object":"lamp_tall","at":[6,23]},
+  {"object":"lamp_tall","at":[30,23]},
+  {"object":"lamp_tall","at":[50,23]},
+  {"object":"lamp_tall","at":[71,23]},
+  {"object":"lamp_tall","at":[81,23]},
+  {"object":"bench_rust","at":[8,23]},
+  {"object":"gate_faces","at":[25,23]},
+  {"object":"tree_dead_eye","at":[47,23]},
+  {"object":"bench_rust","at":[52,23],"flipX":true},
+  {"object":"statue_weeping","at":[63,19]},
+  {"object":"tree_willow","at":[76,23]},
+  {"object":"door_eye","at":[84,23]}
+]

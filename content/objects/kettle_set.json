@@ -1,0 +1,12 @@
+{
+  "id": "kettle_set",
+  "name": "錆びた湯沸かし",
+  "sprite": "kettle_set",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

@@ -1,0 +1,12 @@
+{
+  "id": "bathtub_steam",
+  "name": "湯気の浴槽",
+  "sprite": "bathtub_steam",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

@@ -1,0 +1,25 @@
+{
+  "id": "bed_room",
+  "name": "ベッドのある部屋",
+  "view": "top",
+  "size": [20, 14],
+  "depth": 1,
+  "physics": {
+    "friction": 0.7,
+    "accel": 0.3,
+    "maxSpeed": 1.5
+  },
+  "layers": [
+    { "type": "gradient", "colors": ["#0a0716", "#1a1030", "#0a0716"], "steps": 6 },
+    { "type": "tiles", "id": "floor" },
+    { "type": "tiles", "id": "walls", "collide": true },
+    { "type": "particles", "count": 24, "colors": ["#e8dcff", "#ffe9c4"], "velocity": [2, -3], "wobble": 3, "alpha": 0.5, "seed": "dust" },
+    { "type": "fog", "color": "#1a0f2e", "density": 0.18, "drift": [2, 1] }
+  ],
+  "spawns": {
+    "start": [5, 10],
+    "beside_bed": [4, 11],
+    "east_door": [17, 7]
+  },
+  "basable": true
+}

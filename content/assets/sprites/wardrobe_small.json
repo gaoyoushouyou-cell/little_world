@@ -1,0 +1,37 @@
+{
+  "palette": {".":null,"a":"#2e211f","b":"#4a3532","c":"#6a4c44","d":"#6a6478","e":"#8f6a58","f":"#9a94aa"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/furniture_sheet1_bedroom_packed.png"},
+  "animations": {
+    "idle": [
+      [
+        "aaaaaaaaaaaaaa",
+        "aeeeeeeeeeeeea",
+        "acccccccccccca",
+        "aaaaaaaaaaaaaa",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "accccaddacccca",
+        "accccaffacccca",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "accccaaaacccca",
+        "abbbbaaaabbbba",
+        "aaaaaaaaaaaaaa",
+        "acccccccccccca",
+        "abbbbbbbbbbbba",
+        "aaaaaaaaaaaaaa",
+        "ab............",
+        "aa............"
+      ]
+    ]
+  }
+}

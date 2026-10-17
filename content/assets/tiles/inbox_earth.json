@@ -1,0 +1,82 @@
+{
+  "tiles": {
+    "earth_dark": {
+      "solid": true,
+      "color": "#32231e",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#231918","b":"#2f231e","c":"#30231e","d":"#32231e","e":"#31241c"},
+        "pixels": [
+          "addcddccbccddccd",
+          "ddcccdcccccccccd",
+          "dcdccccccccacccd",
+          "ddcccecccccccddd",
+          "dcdccedccddddddd",
+          "dcdddcddccdddccd",
+          "dddcddddddcdcddd",
+          "dddddddcddcccddd",
+          "ddddddddcccddddd",
+          "cdddddddddecdddd",
+          "dcccdcdddddccddd",
+          "dcccddddddcdcddd",
+          "dcccddddddcccddd",
+          "dcdcccddcccccccd",
+          "dddddedddedcccdd",
+          "dddddddaddddeddd"
+        ]
+      }
+    },
+    "earth_crack_a": {
+      "solid": true,
+      "color": "#62463a",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#170b13","b":"#291b1b","c":"#362520","d":"#4d352d","e":"#62463a","f":"#725344"},
+        "pixels": [
+          "eeeeeeeeeeeefeee",
+          "eeeeeeeeeeebeeee",
+          "eeeeeeeeeeeceeee",
+          "eedbbeeeeeecfeee",
+          "eceeebeeeebeceee",
+          "eeeeeeeeeeeeebfe",
+          "eeeeeeeeeeeeeeee",
+          "eeeeeeeeeeeeeeee",
+          "eeeeeeeeeeeeeeee",
+          "eeeeeeeeeeeeeeee",
+          "eeeeeeeeeadeeebe",
+          "eeeeeeeeeeecabce",
+          "eeeeeeeeeefcccee",
+          "eeeeeeeeeeeeceee",
+          "eeeeeeeeedeebeee",
+          "eeeeeeeeeeeeeeee"
+        ]
+      }
+    },
+    "earth_crack_b": {
+      "solid": true,
+      "color": "#825f4a",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#150a13","b":"#31221e","c":"#442f28","d":"#533a31","e":"#694c3f","f":"#825f4a"},
+        "pixels": [
+          "ffffffffffffaaaf",
+          "fffdffbfffafabbf",
+          "ffcddcdfffaabbbf",
+          "fcdddddbaabbbbff",
+          "fddddddafabbbbff",
+          "faddddeffffbffbf",
+          "ffbbdaffffffbfff",
+          "ffffffffffffffff",
+          "ffffffffffffffff",
+          "ffffffafffffffff",
+          "faafffafffffffff",
+          "ffaababfffffffff",
+          "fffbbbbfffffffff",
+          "ffffafffffffffff",
+          "ffffcfffffffffff",
+          "ffffffffffffffff"
+        ]
+      }
+    }
+  }
+}

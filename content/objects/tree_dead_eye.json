@@ -1,0 +1,12 @@
+{
+  "id": "tree_dead_eye",
+  "name": "枯れた目の木",
+  "sprite": "tree_dead_eye",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

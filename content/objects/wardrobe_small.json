@@ -1,0 +1,12 @@
+{
+  "id": "wardrobe_small",
+  "name": "小さな衣装棚",
+  "sprite": "wardrobe_small",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

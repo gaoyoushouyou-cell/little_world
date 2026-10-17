@@ -1,0 +1,12 @@
+{
+  "id": "desk_small",
+  "name": "小さな机",
+  "sprite": "desk_small",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

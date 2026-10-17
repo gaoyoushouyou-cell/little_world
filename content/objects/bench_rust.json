@@ -1,0 +1,12 @@
+{
+  "id": "bench_rust",
+  "name": "錆びたベンチ",
+  "sprite": "bench_rust",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

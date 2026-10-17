@@ -1,0 +1,12 @@
+{
+  "id": "desk_letters",
+  "name": "手紙の机",
+  "sprite": "desk_letters",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

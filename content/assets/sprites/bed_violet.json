@@ -1,0 +1,40 @@
+{
+  "palette": {".":null,"a":"#1a1426","b":"#3a1424","c":"#2e211f","d":"#26243f","e":"#3a2f55","f":"#4a3532","g":"#6a4c44","h":"#5a4a80","i":"#8a3f5c","j":"#8f6a58","k":"#b85a7a","l":"#e0607a","m":"#e9d0c4","n":"#f2d9c9","o":"#f4eef7"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/furniture_sheet1_bedroom_packed.png"},
+  "animations": {
+    "idle": [
+      [
+        "cccccccccccccccc",
+        "cjjjjjjjjjjjjjjc",
+        "cgeeeeeeeeeeeegc",
+        "cghkkkkkkkkkkhgc",
+        "cgeiiiiiiiiiiegc",
+        "cfddddddddddddfc",
+        "cfaaaaa..aaaaafc",
+        "cfaoooa..aoooafc",
+        "cfannna..annnafc",
+        "cfammma..ammmafc",
+        "cfbbbbbbbbbbbfc.",
+        "cfblllllllllbfc.",
+        "cfblllllllllbfc.",
+        "cfbkkkkkkkkkbfc.",
+        "cfbkkkkkkkkkbfc.",
+        "cfbkkkkkkkkkbfc.",
+        "cfbkkkkkkkkkbfc.",
+        "cfbkkkkkkkkkbfc.",
+        "cfbkkkkkkkkkbfc.",
+        "cfbiiiiiiiiibfc.",
+        "cfbiiiiiiiiibfc.",
+        "cfbiiiiiiiiibfc.",
+        "cfbbbbbbbbbbbfc.",
+        "cgggggggggggggc.",
+        "cfffffffffffffc.",
+        "ccccccccccccccc.",
+        "cf..............",
+        "cf..............",
+        "cc.............."
+      ]
+    ]
+  }
+}

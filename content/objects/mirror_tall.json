@@ -1,0 +1,12 @@
+{
+  "id": "mirror_tall",
+  "name": "背の高い鏡",
+  "sprite": "mirror_tall",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

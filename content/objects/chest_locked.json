@@ -1,0 +1,12 @@
+{
+  "id": "chest_locked",
+  "name": "錠前の箱",
+  "sprite": "chest_locked",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

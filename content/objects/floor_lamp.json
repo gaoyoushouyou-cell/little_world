@@ -1,0 +1,12 @@
+{
+  "id": "floor_lamp",
+  "name": "床置きの灯り",
+  "sprite": "floor_lamp",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

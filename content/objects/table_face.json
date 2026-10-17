@@ -1,0 +1,12 @@
+{
+  "id": "table_face",
+  "name": "顔のある台",
+  "sprite": "table_face",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

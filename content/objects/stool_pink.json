@@ -1,0 +1,12 @@
+{
+  "id": "stool_pink",
+  "name": "桃色の腰掛け",
+  "sprite": "stool_pink",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

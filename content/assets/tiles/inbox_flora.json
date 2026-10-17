@@ -1,0 +1,472 @@
+{
+  "tiles": {
+    "weed_bush": {
+      "solid": false,
+      "color": "#47734a",
+      "source": "art/inbox/natural_weeds_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#122017","b":"#253e2d","c":"#47734a","d":"#7da66b"},
+        "pixels": [
+          "................",
+          "...a.....a......",
+          "..aca...ada..a..",
+          "..acda.acdaaca..",
+          ".acdcaacdccd.a..",
+          ".acdccdcdccccda.",
+          "acdcccccccccccda",
+          "acdcccbcccccbcda",
+          ".acdcbbbcccbcda.",
+          ".acdcbbbbbbcbcda",
+          "..abbbbbbbbbbbba",
+          "...aaaaaaaaaaaa.",
+          "................",
+          "................",
+          "................",
+          "................"
+        ]
+      }
+    },
+    "weed_dandelion": {
+      "solid": false,
+      "color": "#122017",
+      "source": "art/inbox/natural_weeds_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#122017","b":"#253e2d","c":"#4a3532","d":"#47734a","e":"#8a6a3a","f":"#7da66b","g":"#ffd88a"},
+        "pixels": [
+          "......aa........",
+          ".....agga.......",
+          "....aeggea......",
+          "....aeggea......",
+          ".....aeea.......",
+          "......ca........",
+          ".....aca...aa...",
+          "....aeca..aega..",
+          "...aeca..aeggea.",
+          "...aca...aeggea.",
+          "..ada.....aeea..",
+          ".adfda.....aca..",
+          "adfdbbabd.ada...",
+          "adbbbbbbbabd....",
+          ".aaaaaaaaaa.....",
+          "................"
+        ]
+      }
+    },
+    "weed_bud": {
+      "solid": false,
+      "color": "#122017",
+      "source": "art/inbox/natural_weeds_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#122017","b":"#253e2d","c":"#47734a","d":"#8a6a3a","e":"#7da66b","f":"#ffd88a"},
+        "pixels": [
+          "................",
+          ".......aa.......",
+          "......affa......",
+          "......adfa......",
+          ".......aa.......",
+          ".......aa.......",
+          "..aa...aca...aa.",
+          ".aceaa.aca.aaeca",
+          ".aceceaacaaececa",
+          ".aceccceccecccba",
+          "aaceccccccccccba",
+          ".acecbbbbbbbbcba",
+          "..abccbbbbbbbba.",
+          "...aaaaaaaaaaa..",
+          "................",
+          "................"
+        ]
+      }
+    },
+    "weed_spiky": {
+      "solid": false,
+      "color": "#122017",
+      "source": "art/inbox/natural_weeds_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#122017","b":"#253e2d","c":"#47734a","d":"#7da66b"},
+        "pixels": [
+          ".......a........",
+          "......aca.......",
+          ".....acdaa......",
+          ".....acdca......",
+          "....acdcca......",
+          "....acdcca...a..",
+          "...acdcbca..aca.",
+          "...acdcbca.acdaa",
+          "..acdcbbcaacdcba",
+          "..acdcbbcbcdccba",
+          ".acdcbbbbcdcccba",
+          ".acdcbbbbbdcccba",
+          ".abccbbbbbbcccba",
+          "..aaaaaaaaaaaaa.",
+          "................",
+          "................"
+        ]
+      }
+    },
+    "weed_sprout": {
+      "solid": false,
+      "color": "#122017",
+      "source": "art/inbox/natural_weeds_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#122017","b":"#253e2d","c":"#47734a","d":"#7da66b","e":"#a1c98c"},
+        "pixels": [
+          "................",
+          "...aa....aa.....",
+          "..adea..adea....",
+          "..aedaeadeda....",
+          "...aadccaad.....",
+          ".....aca........",
+          ".....aca..aa....",
+          "....aada.adea...",
+          "...adea.aedea...",
+          "...aedaeaada....",
+          "....aadcca......",
+          "......aca.aa....",
+          ".....acdaaca....",
+          ".....abccbba....",
+          "......aaaaa.....",
+          "................"
+        ]
+      }
+    },
+    "weed_outline": {
+      "solid": false,
+      "color": "#122017",
+      "source": "art/inbox/natural_weeds_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#122017","b":"#253e2d","c":"#47734a","d":"#7da66b","e":"#a1c98c"},
+        "pixels": [
+          ".......aa.......",
+          "......adea......",
+          ".....aedea......",
+          "....adeaadaa....",
+          "...adea..adea...",
+          "..aedea..aedea..",
+          ".adeaaaaaadea...",
+          ".aedeadcdaedea..",
+          "..aaadcccaada...",
+          "....acdcccba....",
+          "...acdcccccba...",
+          "...acdcbbbbbba..",
+          "....abbbbbbbbba.",
+          ".....aaaaaaaaa..",
+          "................",
+          "................"
+        ]
+      }
+    },
+    "weed_mound": {
+      "solid": false,
+      "color": "#122017",
+      "source": "art/inbox/natural_weeds_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#122017","b":"#253e2d","c":"#47734a","d":"#7da66b","e":"#a1c98c"},
+        "pixels": [
+          "................",
+          "................",
+          "................",
+          "................",
+          "................",
+          ".......aa.......",
+          "......adea......",
+          "....aaaedea.....",
+          "...adeaaaadaa...",
+          "..aedea..aedea..",
+          ".adeaaaaaadea...",
+          "acdccccdccccdca.",
+          "acdcbbbbbbbbbcba",
+          "aaaaaaaaaaaaaaaa",
+          "................",
+          "................"
+        ]
+      }
+    },
+    "weed_eyes": {
+      "solid": false,
+      "color": "#122017",
+      "source": "art/inbox/natural_weeds_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#0a0716","b":"#122017","c":"#253e2d","d":"#47734a","e":"#b85a7a","f":"#7da66b","g":"#ffd88a","h":"#f4eef7"},
+        "pixels": [
+          ".....aa.........",
+          "....ahhea.......",
+          "....ahgha.......",
+          "....ahhea.......",
+          ".....aa.b.......",
+          "........bdb.....",
+          ".....aa.bdfb....",
+          "....ahhea.bdfb..",
+          "....ahgha.bdfcb.",
+          "....ahhea.bcdcb.",
+          "...b.aa..bcddccb",
+          "..bdb...bcddcccb",
+          ".bdfdbccccccccb.",
+          ".bcddccccccccb..",
+          "..bbbbbbbbbbb...",
+          "................"
+        ]
+      }
+    },
+    "deco_tuft": {
+      "solid": false,
+      "color": "#4f7a52",
+      "source": "art/inbox/nature_decorations_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#1c2e22","b":"#2f4a36","c":"#4f7a52","d":"#8fb37a"},
+        "pixels": [
+          "................",
+          "................",
+          "....d...d.......",
+          "...dcd.dcd......",
+          "...cbc.cbc..d...",
+          "..dcbcdcb.dcd...",
+          "..cbcbcbcdcb....",
+          ".dcbcabcabc.....",
+          ".cbcacabcbc.....",
+          ".bcbcabcabc.....",
+          "dcbcabcabcab....",
+          "bcbcabcabcab....",
+          "cbcabcabcabc....",
+          "bcabcabcabca....",
+          "aaaaaaaaaaaa....",
+          "................"
+        ]
+      }
+    },
+    "deco_tall_grass": {
+      "solid": false,
+      "color": "#4f7a52",
+      "source": "art/inbox/nature_decorations_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#1c2e22","b":"#2f4a36","c":"#4f7a52","d":"#8fb37a"},
+        "pixels": [
+          "......d.........",
+          ".....dcd........",
+          ".....cbc........",
+          "......bc........",
+          "......ac........",
+          ".....dca........",
+          "....dcb.........",
+          "....cbc.........",
+          "....aca.........",
+          "....bca...d.....",
+          "...dcba..dcd....",
+          "...cbca.dcb.....",
+          "...bca.dcb......",
+          "..dbca.cbc......",
+          "..aaaaaaaa......",
+          "................"
+        ]
+      }
+    },
+    "deco_sunflower": {
+      "solid": false,
+      "color": "#ffd88a",
+      "source": "art/inbox/nature_decorations_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#1c2e22","b":"#2f4a36","c":"#4f7a52","d":"#b85a7a","e":"#8fb37a","f":"#ffc2d6","g":"#ffd88a","h":"#fff4d6"},
+        "pixels": [
+          "................",
+          ".....g.g........",
+          "....ghghg.......",
+          "...ghdddhg......",
+          "...gdfffdg......",
+          "...gdfffdg......",
+          "...ghdddhg......",
+          "....ghghg.......",
+          ".....e.g........",
+          "....ece.........",
+          "....cbc.........",
+          "....aca.........",
+          "....bca.........",
+          "...ecbca........",
+          "...aaaaaa.......",
+          "................"
+        ]
+      }
+    },
+    "deco_eye_flower": {
+      "solid": false,
+      "color": "#1c2e22",
+      "source": "art/inbox/nature_decorations_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#1a1426","b":"#1c2e22","c":"#2f4a36","d":"#4f7a52","e":"#8fb37a","f":"#f4eef7"},
+        "pixels": [
+          "................",
+          "......bbb.......",
+          ".....bfffb......",
+          "....bffaffb.....",
+          "....bffaffb.....",
+          ".....bfffb......",
+          "......bbb.......",
+          ".......e........",
+          "......ede.......",
+          "......dcd.......",
+          "......cdb.......",
+          "....e.cdb.......",
+          "...edecdb.......",
+          "...dcdbcd.......",
+          "...bbbbbb.......",
+          "................"
+        ]
+      }
+    },
+    "deco_mossy_rock": {
+      "solid": true,
+      "color": "#4f7a52",
+      "source": "art/inbox/nature_decorations_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#3e3a48","b":"#6a6478","c":"#4f7a52","d":"#9a94aa"},
+        "pixels": [
+          "................",
+          "................",
+          ".....a.a........",
+          "....adaa........",
+          "...addaaa.......",
+          "..adddcaaa......",
+          "..addccccaa.....",
+          ".addcccccbaa....",
+          ".addcccccbbaa...",
+          ".adcccccccbbaa..",
+          ".accccccccbbba..",
+          ".acccccccccbbba.",
+          ".accccccccccbbb.",
+          "..abbbbbbbbbbb..",
+          "...bbbbbbbbbbb..",
+          "................"
+        ]
+      }
+    },
+    "deco_stump": {
+      "solid": true,
+      "color": "#2e211f",
+      "source": "art/inbox/nature_decorations_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#2e211f","b":"#4a3532","c":"#6a4c44","d":"#8f6a58"},
+        "pixels": [
+          "................",
+          "....dddd........",
+          "...dccccd.......",
+          "..dccbbccd......",
+          "..dcbaabccd.....",
+          "..dcccbbccd.....",
+          "...aaaaaaaa.....",
+          "...addda........",
+          "..adddddaa......",
+          "..acccccca......",
+          ".acccbcccca.....",
+          ".accbbabcca.....",
+          "accbbaaabbca....",
+          "aaaaaaaaaaaa....",
+          "................",
+          "................"
+        ]
+      }
+    },
+    "deco_mushrooms": {
+      "solid": false,
+      "color": "#3a1424",
+      "source": "art/inbox/nature_decorations_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#3a1424","b":"#b85a7a","c":"#ffc2d6","d":"#f4eef7"},
+        "pixels": [
+          "................",
+          ".....aaaa.......",
+          "....acbbca......",
+          "...acbbbbca.....",
+          "...acbbbbca.....",
+          "....aaaaaaaa....",
+          ".....adda.a.....",
+          ".....adda.a.a...",
+          ".....adda.ada...",
+          "....aadda.ada...",
+          "...acbbcaaadaa..",
+          "..acbbbbcadda...",
+          "..acbbbbcadda...",
+          "...aaaaaaadda...",
+          ".....aaaaaaaa...",
+          "................"
+        ]
+      }
+    },
+    "deco_vine": {
+      "solid": false,
+      "color": "#1c2e22",
+      "source": "art/inbox/nature_decorations_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#1c2e22","b":"#2f4a36","c":"#4f7a52","d":"#8fb37a"},
+        "pixels": [
+          "................",
+          "........d.......",
+          ".......dcd......",
+          ".......cbc......",
+          "........bc......",
+          "........a.......",
+          ".......a........",
+          "......a.........",
+          "......a.........",
+          "......a.........",
+          "......a.........",
+          ".......a........",
+          "........a.......",
+          "................",
+          "................",
+          "................"
+        ]
+      }
+    },
+    "deco_crystal": {
+      "solid": false,
+      "color": "#020a14",
+      "source": "art/inbox/nature_decorations_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#020a14","b":"#06243a","c":"#13606a","d":"#6fd1d9","e":"#bff6ff"},
+        "pixels": [
+          ".......a........",
+          "......aba.......",
+          ".....abcba......",
+          "....abcdcba.....",
+          "...abcdedcba....",
+          "...acdeeedca....",
+          "....adeeeda.....",
+          "....adeeeda.....",
+          "....acdeeda.....",
+          "....acdddca.....",
+          ".....acdca......",
+          ".....acdca......",
+          "......aca.......",
+          "......aba.......",
+          ".......a........",
+          "................"
+        ]
+      }
+    },
+    "deco_bush": {
+      "solid": false,
+      "color": "#4f7a52",
+      "source": "art/inbox/nature_decorations_preview.png",
+      "art": {
+        "palette": {".":null,"a":"#1c2e22","b":"#2f4a36","c":"#4f7a52","d":"#8fb37a","e":"#ffd88a"},
+        "pixels": [
+          "....e...........",
+          ".......e...e....",
+          "....dddd........",
+          "...dccccd..e....",
+          "..dccbcccd......",
+          "..dcbbabccd.....",
+          "..dcbaabccd.....",
+          ".dccbbabcccd....",
+          ".dcccbbccccd....",
+          "..dccccccccd....",
+          "...dcaaaacd.....",
+          "....aaaaaa......",
+          ".....acba.......",
+          ".....acba.......",
+          "....aaaaaa......",
+          "................"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "tiles": {
+    "wall_violet": { "solid": true, "color": "#3a2f55", "accent": "#5a4a80", "style": "brick" },
+    "floor_wood": { "color": "#4a3532", "accent": "#6a4c44", "style": "plank" },
+    "rug": { "color": "#5b2f4f", "accent": "#8a4a72", "style": "speckle" },
+    "bed": { "solid": true, "color": "#c9b6e4", "accent": "#efe6ff", "style": "plain" },
+    "night_stone": { "solid": true, "color": "#26243f", "accent": "#5d5a8a", "style": "topped" },
+    "night_stone_deep": { "solid": true, "color": "#1c1a30", "style": "speckle" },
+    "lamp": { "color": "#ffd88a", "accent": "#fff4d6", "style": "glow" },
+    "moss_flower": { "color": "#c7a6ff", "accent": "#fff1a8", "style": "flower" },
+    "coral_glass": { "solid": true, "color": "#1f3d55", "accent": "#6fd1d9", "style": "topped" },
+    "coral_glass_deep": { "solid": true, "color": "#152a3d", "accent": "#2d5a72", "style": "speckle" },
+    "grass": { "color": "#2f4a36", "accent": "#4f7a52", "style": "speckle" },
+    "flower_red": { "color": "#e0607a", "accent": "#ffe08a", "style": "flower" },
+    "flower_white": { "color": "#f2eefc", "accent": "#ffd36b", "style": "flower" },
+    "rock": { "solid": true, "color": "#6a6478", "accent": "#9a94aa", "style": "boulder" }
+  }
+}

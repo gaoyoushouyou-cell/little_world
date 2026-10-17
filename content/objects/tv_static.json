@@ -1,0 +1,12 @@
+{
+  "id": "tv_static",
+  "name": "砂嵐のテレビ",
+  "sprite": "tv_static",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

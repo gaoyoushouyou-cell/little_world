@@ -1,0 +1,12 @@
+{
+  "id": "piano",
+  "name": "ピアノ",
+  "sprite": "piano",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}
