@@ -14,6 +14,8 @@ npm run art -- scan <画像> [背景] [まとめる間隔]   # 原画の中の�
 npm run art -- build                              # import-manifest.json のとおりに原画を加工する
 npm run art -- preview <出力.png> [id...]         # 加工した結果を並べた確認用画像（出力は scratchpad に）
 npm run art -- crop <画像> x y 幅 高さ <出力.png> [倍率]  # 原画の一部を書き出して切り抜き範囲を決める
+npm run atlas                 # 開発の地図帳の解析 → planning/out/atlas.json。赤があれば終了コード 1（-- --watch で監視）
+npm run reachability          # 到達性チェック（atlas を 1 回走らせて赤があれば失敗）
 ```
 
 - 開発中の URL 引数：`?area=<id>&spawn=<名前>` で好きなエリアから始める、`?debug` でデバッグ表示（ゲーム中は ` キーで切り替え）
@@ -36,6 +38,11 @@ npm run art -- crop <画像> x y 幅 高さ <出力.png> [倍率]  # 原画の�
 - 依存パッケージは公開から2週間以上たった版を、版を固定して入れる
 - 16px タイル、内部解像度 480×270（仮）を整数倍に拡大
 - 公開は GitHub Pages（GitHub Actions）。作者エディタとローカル保存の口は公開版に含めない
+- 開発の地図帳（[14_dev_atlas.md](docs/design/14_dev_atlas.md)、決定 69〜77、P0 まで実装済み）：解析は `tools/atlas/`、表示と計画の編集は MindBloom（`python作品/1_mindmapapp`、`--atlas` で起動）を改造して行う。計画は `planning/`（公開版に含めない。生成物の `planning/out/` は git に入れない）。条件プラグインは段階4で作るとき、ゲーム中の判定と並べて地図帳用の正規化（`normalize()`）を持たせる
+  - 解析は `Content` をそのまま使うため、`tools/atlas/index.ts` が Vite のモジュールランナーで `run.ts` を読む（`import.meta.glob` を動かすため）。`index.ts` はほかの .ts を直接 import しない
+  - 検査は `tools/atlas/checks/<id>.ts` に 1 種類 1 ファイル（自動登録）。テストの架空の世界は `tests/atlas.test.ts` の `fakeWorld`
+  - `src/` から `planning/`・`tools/` を読み込まない（テストで確かめている）
+  - MindBloom の確かめ方：`processing-java --sketch=<MindBloom> --output=<scratchpad> --force --run --atlas --selftest=<出力>`（`--atlas-live` で解析の起動・停止も、`--atlas-repo=<フォルダ>` で別の atlas.json も）。Processing は `C:\3年春学期\マルチメディアデザイン\processing-4.2\processing-java.exe`
 
 ## 構成のルール
 
@@ -121,7 +128,7 @@ npm run art -- crop <画像> x y 幅 高さ <出力.png> [倍率]  # 原画の�
 4. `content/world/map.json` に配置し、既存エリアと端またはワープでつなぐ（視点・重力が違う境界は安全な出現位置を確認）
 5. そのエリアの日記ページ（実績）を 1〜3 枚作る
 6. かけらを足したら `effect_tree.json` との釣り合いを確認する
-7. **`tools/validate.ts` と `tools/reachability.ts` を実行し、通ってから報告する**
+7. **`npm test` と `npm run reachability` を実行し、通ってから報告する**（`tools/validate.ts` は段階2でできるまで `npm test` の content の検証が代わり）。地図帳の情報・黄の結果も見て、意図どおりか確かめる
 8. 組み込みブラウザで実際に歩いて確認する
 
 種（`content/seeds/`）を育てるときも同じ手順。種のメモと配置を尊重する。

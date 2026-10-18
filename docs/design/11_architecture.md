@@ -34,6 +34,7 @@
 │  │  ├─ entities.json           # 住人・物の配置
 │  │  ├─ events.json             # きっかけ → 動作
 │  │  ├─ fragments.json          # 夢のかけら
+│  │  ├─ toggles.json            # 切り替え（レバーなど。決定 73）
 │  │  └─ notes.md                # ユーザーが伝えた世界観を原文のまま保存
 │  ├─ objects/<id>.json          # エリアに置く物（スプライト・当たり判定）。置き場所は areas/<id>/entities.json
 │  ├─ effects/<id>.json          # エフェクトのデータ
@@ -90,10 +91,15 @@
 │
 ├─ tools/                        # 開発用ツール（Claude が毎回実行するもの）
 │  ├─ validate.ts                # 全 JSON のスキーマ検証、ID の重複・参照切れ、規則の枠の衝突
-│  ├─ reachability.ts            # 到達性チェック（詰み防止）
+│  ├─ reachability.ts            # 到達性チェック（詰み防止）。atlas の解析を呼び、赤があれば失敗する薄い入口
+│  ├─ atlas/                     # 開発の地図帳の解析（決定 69。graph / solver / nodes/<kind> / checks/<name>）
 │  ├─ import-art.ts              # art/ の原画を content/assets/ のデータに加工する（scan / build / preview。実装済み）
 │  ├─ preview.ts                 # ドット絵の JSON を PNG に書き出す
 │  └─ new-area.ts                # 新しいエリアの雛形を作る
+│
+├─ planning/                     # 開発の計画（決定 74。公開版に含めない）
+│  ├─ world_plan.json            #   計画ノード・作業・マイルストーン（MindBloom が書く）
+│  └─ out/atlas.json             #   解析の結果（生成物。git に入れない）
 │
 ├─ public/
 └─ .github/workflows/deploy.yml  # GitHub Pages への自動公開
@@ -111,7 +117,7 @@
     { "flag": "sat_in_red_room" },
     { "weight": { ">=": 20 } }                        // 沈みの重さ
 ] }
-// ほかに any / not / count / inArea / rule / item なども使える
+// ほかに any / not / count / inArea / rule / item / toggle なども使える
 ```
 
 新しい種類の条件は `src/plugins/conditions/` に1ファイル足すだけで、全部の仕組みから使えるようになる。

@@ -1,7 +1,7 @@
 import type { Content } from '../engine/content';
 import { TILE } from '../engine/constants';
 import { makeRng } from '../engine/rng';
-import { buildMosaic, MOSAIC, type Mosaic } from '../systems/mapview';
+import { areaMosaic, MOSAIC, type Mosaic } from '../systems/mapview';
 import { stageOf } from '../systems/bases';
 import type { SaveData } from '../systems/save';
 import { closeModal, openModal } from './modal';
@@ -26,12 +26,7 @@ export async function openMap(content: Content, save: SaveData, here: { area: st
     if (mosaicCache.has(id)) continue;
     const a = content.getLoaded(id);
     if (!a) continue;
-    const grids = a.def.layers
-      .map((l, i) => (l.type === 'tiles' ? (a.layerParams[i] as { id: string } | undefined)?.id : undefined))
-      .filter((g): g is string => !!g)
-      .map((g) => a.grids[g]!)
-      .filter(Boolean);
-    mosaicCache.set(id, buildMosaic(grids, (t) => content.tiles.get(t)?.color, a.def.size[0], a.def.size[1]));
+    mosaicCache.set(id, areaMosaic(a, (t) => content.tiles.get(t)?.color));
   }
 
   const placed = visited.map((id) => content.world.get(id)!);
