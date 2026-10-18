@@ -25,5 +25,6 @@ Claude Code とのチャットで世界観を受け取り、アセットとエ�
 | [11_architecture.md](11_architecture.md) | ファイル構成、プラグイン、条件の書き方、スキーマ、開発ツール |
 | [12_conflicts.md](12_conflicts.md) | 矛盾の一覧と解決 |
 | [13_open_questions_and_roadmap.md](13_open_questions_and_roadmap.md) | 未決事項と実装の段階 |
+| [14_dev_atlas.md](14_dev_atlas.md) | 開発の地図帳（決定 69〜74、未実装）。MindBloom を改造した、到達性・依存関係・進み具合の検査と可視化 |
 
 Claude Code が守る作業ルールはリポジトリ直下の [CLAUDE.md](../../CLAUDE.md) にある。

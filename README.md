@@ -32,6 +32,7 @@ npm run dev
 npm test           # テスト
 npm run typecheck  # 型検査
 npm run build      # 公開用ビルド
+npm run atlas      # 開発の地図帳の解析（到達できないエリア・戻れないエリアなどを検査）
 ```
 
 ゲームのデータはすべて `content/`（JSON）、コードは `src/`。

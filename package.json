@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "art": "node tools/import-art.ts"
+    "art": "node tools/import-art.ts",
+    "atlas": "node tools/atlas/index.ts",
+    "reachability": "node tools/reachability.ts"
   },
   "dependencies": {
     "phaser": "4.2.1",

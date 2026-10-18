@@ -1,4 +1,5 @@
 import type { TileGrid } from '../engine/tilegrid';
+import type { LoadedArea } from '../engine/content';
 
 /**
  * 地図のモザイク。エリアのタイルを 4×4 マスごとにまとめ、その範囲で一番多い色を1マスにする。
@@ -46,4 +47,14 @@ export function buildMosaic(grids: TileGrid[], colorOf: (tileId: string) => stri
     }
   }
   return { w: mw, h: mh, cells };
+}
+
+/** 読み込んだエリアのモザイク（tiles レイヤーを書いた順に重ねる）。地図の画面と地図帳の解析で共有する */
+export function areaMosaic(a: LoadedArea, colorOf: (tileId: string) => string | undefined): Mosaic {
+  const grids = a.def.layers
+    .map((l, i) => (l.type === 'tiles' ? (a.layerParams[i] as { id: string } | undefined)?.id : undefined))
+    .filter((g): g is string => !!g)
+    .map((g) => a.grids[g]!)
+    .filter(Boolean);
+  return buildMosaic(grids, colorOf, a.def.size[0], a.def.size[1]);
 }
