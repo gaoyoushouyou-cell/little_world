@@ -1,0 +1,47 @@
+{
+  "palette": {".":null,"a":"#090b1e","b":"#211334","c":"#192c42","d":"#660c6f","e":"#2f3654","f":"#22535f","g":"#4c5778","h":"#3a8081","i":"#5e8098","j":"#31a9aa","k":"#69a5ba","l":"#43eff1"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_q9ydn5q9ydn5q9yd (1).jpg"},
+  "animations": {
+    "idle": [
+      [
+        ".dggggb...........ddddddddd...........eggggd.",
+        ".igggggbbbbbbbbbbaggggggggebbbbbbbbbbagggggi.",
+        ".igggggaececeecccagggggggggaccceecccccgggggi.",
+        ".igggggeeeggggeeebgggggggggeeeggggggecgggggi.",
+        ".kiiiikkkkkeeeekkbeccccccceakekkkkkkkaiiiiid.",
+        ".aabbbabeeaabaeebaaaaeeecaeaaaaaaaaeeaaaaaaa.",
+        ".ebeeceedee..eb.gbbcllllleebe.gb..ebbceeeeae.",
+        ".ecaeacaeebcecccbcecllllleebccabccacecceaaae.",
+        ".eeeeeeeeeeeeeeeeacaiaaaabbeeeeeeeeeeeeeeeed.",
+        "..ecbac...b....b..bbbbbbbbb.......e..acebcb..",
+        "..ab.be....baabd..................bb.aeb.eb..",
+        "..ae.ee.............................baee.eg..",
+        "..aeebe..............................bebeeg..",
+        "..aed.e..............................ae.beg..",
+        "..aed.e..............................ae.eeb..",
+        "..aebbe..............................beebeb..",
+        "..ae.ee..............................bee.eb..",
+        "..ae.be..............................bee.eb..",
+        "..aebbe..............................beeeeb..",
+        "..aec.edehhhhhhceeeeeeeeeceeceeeeebhhae.eeb..",
+        "..aed.eceeeeeeeceeeeeeeeehceheeecefeeae.beb..",
+        "..aeedeeeeheeccjeeeeeeeeeeeeceeeeecccaebeeb..",
+        "..aeaaeaffceeceeeeeeeeeeeeeeeeeeehchhaeeaea..",
+        "baaeeaegeeeeehhhhhheeeeeeehhhhhhfeeeegebeeabd",
+        "babeeeegeflccccccceceeeeeceeeceeeejeegeeeeaba",
+        "baaeecegeeeeeeeeeeheceehcefeeeeeeeeeegeeeeaba",
+        "baceeeegeeeeeeeeeeeheheheheeeeeeeeeeegeeeeaba",
+        "baceeeegcfhhhhhhheeheheheheehhhhhhhhageeeeabb",
+        "cgggggggceeeeeeeeheheheheheheeeeeeeecgaggggab",
+        "ceeeleeecccccehfeechehehehceeeheccccceeeleeab",
+        "beeaebeeeeeeefehlechehehehcelfeheeeeeaeeaebeb",
+        "baaaaaaaeeeeeecelechehehehcelefeeeeecaaaaaaae",
+        "geeeeaaaeeeeelecfechehehehcehceleeeeeaageggge",
+        ".....bhhhhhhccecfechehehehcehcecchhhhhhd.....",
+        "......deeeeeececfechehehehcehceceeeeeed......",
+        ".......deeeeececfehfeceheccehceceeeeed......."
+      ]
+    ]
+  }
+}

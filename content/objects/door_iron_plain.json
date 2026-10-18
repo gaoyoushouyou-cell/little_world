@@ -1,0 +1,12 @@
+{
+  "id": "door_iron_plain",
+  "name": "鍵穴のない鉄の扉",
+  "sprite": "door_iron_plain",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

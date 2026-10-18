@@ -1,0 +1,7 @@
+{
+  "id": "glass_sand",
+  "name": "ガラスの砂",
+  "icon": "item_glass_sand",
+  "weight": 2,
+  "maxStack": 99
+}

@@ -1,0 +1,9 @@
+{
+  "id": "lamp_post",
+  "name": "柱の短い街灯",
+  "icon": "lamp_post",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "lamp_post"
+}

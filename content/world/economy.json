@@ -1,0 +1,16 @@
+{
+  "pocketSlots": 12,
+  "storageSlots": [
+    24,
+    36,
+    48,
+    60
+  ],
+  "baseCostGrowth": 1.6,
+  "starter": [
+    {
+      "item": "chest_small",
+      "count": 2
+    }
+  ]
+}

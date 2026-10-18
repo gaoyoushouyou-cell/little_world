@@ -1,0 +1,7 @@
+{
+  "id": "sf_warp_ring",
+  "name": "ワープの輪",
+  "sprite": "sf_warp_ring",
+  "collision": {},
+  "provisional": true
+}

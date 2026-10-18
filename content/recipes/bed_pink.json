@@ -1,0 +1,18 @@
+{
+  "id": "bed_pink",
+  "output": {
+    "item": "bed_pink",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "planks",
+      "count": 6
+    },
+    {
+      "item": "fiber",
+      "count": 6
+    }
+  ],
+  "station": "workbench"
+}

@@ -134,3 +134,269 @@ body {
 .issues code {
   color: var(--ui-dim);
 }
+
+/* ---- 画面（一覧・倉庫・地図）。開いている間はゲームが止まる ---- */
+
+.modal {
+  position: absolute;
+  pointer-events: auto;
+  background: var(--ui-bg);
+  border: 1px solid var(--ui-line);
+  box-shadow: 0 0 0 calc(var(--z) * 1px) #000;
+  padding: calc(var(--z) * 4px) calc(var(--z) * 6px);
+  font-size: calc(var(--z) * 6px);
+}
+
+.modal h2 {
+  margin: 0 0 calc(var(--z) * 2px);
+  font-size: 1.15em;
+  letter-spacing: 0.1em;
+}
+
+.modal h3 {
+  margin: 0 0 calc(var(--z) * 2px);
+  font-size: 0.9em;
+  font-weight: normal;
+  color: var(--ui-dim);
+}
+
+.modal .sub,
+.modal .hint {
+  margin: 0;
+  color: var(--ui-dim);
+  font-size: 0.8em;
+}
+
+.modal .hint {
+  margin-top: calc(var(--z) * 3px);
+}
+
+.modal.menu {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 46%;
+  max-width: 80%;
+}
+
+.modal.menu ul {
+  list-style: none;
+  margin: calc(var(--z) * 2px) 0;
+  padding: 0;
+}
+
+.modal.menu li {
+  padding: calc(var(--z) * 1px) calc(var(--z) * 3px);
+  cursor: pointer;
+}
+
+.modal.menu li.selected {
+  background: var(--ui-line);
+}
+
+.modal.menu li.selected::before {
+  content: '▶ ';
+}
+
+.modal.menu li.disabled {
+  color: var(--ui-dim);
+  opacity: 0.6;
+}
+
+.modal .detail {
+  border-top: 1px solid var(--ui-line);
+  padding-top: calc(var(--z) * 2px);
+  font-size: 0.85em;
+}
+
+.modal .detail p {
+  margin: 0;
+}
+
+.modal .detail p.lack {
+  color: var(--ui-error);
+}
+
+.modal.storage {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal.storage .panels {
+  display: flex;
+  gap: calc(var(--z) * 8px);
+  align-items: flex-start;
+}
+
+.modal.storage .grid {
+  display: grid;
+  grid-template-columns: repeat(6, calc(var(--z) * 20px));
+  gap: calc(var(--z) * 1px);
+}
+
+.modal.storage .cell {
+  position: relative;
+  width: calc(var(--z) * 20px);
+  height: calc(var(--z) * 20px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--ui-line);
+  cursor: pointer;
+}
+
+.modal.storage .cell.selected {
+  border-color: var(--ui-fg);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.modal.storage .cell img {
+  position: absolute;
+  left: calc(var(--z) * 2px);
+  top: calc(var(--z) * 1px);
+  width: calc(var(--z) * 16px);
+  height: calc(var(--z) * 16px);
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.modal.storage .cell .count {
+  position: absolute;
+  right: 1px;
+  bottom: 0;
+  font-size: 0.8em;
+  text-shadow: 0 0 2px #000, 0 0 2px #000;
+}
+
+.modal.storage .cell .quality {
+  position: absolute;
+  left: 1px;
+  top: 0;
+  font-size: 0.6em;
+  color: var(--ui-warn);
+  text-shadow: 0 0 2px #000;
+}
+
+.modal.storage .info {
+  margin: calc(var(--z) * 2px) 0 0;
+  min-height: 1.4em;
+}
+
+.modal.storage button {
+  font: inherit;
+  font-size: 0.85em;
+  color: var(--ui-fg);
+  background: var(--ui-line);
+  border: 1px solid var(--ui-dim);
+  padding: 0 calc(var(--z) * 3px);
+  cursor: pointer;
+}
+
+.modal.map {
+  inset: 0;
+  padding: 0;
+  border: none;
+  background: #000;
+}
+
+.modal.map canvas {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+
+.toasts {
+  position: absolute;
+  left: calc(var(--z) * 4px);
+  bottom: calc(var(--z) * 24px);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--z) * 1px);
+}
+
+.toast {
+  padding: 0 calc(var(--z) * 3px);
+  background: var(--ui-bg);
+  border: 1px solid var(--ui-line);
+  font-size: calc(var(--z) * 5px);
+  transition: opacity 0.6s;
+}
+
+.toast.fade {
+  opacity: 0;
+}
+
+/* 建築モードの帯（決定 52） */
+.buildbar {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--z) * 3px);
+  transform: translateX(-50%);
+  padding: calc(var(--z) * 2px) calc(var(--z) * 4px);
+  background: var(--ui-bg);
+  border: 1px solid var(--ui-line);
+  max-width: 96%;
+}
+
+.buildbar.top {
+  top: calc(var(--z) * 3px);
+  bottom: auto;
+}
+
+.buildbar .items {
+  display: flex;
+  gap: calc(var(--z) * 1px);
+  min-height: calc(var(--z) * 20px);
+  overflow: hidden;
+}
+
+.buildbar .cell {
+  position: relative;
+  flex: none;
+  width: calc(var(--z) * 20px);
+  height: calc(var(--z) * 20px);
+  border: 1px solid var(--ui-line);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.buildbar .cell.selected {
+  border-color: var(--ui-fg);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.buildbar .cell img {
+  position: absolute;
+  inset: calc(var(--z) * 1px);
+  width: calc(var(--z) * 18px - 2px);
+  height: calc(var(--z) * 18px - 2px);
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.buildbar .cell .count {
+  position: absolute;
+  right: 1px;
+  bottom: 0;
+  font-size: 0.8em;
+  text-shadow: 0 0 2px #000, 0 0 2px #000;
+}
+
+.buildbar .empty {
+  margin: 0;
+  color: var(--ui-dim);
+  align-self: center;
+}
+
+.buildbar .status {
+  margin: calc(var(--z) * 1px) 0 0;
+  min-height: 1.4em;
+}
+
+.buildbar .status.ng {
+  color: var(--ui-error);
+}
+
+.buildbar .hint {
+  margin: 0;
+  color: var(--ui-dim);
+  font-size: 0.85em;
+}

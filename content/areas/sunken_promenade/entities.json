@@ -10,5 +10,6 @@
   {"object":"bench_rust","at":[52,23],"flipX":true},
   {"object":"statue_weeping","at":[63,19]},
   {"object":"tree_willow","at":[76,23]},
-  {"object":"door_eye","at":[84,23]}
+  {"object":"door_eye","at":[84,23]},
+  {"object":"base_core","at":[38,23]}
 ]

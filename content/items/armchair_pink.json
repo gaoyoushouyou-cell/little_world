@@ -1,0 +1,9 @@
+{
+  "id": "armchair_pink",
+  "name": "桃色の椅子",
+  "icon": "armchair_pink",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "armchair_pink"
+}

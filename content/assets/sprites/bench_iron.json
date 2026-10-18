@@ -1,0 +1,33 @@
+{
+  "palette": {".":null,"a":"#030306","b":"#101219","c":"#21252d","d":"#313842","e":"#3e4a57","f":"#495564","g":"#62707f","h":"#828c97","i":"#adb0b1","j":"#bcbcbd"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/6.png"},
+  "animations": {
+    "idle": [
+      [
+        "..............ba.....",
+        "...........aabjf.....",
+        ".........abiffff.....",
+        "......hghhfeffbe.....",
+        "....abhhfeeebjee.....",
+        "..caefffeebeeeee.....",
+        "ahgeeefajeeeeaaa.....",
+        "aceeeaffeeea..agga...",
+        "aabifeffca.jaggggaga.",
+        "geffeea..agggggcgggga",
+        "gdfaa.jcggggbgggggdfa",
+        ".aa.agggggagggghfffa.",
+        ".aagggghgggggaffaaac.",
+        ".ddggagggggaffaa..ad.",
+        ".aeahgggbfffajajjjada",
+        ".aaaedbfffajjjjjjjaba",
+        ".caabafajjjjjjjjjjja.",
+        "acajjaajjjjjjjjjj....",
+        "aaaiiaajjjjjjj.......",
+        ".jiiiadjjjjj.........",
+        "...iiabaj............",
+        ".....aa.............."
+      ]
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "door_double_uneven",
+  "name": "高さの違う両開きの扉",
+  "sprite": "door_double_uneven",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

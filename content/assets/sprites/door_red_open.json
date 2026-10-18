@@ -1,0 +1,51 @@
+{
+  "palette": {".":null,"a":"#17040d","b":"#2e0924","c":"#4b0248","d":"#552121","e":"#412a2b","f":"#692b28","g":"#533a35","h":"#80286c","i":"#60463f","j":"#89352e","k":"#6b5146","l":"#a15146"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_vwtoaxvwtoaxvwto.jpg"},
+  "animations": {
+    "idle": [
+      [
+        "...............ala..................",
+        ".............bllld..................",
+        "...........alllddd..................",
+        ".........cllldddblb.................",
+        ".......alllddd.djjlla...............",
+        ".....blllddda..djjjjllb.............",
+        "...clllddd.....djjjjjjlla...........",
+        "...ffddd.......djjjdjjjjlla.........",
+        "...jjda........dejjfjjjjjjll........",
+        "...jjd.........djjjjjjddjjfd........",
+        "...jjd.........djjjjjjfjjdfd........",
+        "...jjd.........djjjjjjfjjjjd........",
+        "...jjd.........djjjjjjfjjjjd........",
+        "...jjd.........djjjjjjfjjjjd........",
+        "...jjd.........djjjjjjfjjjjd........",
+        "...jjd.........djjjjjjfjjjjd........",
+        "...jjd.........djjljfjfjjjjd........",
+        "...jjd.........djjjjljfjjjjd........",
+        "...jjd.........djjjjjjjfjjjd........",
+        "...jjd.........djjjjjjjjjfjd........",
+        "...jjd.........djjjdjjjjjjjda.......",
+        "...jjd.........djjjjfjjjjkeda.......",
+        "...jjd.........djjjjjjjdjkeda.......",
+        "...jjd.........djjjjjjjjffid........",
+        "...jjd.........dbjjjjjfjjffd........",
+        "...jjd.........dbjjjjjfjjfjd........",
+        "...jjd.......hhdjjjjjjfjjjjd........",
+        "...jjd....hgkkkdjjfjjjfjjjjd........",
+        "...jjdakkkkkkkedjjlfjjfjjjjda.......",
+        "...jjdakkkkkkkeajjjjljfjjjjdbbbc....",
+        "...jjdkkkkkkkeeeeajjjjffjjjdbbbbb...",
+        "..kjjdkkkkkeeeekkiaajjjjffjdbbbbbbb.",
+        ".ikjjdkkkeeeekkkkkkkafjjjjjdbbbbbbb.",
+        "..kjfdaeeeekkkkkkkkkkkaajjjdbbbbb...",
+        ".iifjdeeekkkkkkkkkkkkkkkaajdbbb.....",
+        "iikajdekkkkkkkkkkkkkkkkkh.bab.......",
+        ".igigggkkggkkkkkkkkkkkk.............",
+        "..gigggkkkkkkkkkkkkkkk..............",
+        ".....iigkkgkikkkkkk.................",
+        "............hikkki.h................"
+      ]
+    ]
+  }
+}

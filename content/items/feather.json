@@ -1,0 +1,7 @@
+{
+  "id": "feather",
+  "name": "灰色の羽根",
+  "icon": "item_feather",
+  "weight": 1,
+  "maxStack": 99
+}

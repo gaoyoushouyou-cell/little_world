@@ -1,0 +1,12 @@
+{
+  "id": "streetlamp_double",
+  "name": "二灯の街灯",
+  "sprite": "streetlamp_double",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "tree_moss_giant",
+  "name": "苔むした大木",
+  "sprite": "tree_moss_giant",
+  "collision": {
+    "top": [
+      3,
+      1
+    ]
+  },
+  "provisional": false
+}

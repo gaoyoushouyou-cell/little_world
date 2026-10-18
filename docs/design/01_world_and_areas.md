@@ -73,18 +73,40 @@
 ```jsonc
 "layers": [
   { "type": "gradient",  "colors": ["#0b0a1f", "#3a1d4f"], "scroll": 0 },
-  { "type": "image",     "asset": "far_jellyfish_city", "scroll": 0.1, "autoScroll": [0.05, 0] },
-  { "type": "image",     "asset": "mid_coral_towers", "scroll": 0.4 },
+  { "type": "image",     "image": "backgrounds/far_jellyfish_city", "scroll": 0.1, "scale": 2, "autoScroll": [3, 0] },
+  { "type": "image",     "image": "backgrounds/mid_coral_towers", "scroll": 0.4, "scale": 2 },
   { "type": "tiles",     "id": "ground", "collide": true },
   { "type": "tiles",     "id": "deco" },
   { "type": "particles", "preset": "rising_bubbles" },
-  { "type": "image",     "asset": "near_kelp", "scroll": 1.3, "alpha": 0.7 },
+  { "type": "image",     "image": "backgrounds/near_kelp", "scroll": 1.3, "alpha": 0.7 },
   { "type": "fog",       "color": "#000", "density": 0.3 }
 ]
 ```
 
 - レイヤーの種類はプラグイン（`src/plugins/layers/`）で増やせる
 - 巨大な遠景はなるべく手続き生成（グラデーション、ノイズ、繰り返し模様）にして画像を小さく保つ
+
+### 画像レイヤー `image`（決定 45〜49）
+
+ユーザーの原画から作った PNG（`content/assets/images/`）を描く。
+
+| パラメータ | 意味 | 既定 |
+|---|---|---|
+| `image` | `content/assets/images/` からのパス（拡張子なし。manifest の `images` の id） | 必須 |
+| `scroll` | パララックスの係数（0 = 画面に固定、1 = 地面と同じ速さ） | 0.3 |
+| `baseline`・`offsetY` | 縦の位置。影絵（`silhouette`）と同じ決まりで、カメラが一番下のとき絵の下端がエリアの高さ × `baseline` に来る | 1・0 |
+| `repeatX` | 横に繰り返す（左右がつながる絵だけ） | true |
+| `x` | 繰り返さないときの左端（画面の px、カメラが左端のとき） | 0 |
+| `scale` | 整数倍で拡大する | 1 |
+| `autoScroll`・`alpha` | ひとりでに流れる速さ（px/秒、横だけ）・不透明度 | [0, 0]・1 |
+
+- **読み込み**：レイヤーの種類が使う画像を申告し（`images(params)`）、`tiles.json` と同じく、エリアに入るとき（今いるエリアと隣のエリアの分）に Content がまとめて読む（決定 45）
+- **mood**：PNG の中の色（16 色以内）をそのままパレットとして集めておき、スプライトと同じように mood で差し替える（決定 46。差し替え自体は mood の実装と一緒に作る）
+- **縦の位置**は影絵と同じ `baseline` の決まり（決定 47）
+- **原寸で書き出し、`scale` で拡大**する（決定 48）。原画の 1 ドットが 2px になるような書き出しはしない
+- 最後の `tiles` レイヤーより後ろに書いた画像は前景（プレイヤーより手前）
+- 検証：画像があること、色が 16 色以内で半透明のドットがないこと、`repeatX` の絵の幅が 16 の倍数であること
+- **描画の検証**（`src/engine/rendercheck.ts`）：レイヤーの種類が「画面のどのドットがどの色になるはずか」を描画とは別に計算し（`expect`）、実際に描かれた画面と1ドットずつ比べる。開発中にブラウザのコンソールで `__lw.checkRender()` を実行する
 
 ## エリアのつながり
 

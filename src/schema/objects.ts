@@ -21,6 +21,12 @@ export const ObjectDef = z.strictObject({
     .default({}),
   /** 当たり判定がユーザーに確認されていない仮のものなら true */
   provisional: z.boolean().default(false),
+  /** 建築モードでしまえる（決定 54）。しまうと item の家具が持ち物に入る */
+  movable: z.boolean().default(false),
+  /** しまったときに入る家具の持ち物（省略すると物と同じ ID） */
+  item: Id.optional(),
+  /** 近くで「調べる」と起きること（src/plugins/interactions/<type>.ts） */
+  interact: z.looseObject({ type: Id, label: z.string().optional() }).optional(),
   note: z.string().optional(),
 });
 export type ObjectDef = z.infer<typeof ObjectDef>;

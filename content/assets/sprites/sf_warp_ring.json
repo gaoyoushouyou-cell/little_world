@@ -1,0 +1,43 @@
+{
+  "palette": {".":null,"a":"#0b0b22","b":"#1e1b39","c":"#5b1069","d":"#2b2e4e","e":"#13486a","f":"#393f62","g":"#4b5276","h":"#146f89","i":"#656a91","j":"#3599b2","k":"#7e90b5","l":"#5bc7dd"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_q9ydn5q9ydn5q9yd (1).jpg"},
+  "animations": {
+    "idle": [
+      [
+        ".............ikkki.............",
+        "............aifgfib............",
+        ".........ggaafggggbbgg.........",
+        ".......cfbdaagbkkgbafdgb.......",
+        ".....igddabbdgbbbgibbdfdgk.....",
+        "...dgfgbbkgdddbbbgadgbadgfi....",
+        "...fggfdibdlhgddddeefgiafggi...",
+        "...bfddgaehdbiggdgbeeebgbfgb...",
+        "...dfdgaehbgb.....fgbeeagadf...",
+        "..gcakaeebb.........fbhfbbdcg..",
+        "..gdafdebb...........fdhffadf..",
+        ".acagbedf.............dehaiadc.",
+        ".aaafdhbb.............bbedgaab.",
+        "giiaaefg...............geefaiib",
+        "gffaahdg...............gdjaaffg",
+        "ggfddldb...............adlbddgg",
+        "ggffdlbb...............adjbafgg",
+        "gffddjdb...............adlbafgg",
+        "ddddaefg...............gdeadddb",
+        ".ddaffef..............abeegafd.",
+        ".acafdebi.............gdedfadb.",
+        "..bbadeebb...........ibeegabd..",
+        "..diafblfai.........ibejdgacd..",
+        "...ddafdjfbib.....bgbdhdfafd...",
+        "...ddbafdhfdbiigiiddhedfbfad...",
+        "...dffaafdeeeifffiehfbfabffd...",
+        "...bbffaaffbdbakaddbigbbffdc...",
+        "....bbfddabffdafafffaadbfd.....",
+        ".....b.dbcdaabacaddabcdb.......",
+        "........cddbadadadaadd.........",
+        "...........badafadaa...........",
+        ".............dbdbd............."
+      ]
+    ]
+  }
+}

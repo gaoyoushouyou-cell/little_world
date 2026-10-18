@@ -1,0 +1,9 @@
+{
+  "id": "dresser",
+  "name": "引き出し",
+  "icon": "dresser",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "dresser"
+}

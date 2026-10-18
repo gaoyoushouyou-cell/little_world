@@ -1,0 +1,29 @@
+{
+  "palette": {".":null,"a":"#06051a","b":"#420643","c":"#151e41","d":"#272c62","e":"#074a5d","f":"#364180","g":"#157c9f","h":"#5e61b8","i":"#4f8ebd","j":"#69aad9","k":"#42ee79","l":"#48e1f4"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_q9ydn5q9ydn5q9yd (3).jpg"},
+  "animations": {
+    "idle": [
+      [
+        ".ajaaaaaaaaaaaaaaaaaaaia....",
+        "affjiclllllfffffffflllgcj...",
+        "dccdfjcffflfflfffffffgffajb.",
+        "dcccdllajjjljjjjjjljjljjjcl.",
+        "dccccdlahhhlhhhlhhlhhhhhhcla",
+        "adaccfjaddddfddfddfdfgddddha",
+        "dddacfhhddddldhhhhhaldddddha",
+        "acdadfhhdddddakcccckddddddha",
+        "dcddffhhhhhhhhceeeckhhhhhhha",
+        "dcdccdlllllllccekkekllllllla",
+        "dcdlcdhhcccadccekkekcacccaha",
+        "dcgdcdhhdddfdcceeeckdlddddha",
+        "dccdcdhhddldddckkkkcldlffdha",
+        "aacdcdhhddllddfdddlgdlleddha",
+        ".fadcdhhdddddddlddddddddddha",
+        "..dcddhhdddddddfddddddldddha",
+        "...aadhhhhhhhhhhhhhhhhhhhcha",
+        "....afdcccccccccccccccccccd."
+      ]
+    ]
+  }
+}

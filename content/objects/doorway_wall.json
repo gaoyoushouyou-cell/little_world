@@ -1,0 +1,7 @@
+{
+  "id": "doorway_wall",
+  "name": "壁の出入口",
+  "sprite": "doorway_wall",
+  "collision": {},
+  "provisional": true
+}

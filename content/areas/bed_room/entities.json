@@ -16,5 +16,6 @@
   {"object":"desk_small","at":[12,12]},
   {"object":"armchair_pink","at":[14,12]},
   {"object":"table_face","at":[16,12]},
-  {"object":"stool_pink","at":[1,12]}
+  {"object":"stool_pink","at":[1,12]},
+  {"object":"chest","at":[4,12]}
 ]

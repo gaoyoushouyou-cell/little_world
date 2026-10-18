@@ -1,8 +1,11 @@
 /// <reference types="node" />
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import pngjs from 'pngjs';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { Content, type LoadedArea } from '../src/engine/content';
+import type { ImageDecoder } from '../src/engine/images';
 import { TILE } from '../src/engine/constants';
 import { stepBody, type Body, type StepInput, type StepParams } from '../src/engine/physics';
 import { checkEdge, placeArrival, stepParamsFor, type Arrival } from '../src/engine/travel';
@@ -14,8 +17,17 @@ import { makeSolidQuery } from '../src/engine/world';
 
 let content: Content;
 
+/** テストではブラウザの代わりに、PNG をファイルから読む（URL は "/content/assets/images/…png"） */
+const root = fileURLToPath(new URL('..', import.meta.url));
+const decodePngFile: ImageDecoder = async (url) => {
+  const path = url.split('?')[0]!;
+  const file = path.startsWith('/@fs/') ? path.slice(4) : join(root, path);
+  const png = pngjs.PNG.sync.read(readFileSync(file));
+  return { width: png.width, height: png.height, data: new Uint8Array(png.data) };
+};
+
 beforeAll(async () => {
-  content = new Content();
+  content = new Content({ decodeImage: decodePngFile });
   for (const id of content.areas.keys()) await content.loadArea(id);
 });
 
@@ -74,6 +86,16 @@ class Walker {
     return [Math.floor((this.body.x + this.body.w / 2) / TILE), Math.floor((this.body.y + this.body.h / 2) / TILE)];
   }
 }
+
+describe('画像', () => {
+  it('レイヤーが使う画像を、エリアと一緒に読み込んでいる', () => {
+    for (const [id, area] of content.areas) {
+      for (const layer of area.layers) {
+        if (layer.type === 'image') expect(content.images.has(String(layer.image)), `${id}: ${String(layer.image)}`).toBe(true);
+      }
+    }
+  });
+});
 
 describe('エリアをまたぐ移動', () => {
   it('寝室（見下ろし）の東の出口から、沈んだ遊歩道（横）の床の上に出る', () => {

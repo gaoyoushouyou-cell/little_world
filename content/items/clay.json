@@ -1,0 +1,7 @@
+{
+  "id": "clay",
+  "name": "粘土",
+  "icon": "item_clay",
+  "weight": 2,
+  "maxStack": 99
+}

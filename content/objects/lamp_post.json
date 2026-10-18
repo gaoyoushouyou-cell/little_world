@@ -1,0 +1,12 @@
+{
+  "id": "lamp_post",
+  "name": "柱の短い街灯",
+  "sprite": "lamp_post",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

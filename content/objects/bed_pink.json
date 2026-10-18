@@ -8,5 +8,9 @@
       2
     ]
   },
-  "provisional": true
+  "provisional": true,
+  "interact": {
+    "type": "bed",
+    "label": "眠る"
+  }
 }

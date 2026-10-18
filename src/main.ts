@@ -2,7 +2,9 @@ import Phaser from 'phaser';
 import { Content } from './engine/content';
 import { VIEW_H, VIEW_W } from './engine/constants';
 import { AreaScene, type AreaSceneData } from './scenes/AreaScene';
+import { SaveStore } from './systems/save';
 import { showIssues } from './ui/overlay';
+import { createUi } from './ui/ui';
 
 /** 画面に収まる最大の整数倍 */
 function fitZoom(): number {
@@ -22,7 +24,7 @@ function applyZoom(zoom: number, game?: Phaser.Game): void {
  * 開発中は ?area=<id>（&spawn=<名前>）で好きなエリアから始められ、
  * ファイルを保存して再読み込みされたときは直前の位置に戻る。
  */
-function resolveStart(content: Content): AreaSceneData {
+function resolveStart(content: Content, save: SaveStore): AreaSceneData {
   const params = new URLSearchParams(location.search);
   const areaParam = params.get('area');
   if (areaParam && content.areas.has(areaParam)) {
@@ -37,6 +39,10 @@ function resolveStart(content: Content): AreaSceneData {
       return { areaId: saved.areaId, arrival: { kind: 'restore', at: { x: saved.x, y: saved.y } } };
     }
   }
+  // 最後に眠った場所から始める
+  const r = save.data.respawn;
+  const tile = r && content.world.get(r.area) ? ('tile' in r ? r.tile : content.areas.get(r.area)?.spawns[r.spawn]) : undefined;
+  if (r && tile) return { areaId: r.area, arrival: { kind: 'tile', tile } };
   const { start } = content.map;
   return { areaId: start.area, arrival: { kind: 'tile', tile: content.areas.get(start.area)!.spawns[start.spawn]! } };
 }
@@ -50,7 +56,14 @@ async function boot(): Promise<void> {
     return;
   }
 
-  const start = resolveStart(content);
+  let storage: Storage | null = null;
+  try {
+    storage = window.localStorage;
+  } catch {
+    storage = null;
+  }
+  const save = new SaveStore(storage, content.economy.pocketSlots);
+  const start = resolveStart(content, save);
   try {
     await content.loadWithNeighbors(start.areaId);
   } catch (e) {
@@ -72,6 +85,8 @@ async function boot(): Promise<void> {
     scale: { mode: Phaser.Scale.NONE, zoom: fitZoom() },
   });
   game.registry.set('content', content);
+  game.registry.set('save', save);
+  game.registry.set('ui', createUi(content));
   game.registry.set('debug', new URLSearchParams(location.search).has('debug'));
   game.scene.add('area', AreaScene, true, start);
 

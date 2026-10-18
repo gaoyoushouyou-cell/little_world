@@ -1,0 +1,22 @@
+{
+  "id": "lamp_post",
+  "output": {
+    "item": "lamp_post",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "rock",
+      "count": 4
+    },
+    {
+      "item": "coal",
+      "count": 1
+    },
+    {
+      "item": "crystal",
+      "count": 1
+    }
+  ],
+  "station": "workbench"
+}

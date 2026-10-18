@@ -1,0 +1,12 @@
+{
+  "id": "sf_server_racks_a",
+  "name": "サーバーラック",
+  "sprite": "sf_server_racks_a",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

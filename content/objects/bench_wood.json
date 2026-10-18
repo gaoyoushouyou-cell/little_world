@@ -1,0 +1,12 @@
+{
+  "id": "bench_wood",
+  "name": "木のベンチ",
+  "sprite": "bench_wood",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": false
+}

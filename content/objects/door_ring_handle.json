@@ -1,0 +1,12 @@
+{
+  "id": "door_ring_handle",
+  "name": "取手の大きな扉",
+  "sprite": "door_ring_handle",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

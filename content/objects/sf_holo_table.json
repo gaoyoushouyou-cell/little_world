@@ -1,0 +1,12 @@
+{
+  "id": "sf_holo_table",
+  "name": "ホログラムの台",
+  "sprite": "sf_holo_table",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

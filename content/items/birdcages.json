@@ -1,0 +1,9 @@
+{
+  "id": "birdcages",
+  "name": "重なった鳥かご",
+  "icon": "birdcages",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "birdcages"
+}

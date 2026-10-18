@@ -1,0 +1,9 @@
+{
+  "id": "glass_cabinet",
+  "name": "硝子の戸棚",
+  "icon": "glass_cabinet",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "glass_cabinet"
+}

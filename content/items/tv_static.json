@@ -1,0 +1,9 @@
+{
+  "id": "tv_static",
+  "name": "砂嵐のテレビ",
+  "icon": "tv_static",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "tv_static"
+}

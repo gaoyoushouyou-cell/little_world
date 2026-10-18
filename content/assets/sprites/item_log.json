@@ -1,0 +1,27 @@
+{
+  "palette": {".":null,"a":"#360823","b":"#4e2b0f","c":"#7b216a","d":"#714521","e":"#b47d3b","f":"#dba761","g":"#f0e8f6"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Designer.jpeg"},
+  "animations": {
+    "idle": [
+      [
+        "................",
+        "................",
+        "................",
+        ".g..............",
+        ".......cffffa...",
+        ".....afefffffec.",
+        ".....dfeeefeefb.",
+        ".....dfffffefbb.",
+        ".....bbdffffdbb.",
+        ".....bbdddbbbab.",
+        ".....dbddddbbbb.",
+        ".....addbddbbba.",
+        "......bddbdbba..",
+        "........abba....",
+        "................",
+        "................"
+      ]
+    ]
+  }
+}

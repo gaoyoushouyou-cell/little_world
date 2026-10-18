@@ -1,0 +1,12 @@
+{
+  "id": "sf_battery_09",
+  "name": "大きな電池",
+  "sprite": "sf_battery_09",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

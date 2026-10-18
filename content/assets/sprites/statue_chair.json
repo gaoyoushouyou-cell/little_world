@@ -1,0 +1,43 @@
+{
+  "palette": {".":null,"a":"#050104","b":"#160a11","c":"#380336","d":"#221819","e":"#302526","f":"#403432","g":"#6d216b","h":"#504440","i":"#685b53","j":"#7d6f62","k":"#8d8173","l":"#9d9181"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_xv1u3xxv1u3xxv1u.jpg"},
+  "animations": {
+    "idle": [
+      [
+        "..............aaa............................",
+        ".............ahlla...........................",
+        ".aab...cdaaaaadhlla..........................",
+        "ahllaaalllfifhhdjja..........................",
+        "ahllklllffffjjjdjja..........................",
+        "ahljjbjjjjjfjjjdjja..........................",
+        "ahljjdjjjjjfjjjdjja..........................",
+        "adljjdjjjjhjjjjdjla..............aaa.........",
+        "ahljjdjjjjhjjjjdjla.............allja........",
+        "ahdjjdjjjjjjjjjdjla...........bjjllhl........",
+        "ahejjdhjjjjjjjjdjja...........ajkhhlh........",
+        "ahejjdjfjjjjjjjdffa...........ajjhlla........",
+        "ahejijjhjjjjjjhdikkacc........ahfkkla........",
+        "ahejjjjjjjjjjjhdheillla.......fadkkhb........",
+        "ahefffjjejjjjhhdhhdflllab.....ahhhkj.........",
+        "ahdllleddjjjjhedhhdhdfllla...ahjhddda........",
+        "ahdifllllbbddjjjiddhhhdjja..alllkkkhl........",
+        "ahhdhhflllkdlllliiihhhdda...alihkkklea.......",
+        "ahhfddhfellllllllliibhdha...albikkklfa.......",
+        ".ahheeedhljjbllhllllhddja..ailbiihkldhaag....",
+        "ahhhhehhddddllllffejjddfa..ailbhhjhdlldlhb...",
+        "ahhhhehhhhhhllffjjjjdedia..alhbhjhdlllhhla...",
+        "adhhhehhhjjjdfjjkddhbhdia..alabhhdljllleha...",
+        "ahhhdhhhhhjjdbdhhhjhbhdja..jlhhkhkjejlldka...",
+        "afhdhhhhhkjjdhhhjjjjbheja.cjjahjjjjhdllhklc..",
+        "aedhhhhhhhjjdhhjjjjjbheja.cjjahhjjhhjlhlkla..",
+        "cdehhhhhhejjdjjjjjjibheha.bljaahjjhhdillila..",
+        ".caehhhhhkhjjjjjjjaa.aa..biaia.ahhhaaillhha..",
+        "...aahhhhkhjjjjhaa.......aa.a...aaa.celfhhi..",
+        ".....aehhjkhdaa.....................bhfkdhkk.",
+        ".......afjai.........................hkkkaaa.",
+        ".........a.............................aaa..."
+      ]
+    ]
+  }
+}

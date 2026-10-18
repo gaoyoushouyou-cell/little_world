@@ -1,0 +1,7 @@
+{
+  "id": "birds_flock",
+  "name": "鳥の群れ",
+  "sprite": "birds_flock",
+  "collision": {},
+  "provisional": true
+}

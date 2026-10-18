@@ -1,0 +1,7 @@
+{
+  "id": "scales",
+  "name": "魚の鱗",
+  "icon": "item_scales",
+  "weight": 1,
+  "maxStack": 99
+}

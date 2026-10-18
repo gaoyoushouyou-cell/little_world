@@ -1,0 +1,12 @@
+{
+  "id": "streetlamp_hanging",
+  "name": "吊り下げの街灯",
+  "sprite": "streetlamp_hanging",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": false
+}

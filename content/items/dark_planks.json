@@ -1,0 +1,7 @@
+{
+  "id": "dark_planks",
+  "name": "黒い板",
+  "icon": "item_dark_planks",
+  "weight": 2,
+  "maxStack": 99
+}

@@ -1,0 +1,7 @@
+{
+  "id": "doorway_dark",
+  "name": "暗い出入口",
+  "sprite": "doorway_dark",
+  "collision": {},
+  "provisional": true
+}

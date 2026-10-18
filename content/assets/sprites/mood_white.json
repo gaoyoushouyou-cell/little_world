@@ -1,0 +1,23 @@
+{
+  "palette": {".":null,"a":"#252425","b":"#e2d9c4","c":"#e5dac8"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Designer (16).png"},
+  "animations": {
+    "idle": [
+      [
+        "...aaaaaa...",
+        "..aabbbcaa..",
+        ".aabcbcbbaa.",
+        ".abbcbcccba.",
+        "acbccaacccca",
+        "acccaaaaccca",
+        "acccaaaabcca",
+        "aaccbcacbcaa",
+        ".abcbcbcbca.",
+        ".aacbcccbaa.",
+        "..aabccbaa..",
+        "...aaaaaa..."
+      ]
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "pebbles",
+  "name": "小石",
+  "icon": "item_pebbles",
+  "weight": 2,
+  "maxStack": 99
+}

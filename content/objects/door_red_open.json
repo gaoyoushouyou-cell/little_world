@@ -1,0 +1,12 @@
+{
+  "id": "door_red_open",
+  "name": "開いた赤い扉",
+  "sprite": "door_red_open",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

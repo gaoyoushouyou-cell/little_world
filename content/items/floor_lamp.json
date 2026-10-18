@@ -1,0 +1,9 @@
+{
+  "id": "floor_lamp",
+  "name": "床置きの灯り",
+  "icon": "floor_lamp",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "floor_lamp"
+}

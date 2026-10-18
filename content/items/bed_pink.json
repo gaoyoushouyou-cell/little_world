@@ -1,0 +1,9 @@
+{
+  "id": "bed_pink",
+  "name": "桃色のベッド",
+  "icon": "bed_pink",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "bed_pink"
+}

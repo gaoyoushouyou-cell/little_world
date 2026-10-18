@@ -1,0 +1,24 @@
+{
+  "area": "bed_room",
+  "initial": true,
+  "spawn": "start",
+  "stages": [
+    {
+      "stage": 2,
+      "cost": [
+        {
+          "item": "log",
+          "count": 6
+        },
+        {
+          "item": "rock",
+          "count": 4
+        },
+        {
+          "item": "sap",
+          "count": 2
+        }
+      ]
+    }
+  ]
+}

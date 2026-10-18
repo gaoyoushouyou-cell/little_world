@@ -1,0 +1,27 @@
+{
+  "palette": {".":null,"a":"#170a2d","b":"#232a4b","c":"#353f5e","d":"#3f5c7f","e":"#1f99ca","f":"#7084a4","g":"#6dcfeb"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_q9ydn5q9ydn5q9yd (1).jpg"},
+  "animations": {
+    "idle": [
+      [
+        "................",
+        ".....aaaaa......",
+        "....afcccba.....",
+        "...afcbbbdff....",
+        "...abfffffaa....",
+        "...acacacabd....",
+        "...acgccccbd....",
+        "...abgccccbd....",
+        "...abgccccbd....",
+        "...acgccccbd....",
+        "...abgeeeeee....",
+        "...aegeeeeee....",
+        "...acgggggba....",
+        "....abbbbbb.....",
+        ".....accca......",
+        "................"
+      ]
+    ]
+  }
+}

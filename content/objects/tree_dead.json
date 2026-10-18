@@ -1,0 +1,12 @@
+{
+  "id": "tree_dead",
+  "name": "枯れ木",
+  "sprite": "tree_dead",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": false
+}

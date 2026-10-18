@@ -1,0 +1,9 @@
+{
+  "id": "bookshelf",
+  "name": "本棚",
+  "icon": "bookshelf",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "bookshelf"
+}

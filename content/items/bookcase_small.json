@@ -1,0 +1,9 @@
+{
+  "id": "bookcase_small",
+  "name": "小さな本棚",
+  "icon": "bookcase_small",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "bookcase_small"
+}

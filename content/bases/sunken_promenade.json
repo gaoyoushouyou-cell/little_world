@@ -1,0 +1,40 @@
+{
+  "area": "sunken_promenade",
+  "spawn": "core",
+  "stages": [
+    {
+      "stage": 1,
+      "cost": [
+        {
+          "item": "log",
+          "count": 6
+        },
+        {
+          "item": "pebbles",
+          "count": 6
+        },
+        {
+          "item": "fiber",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "cost": [
+        {
+          "item": "rock",
+          "count": 6
+        },
+        {
+          "item": "clay",
+          "count": 4
+        },
+        {
+          "item": "crystal",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

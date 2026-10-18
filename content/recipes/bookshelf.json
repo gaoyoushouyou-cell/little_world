@@ -1,0 +1,18 @@
+{
+  "id": "bookshelf",
+  "output": {
+    "item": "bookshelf",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "planks",
+      "count": 8
+    },
+    {
+      "item": "fiber",
+      "count": 2
+    }
+  ],
+  "station": "workbench"
+}

@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { Id, IntPair, Vec2 } from './common';
+import { Gather } from './economy';
 
 export const View = z.enum(['side', 'top']);
 export type View = z.infer<typeof View>;
@@ -64,8 +65,10 @@ export const Area = z.strictObject({
   exits: z.array(Exit).default([]),
   /** 名前付きの出現位置（タイル座標） */
   spawns: z.record(Id, IntPair).default({}),
-  /** true なら揺らぎ区域（入るたびに作り直す。段階7で使う） */
+  /** true なら揺らぎ区域（入るたびに作り直す） */
   resetOnEnter: z.boolean().default(false),
+  /** 揺らぎ区域で入るたびに散らばる素材 */
+  gather: Gather.optional(),
   basable: z.boolean().default(false),
 });
 export type Area = z.infer<typeof Area>;

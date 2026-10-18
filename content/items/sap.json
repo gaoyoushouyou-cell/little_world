@@ -1,0 +1,7 @@
+{
+  "id": "sap",
+  "name": "樹液",
+  "icon": "item_sap",
+  "weight": 1,
+  "maxStack": 99
+}

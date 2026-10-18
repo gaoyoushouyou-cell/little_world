@@ -1,0 +1,12 @@
+{
+  "id": "sf_door_c",
+  "name": "大きな自動扉",
+  "sprite": "sf_door_c",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

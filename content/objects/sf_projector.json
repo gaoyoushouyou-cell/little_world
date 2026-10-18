@@ -1,0 +1,12 @@
+{
+  "id": "sf_projector",
+  "name": "光を投げる台",
+  "sprite": "sf_projector",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

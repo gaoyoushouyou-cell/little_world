@@ -1,0 +1,12 @@
+{
+  "id": "bench_oneleg",
+  "name": "片脚のベンチ",
+  "sprite": "bench_oneleg",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": false
+}

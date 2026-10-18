@@ -1,0 +1,27 @@
+{
+  "palette": {".":null,"a":"#07091f","b":"#2b3646","c":"#374455","d":"#4f5f71","e":"#758a9e"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_ofnavsofnavsofna.jpg"},
+  "animations": {
+    "idle": [
+      [
+        "................",
+        "................",
+        "................",
+        ".......aa.......",
+        "......adda......",
+        ".....addbbb.....",
+        "....adedbbbba...",
+        "...addddbbbbba..",
+        "..addddddbbbbba.",
+        ".abbdbdbbbbbbbb.",
+        "..abdbcbbbcbba..",
+        "..a.aaabbba..a..",
+        "...aa......aa...",
+        "................",
+        "................",
+        "................"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "planks",
+  "name": "板",
+  "icon": "item_planks",
+  "weight": 2,
+  "maxStack": 99
+}

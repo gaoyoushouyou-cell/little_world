@@ -1,0 +1,7 @@
+{
+  "id": "sand",
+  "name": "砂",
+  "icon": "item_sand",
+  "weight": 2,
+  "maxStack": 99
+}

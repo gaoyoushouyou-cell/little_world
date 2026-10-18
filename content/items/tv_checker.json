@@ -1,0 +1,9 @@
+{
+  "id": "tv_checker",
+  "name": "市松模様のテレビ",
+  "icon": "tv_checker",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "tv_checker"
+}

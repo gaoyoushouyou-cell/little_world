@@ -1,0 +1,7 @@
+{
+  "id": "branch",
+  "name": "枝",
+  "icon": "item_branch",
+  "weight": 1,
+  "maxStack": 99
+}

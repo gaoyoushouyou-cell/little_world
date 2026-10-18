@@ -1,0 +1,23 @@
+{
+  "palette": {".":null,"a":"#490104","b":"#89181b"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_7z29vn7z29vn7z29.jpg"},
+  "animations": {
+    "idle": [
+      [
+        "..aaa...aaa..",
+        ".abbba.abbba.",
+        "abbbbbabbbbba",
+        "abbbbbbbbbbba",
+        "abbbbbbbbbbba",
+        "abbbbbbbbbbba",
+        ".abbbbbbbbba.",
+        "..abbbbbbba..",
+        "...abbbbba...",
+        "....abbba....",
+        ".....aba.....",
+        "......a......"
+      ]
+    ]
+  }
+}

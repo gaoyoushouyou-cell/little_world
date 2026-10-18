@@ -1,0 +1,7 @@
+{
+  "id": "night_dew",
+  "name": "夜露",
+  "icon": "item_night_dew",
+  "weight": 1,
+  "maxStack": 99
+}

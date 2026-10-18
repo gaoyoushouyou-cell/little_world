@@ -1,0 +1,12 @@
+{
+  "id": "bench_iron",
+  "name": "鉄のベンチ",
+  "sprite": "bench_iron",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": false
+}

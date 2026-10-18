@@ -1,0 +1,9 @@
+{
+  "id": "wardrobe_small",
+  "name": "小さな衣装棚",
+  "icon": "wardrobe_small",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "wardrobe_small"
+}

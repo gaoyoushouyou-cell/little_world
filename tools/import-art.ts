@@ -10,8 +10,8 @@
  * 背景の指定：magenta（#FF00FF とその近く）/ alpha（透明）/ none / #rrggbb（その色の近く）/ auto
  * art/ の中のファイルは読むだけで、書き換えない。
  */
-import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
-import { basename, join } from 'node:path';
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'node:fs';
+import { basename, dirname, join } from 'node:path';
 import pngjs from 'pngjs';
 import jpeg from 'jpeg-js';
 
@@ -80,6 +80,24 @@ function mask(img: Img, test: BgTest): Uint8Array {
     m[i] = test(img.data[o]!, img.data[o + 1]!, img.data[o + 2]!, img.data[o + 3]!) ? 0 : 1;
   }
   return m;
+}
+
+/** 背景に接していて、マゼンタ寄り（赤と青が緑より強く、赤と青が近い）のドットを背景にする */
+function removeFringe(img: Img, m: Uint8Array, passes: number): void {
+  for (let pass = 0; pass < passes; pass++) {
+    const drop: number[] = [];
+    for (let y = 0; y < img.h; y++) {
+      for (let x = 0; x < img.w; x++) {
+        const i = y * img.w + x;
+        if (!m[i]) continue;
+        const touches = (x > 0 && !m[i - 1]) || (x < img.w - 1 && !m[i + 1]) || (y > 0 && !m[i - img.w]) || (y < img.h - 1 && !m[i + img.w]);
+        if (!touches) continue;
+        const r = img.data[i * 4]!, g = img.data[i * 4 + 1]!, b = img.data[i * 4 + 2]!;
+        if (r > g + 25 && b > g + 25 && Math.abs(r - b) < 60) drop.push(i);
+      }
+    }
+    for (const i of drop) m[i] = 0;
+  }
 }
 
 // ---- scan：物の範囲と1ドットの大きさ ---------------------------------------
@@ -280,9 +298,28 @@ interface Entry {
   height?: number;
   /** 元画像の何 px を1ドットにするか */
   scale?: number;
+  /** 縦横比を保ったまま、この大きさ [幅, 高さ] に収める */
+  fit?: [number, number];
+  /** 出来上がりをこの大きさのキャンバスの中央・下寄せに置く（アイコンを 16×16 にそろえるなど） */
+  pad?: [number, number];
   colors?: number;
   /** スプライトの1コマあたりのステップ数（60 = 1秒） */
   frameSteps?: number;
+  /**
+   * コマごとに切り詰めて、それぞれを高さ height（ドット）に縮める。描かれた大きさがコマごとに違う原画用。
+   * scale を書いたときは縮尺をそろえたまま、コマごとに切り詰めるだけにする（ポーズで高さが変わる絵や、コマの間が狭い絵）。
+   * 出来上がりは一番大きいコマに合わせ、足元と左右の中央をそろえる
+   */
+  normalize?: boolean;
+  /**
+   * 背景との境目に残った、マゼンタが混ざった色のドットを背景にする（true = 2 周、数字 = 周の数）。
+   * 紫やピンクの物にかけると縁が削れるので、にじみが目立つ絵にだけ使う
+   */
+  defringe?: boolean | number;
+  /** normalize のとき、アニメーションごとの高さ（ドット）。書かないアニメーションは height */
+  heights?: Record<string, number>;
+  /** （内部用）normalize のときのコマごとの高さ */
+  frameHeights?: number[];
   /** タイルだけ */
   solid?: boolean;
   note?: string;
@@ -291,6 +328,8 @@ interface Entry {
 interface Manifest {
   tilesets: { out: string; items: Entry[] }[];
   sprites: Entry[];
+  /** 大きい絵（背景・日記の挿絵・UI）。id は content/assets/images/ からのパス（拡張子なし。例 "backgrounds/promenade_far"） */
+  images?: Entry[];
 }
 
 interface Converted {
@@ -303,6 +342,7 @@ function convert(e: Entry, isTile: boolean): Converted {
   const img = loadImage(e.source);
   const test = bgTest(img, e.bg ?? (isTile ? 'none' : 'auto'), e.bgTolerance);
   const m = mask(img, test);
+  if (e.defringe) removeFringe(img, m, e.defringe === true ? 2 : e.defringe);
   const crops = e.frames ?? [e.crop ?? [0, 0, img.w, img.h]];
   const trim = e.trim ?? !isTile;
 
@@ -322,7 +362,7 @@ function convert(e: Entry, isTile: boolean): Converted {
     }
     return x1 < x0 ? { x: cx, y: cy, w: cw, h: ch } : { x: x0, y: y0, w: x1 - x0 + 1, h: y1 - y0 + 1 };
   });
-  if (regions.length > 1) {
+  if (regions.length > 1 && !e.normalize) {
     // 足元（下端）と左右の中央をそろえて、一番大きい枠に広げる
     const W = Math.max(...regions.map((r) => r.w));
     const H = Math.max(...regions.map((r) => r.h));
@@ -336,7 +376,7 @@ function convert(e: Entry, isTile: boolean): Converted {
   const r0 = regions[0]!;
   let [tw, th] = e.size ?? [0, 0];
   if (!e.size) {
-    const s = e.scale ?? (e.height ? r0.h / e.height : 1);
+    const s = e.scale ?? (e.fit ? Math.max(r0.w / e.fit[0], r0.h / e.fit[1]) : e.height ? r0.h / e.height : 1);
     tw = Math.max(1, Math.round(r0.w / s));
     th = Math.max(1, Math.round(r0.h / s));
   }
@@ -355,8 +395,18 @@ function convert(e: Entry, isTile: boolean): Converted {
   }
   const centers = kmeans(samples, e.colors ?? (isTile ? 8 : 16));
 
+  // コマごとの出来上がりの大きさ（normalize ならコマごとに縦横比から決める）
+  const sizes = regions.map((r, i): [number, number] => {
+    if (!e.normalize) return [tw, th];
+    // scale があれば縮尺はそのまま（ポーズで高さが変わるコマ用）、なければコマごとに高さをそろえる
+    if (e.scale) return [Math.max(1, Math.round(r.w / e.scale)), Math.max(1, Math.round(r.h / e.scale))];
+    const h = e.frameHeights?.[i] || e.height || th;
+    return [Math.max(1, Math.round((r.w * h) / r.h)), h];
+  });
+
   const used = new Map<number, number>();
-  const labelFrames = regions.map((r) => {
+  const labelFrames = regions.map((r, i) => {
+    const [tw, th] = sizes[i]!;
     const sx = r.w / tw;
     const sy = r.h / th;
     const rows: number[][] = [];
@@ -415,7 +465,31 @@ function convert(e: Entry, isTile: boolean): Converted {
   const hex = (c: number[]) => `#${c.map((v) => v.toString(16).padStart(2, '0')).join('')}`;
   const palette: Record<string, string | null> = { '.': null };
   for (const l of order) palette[charOf.get(l)!] = hex(centers[l]!);
-  const frames = labelFrames.map((rows) => rows.map((row) => row.map((l) => (l < 0 ? '.' : charOf.get(l)!)).join('')));
+  let frames = labelFrames.map((rows) => rows.map((row) => row.map((l) => (l < 0 ? '.' : charOf.get(l)!)).join('')));
+  if (e.normalize) {
+    // 一番大きいコマに合わせて、足元（下端）と左右の中央をそろえる
+    tw = Math.max(...sizes.map(([w]) => w));
+    th = Math.max(...sizes.map(([, h]) => h));
+    frames = frames.map((rows, i) => {
+      const [w, h] = sizes[i]!;
+      const left = Math.floor((tw - w) / 2);
+      return [
+        ...Array.from({ length: th - h }, () => '.'.repeat(tw)),
+        ...rows.map((r) => '.'.repeat(left) + r + '.'.repeat(tw - w - left)),
+      ];
+    });
+  }
+  if (e.pad) {
+    const [pw, ph] = e.pad;
+    if (tw > pw || th > ph) throw new Error(`${e.id}: ${tw}x${th} は pad ${pw}x${ph} に収まらない`);
+    const left = Math.floor((pw - tw) / 2);
+    const top = ph - th - Math.floor((ph - th) / 2);
+    frames = frames.map((rows) => [
+      ...Array.from({ length: top }, () => '.'.repeat(pw)),
+      ...rows.map((r) => '.'.repeat(left) + r + '.'.repeat(pw - tw - left)),
+      ...Array.from({ length: ph - th - top }, () => '.'.repeat(pw)),
+    ]);
+  }
   const top = [...used.entries()].sort((a, b) => b[1] - a[1])[0];
   return { palette, frames, mostCommon: top ? hex(centers[top[0]]!) : '#000000' };
 }
@@ -448,7 +522,8 @@ function build(): void {
       ? Object.entries(e.animations)
       : [['idle', e.frames ?? (e.crop ? [e.crop] : [])]];
     const flat = anims.flatMap(([, crops]) => crops);
-    const c = convert({ ...e, frames: flat.length ? flat : undefined }, false);
+    const frameHeights = e.normalize ? anims.flatMap(([name, crops]) => crops.map(() => e.heights?.[name] ?? e.height ?? 0)) : undefined;
+    const c = convert({ ...e, frames: flat.length ? flat : undefined, frameHeights }, false);
     const w = c.frames[0]![0]!.length;
     const h = c.frames[0]!.length;
     const frameJson = (rows: string[]) => `      [\n${rows.map((r) => `        "${r}"`).join(',\n')}\n      ]`;
@@ -461,6 +536,22 @@ function build(): void {
     const text = `{\n  "palette": ${JSON.stringify(c.palette)},\n  "frameSteps": ${e.frameSteps ?? 12},\n  "source": ${JSON.stringify(source)},\n  "animations": {\n${animJson.join(',\n')}\n  }\n}\n`;
     writeFileSync(join(ROOT, `content/assets/sprites/${e.id}.json`), text);
     console.log(`sprite ${e.id}  ${w}x${h}  ${anims.map(([n, cr]) => `${n}:${cr.length || 1}`).join(' ')}  ${Object.keys(c.palette).length - 1} 色`);
+  }
+  // 大きい絵は、色数を整えて原寸（1ドット = 1px）の PNG にする
+  for (const e of manifest.images ?? []) {
+    const c = convert({ ...e, trim: e.trim ?? false }, false);
+    const rows = c.frames[0]!;
+    const out: Img = { w: rows[0]!.length, h: rows.length, data: new Uint8Array(rows[0]!.length * rows.length * 4) };
+    rows.forEach((row, y) =>
+      [...row].forEach((ch, x) => {
+        const col = c.palette[ch];
+        if (col) out.data.set([...hexRgb(col), 255], (y * out.w + x) * 4);
+      }),
+    );
+    const path = join(ROOT, `content/assets/images/${e.id}.png`);
+    mkdirSync(dirname(path), { recursive: true });
+    savePng(path, out);
+    console.log(`image  ${e.id}  ${out.w}x${out.h}  ${Object.keys(c.palette).length - 1} 色`);
   }
 }
 

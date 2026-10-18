@@ -1,0 +1,9 @@
+{
+  "id": "bed_frame",
+  "name": "額のかかったベッド",
+  "icon": "bed_frame",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "bed_frame"
+}

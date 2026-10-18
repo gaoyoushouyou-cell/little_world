@@ -1,0 +1,63 @@
+{
+  "palette": {".":null,"a":"#302331","b":"#332535","c":"#4a3e4b","d":"#625863","e":"#a59ca5","f":"#e7e1e7"},
+  "frameSteps": 20,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_3v5zk93v5zk93v5z.jpg"},
+  "animations": {
+    "idle": [
+      [
+        "aaabaabbaaaaabbbbbbaaaaaaaaaaaaa",
+        "aaaaaaaabbaafaabbbafabbbaaaaaaaa",
+        "aaaaaaaabbfaaaaabbaaaabbaaaaaaaa",
+        "baaaaaaaaaaabaaaaaaaaabaaaaaaaaa",
+        "baaaaaaaaaaabaaaaabaaabaaaaaaaaa",
+        "baaaaaaaafaaaabddbaaaaeaaaaaaaaa",
+        "aaaaaaabbaaaaadbbdaaaaabbbaaaaaa",
+        "aaaaaaabfaaaaacaadaaaaadabbaaaaa",
+        "aaaaaaaafaaabbaddaabbaafaaaaaaaa",
+        "aaaaaaaaaaaaaadddcaaaaaaaaaaaaaa",
+        "aaaaaaaaaaaaaaddddaaaaaaaaaaaaaa",
+        "baaaaaaaaababaaabaaaaaaaaaaaaaaa",
+        "aaaaaaaaaaaabaaaaabaaeaaaaaaaaaa",
+        "aaaaaaaaaafaaaaaaaaafaabaaaaaaaa",
+        "baaaaaaaabaafaaaaaafbbaaaaaaaaaa",
+        "aaaaaaaaaaaaaaaefbbaaaaaaaaaaaaa"
+      ],
+      [
+        "baaaaaaaaaaaadbffacaaaaaaaaaaaaa",
+        "aaaaaaaaaabafaaaaaafbbaaaaaaaaba",
+        "aaaaaaaaaafabaaaaaaafaaaaaaaaaaa",
+        "aaaaaaaaaaaabbbaaaabaebaaaaaaaaa",
+        "aaaaaaaaaaaaabaaaaaabbbaaaaaaaaa",
+        "baaaaaaaaaaaaadddaaaaaaaaaaaaaaa",
+        "aaaaaaaaaaaaaadaadaaaaaaaaaaaaaa",
+        "aaaaaaaafaaaaaaddbaaaaafaaaaaaaa",
+        "aaaaaaabdaaaaaaddaaaaaadaaaaaaaa",
+        "aaaaaaaaaaaaaaddddaaaaaaaaaaaaaa",
+        "baaaaaaaafaaaaddddbaaafaaaaaaaaa",
+        "aaaaaaaaaaabaaaaaaaaaaaaaaaaaaaa",
+        "aaaaaaaaadaaaaaaaaaaaeaaaaaaaaaa",
+        "aaaaaaaaabfaaaaaaaaaaabaaaaaaaaa",
+        "aaaaaaaaabbafaaaaaafaaaaaaaaaaba",
+        "aaaaaaaaaaaaaaaffbaaaaaaaaaabaab"
+      ],
+      [
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "baaaabaaabaaeaaabaadaaaaaaaaaaaa",
+        "aaaaaaaabbaaaaaaaaaaaaaaaaaaaaaa",
+        "aaaaaaaabdbbaaaaaaaaadbaaaaaaaaa",
+        "aaaaaaaaacaaaaaaaaaaaaaaaaaaaaaa",
+        "baaaaaaaaaaaabaddaaaaaeaaaaaaaaa",
+        "aaaaaaaacaaaaadaacaaaaaaaaaaaaaa",
+        "aaaaaabbbaaaaadaadaaaabdaaaaaaaa",
+        "aaaaaaaafaaaaaaddaaaaaaeaaaaaaaa",
+        "aaaaaaaaaaaaaaadddaaaaaaaaaaaaaa",
+        "aaaaaaaaaaaaaaddddaaaaaaaaaaaaaa",
+        "baaaaaaaaabaaaaaaaaaaaaaaaaaaaaa",
+        "aaaaaaaabdbaaaaaaaaaadaaaaaaaaaa",
+        "aaaaaaabbbeaaaaaaaaaaeaaaaaaaaaa",
+        "baaaaaaabaaacaaaaaacbaaaaaaaaaaa",
+        "baaaaabbbaaaacbfcbdaaaaaaaaaaaba"
+      ]
+    ]
+  }
+}

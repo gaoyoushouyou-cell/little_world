@@ -1,0 +1,22 @@
+{
+  "id": "floor_lamp",
+  "output": {
+    "item": "floor_lamp",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "branch",
+      "count": 2
+    },
+    {
+      "item": "sap",
+      "count": 1
+    },
+    {
+      "item": "crystal",
+      "count": 1
+    }
+  ],
+  "station": "workbench"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "chest_small",
+  "name": "小さな箱",
+  "icon": "chest",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "chest_small",
+  "note": "拠点に置ける箱（中身 18 マス）。中身が空のときだけしまえる"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "clock_thin",
+  "name": "細い柱時計",
+  "icon": "clock_thin",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "clock_thin"
+}

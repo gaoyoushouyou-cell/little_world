@@ -1,0 +1,22 @@
+{
+  "id": "glass_cabinet",
+  "output": {
+    "item": "glass_cabinet",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "planks",
+      "count": 4
+    },
+    {
+      "item": "sand",
+      "count": 4
+    },
+    {
+      "item": "crystal",
+      "count": 1
+    }
+  ],
+  "station": "workbench"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "sf_console_large",
+  "name": "大きな操作卓",
+  "sprite": "sf_console_large",
+  "collision": {
+    "top": [
+      3,
+      1
+    ]
+  },
+  "provisional": true
+}

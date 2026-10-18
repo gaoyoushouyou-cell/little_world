@@ -1,0 +1,7 @@
+{
+  "id": "rust",
+  "name": "錆のかけら",
+  "icon": "item_rust",
+  "weight": 2,
+  "maxStack": 99
+}

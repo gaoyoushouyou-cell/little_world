@@ -1,0 +1,12 @@
+{
+  "id": "sf_crystal_tree",
+  "name": "結晶の木",
+  "sprite": "sf_crystal_tree",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

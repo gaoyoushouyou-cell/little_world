@@ -1,0 +1,12 @@
+{
+  "id": "mood_switcher",
+  "name": "mood の切り替え装置",
+  "sprite": "mood_switcher",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

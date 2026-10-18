@@ -1,0 +1,680 @@
+{
+  "tiles": {
+    "night_block_tl": {
+      "solid": true,
+      "color": "#211e35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e35","b":"#372e50","c":"#4e426d","d":"#73649a","e":"#77699e","f":"#9787bf"},
+        "pixels": [
+          "afffffffffffffff",
+          "feeeeeeeeeeeddde",
+          "feeeeddddeeeeedc",
+          "feeeeecccccccccc",
+          "fdddecaaaaaaaaaa",
+          "fdddcaabbbbabbbb",
+          "feeccaabbbbbbbbb",
+          "fdeccabbbbbbbbbb",
+          "fddccabbbbbbbbbb",
+          "fdddcabbbbaaaaaa",
+          "feddcabbbaaaaaaa",
+          "fddccabbbbaaaaaa",
+          "fddccabbbbaaaaaa",
+          "feedcabbbbaaaaaa",
+          "fdddcabbbbaaaaaa",
+          "fdeccabbbbaaaaaa"
+        ]
+      }
+    },
+    "night_block_t_a": {
+      "solid": true,
+      "color": "#211e35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e35","b":"#382f51","c":"#50436f","d":"#75679d","e":"#9080b8"},
+        "pixels": [
+          "ddddddddddddddee",
+          "dddddddddddddddd",
+          "dddddddddddddddd",
+          "cceccccccccccccc",
+          "aaaaaaaabbbbbaaa",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbab",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa"
+        ]
+      }
+    },
+    "night_block_t_b": {
+      "solid": true,
+      "color": "#211f35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#1f1c33","b":"#211f35","c":"#382e50","d":"#514370","e":"#76679d","f":"#9282ba"},
+        "pixels": [
+          "eeeeeeeeeeeeeeff",
+          "eeeeeeeeeeeeeeee",
+          "eeeeeeeeeeeeeeee",
+          "ddfddddddddddddd",
+          "bbbbbbbbcccccbbb",
+          "cccccccccccccccc",
+          "cccccccccccccccc",
+          "cccccccccccccccc",
+          "ccccccccccccccac",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb"
+        ]
+      }
+    },
+    "night_block_tr": {
+      "solid": true,
+      "color": "#372e50",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#1c1833","b":"#211f35","c":"#372e50","d":"#4f426d","e":"#76679d","f":"#9788bf"},
+        "pixels": [
+          "fffffffffffffffa",
+          "eeeeeeeeeeeeeeef",
+          "eeeeeeeeeeeeeeef",
+          "ddddddddddeeeeef",
+          "bbbbbbbbbbdeeeef",
+          "cccccccccbbdeeef",
+          "ccccccccccbddeef",
+          "ccccccccccbddeef",
+          "ccccccccccbddeef",
+          "bbbbbbccccbdeeef",
+          "bbbbbbccccbdeeef",
+          "bbbbbbccccbddeef",
+          "bbbbbbccccbddeef",
+          "bbbbbbccccbdeeef",
+          "bbbbbbccccbdeeef",
+          "bbbbbbccccbddeef"
+        ]
+      }
+    },
+    "night_block_l": {
+      "solid": true,
+      "color": "#201e35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#201e35","b":"#211f33","c":"#362e4f","d":"#534573","e":"#8074a7"},
+        "pixels": [
+          "abbbbbbbaacaddde",
+          "aaaabbbbabcaddde",
+          "bbbabbbaaacaddde",
+          "bbbbbaaaaacaddde",
+          "abbbbaaabacaddde",
+          "abbaaaaaaacaddde",
+          "bbaaaaaaaacaddde",
+          "bbbaaaaaaacbddde",
+          "bbbabbbaaacaddde",
+          "bbbbbbbaaacaddde",
+          "bbbabbaaaacaddde",
+          "bbbbbaaaaacaddde",
+          "bbbbaaababcaddde",
+          "bbbbbaaaaacbddde",
+          "bbbbbbbbaacaddde",
+          "abbbbbbbaacaddde"
+        ]
+      }
+    },
+    "night_block_fill_a": {
+      "solid": true,
+      "color": "#382f52",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#372e51","b":"#382f50","c":"#382f52","d":"#3a2e52","e":"#393053"},
+        "pixels": [
+          "addcccaacccddbdc",
+          "cccbccccccccccce",
+          "cccccaaccccccccc",
+          "cccccacbcccccccc",
+          "cddddccccccddcdd",
+          "ddccccccccccddcc",
+          "cccccccccdcccccc",
+          "cccccccccccbcccc",
+          "cccccccccccccccc",
+          "cccddccccccccddc",
+          "cdddccccccccddcc",
+          "ccccccccccccccce",
+          "ccccccccccbcccce",
+          "ccccccccbcccccce",
+          "cccccdccccccddce",
+          "dddcddccccccdddc"
+        ]
+      }
+    },
+    "night_block_fill_b": {
+      "solid": true,
+      "color": "#382f52",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#372e4f","b":"#352f51","c":"#372e51","d":"#382f50","e":"#382f52","f":"#3a2e52"},
+        "pixels": [
+          "ceecffeeeeeecaaa",
+          "eeeceeeeeeeeeeee",
+          "eeeabeecceeeeeec",
+          "deecccbcceeeeefc",
+          "eeeccbccbeeeeeef",
+          "eefcccccceeeeeff",
+          "eefccbeeeeeefeee",
+          "ceeeeeeeeeeeeeee",
+          "ceeeeeeeefeeeeee",
+          "eeeeeeeeeeeeeeef",
+          "eeeefeeeeeeeeeee",
+          "eeeeeeeeeeeeeeee",
+          "eeeeeeeeeeeeeeee",
+          "eeeeeeeeeeeeeeee",
+          "eeeeefeffeeeeeef",
+          "aeeefeffeeeeeeef"
+        ]
+      }
+    },
+    "night_block_r": {
+      "solid": true,
+      "color": "#211e35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e35","b":"#362e4f","c":"#4f436d","d":"#524571","e":"#8376a9"},
+        "pixels": [
+          "edddabaaaaaaaaaa",
+          "eddcabaaaaaaaaaa",
+          "eddaabaaaaaaaaaa",
+          "edddabaaaaaaaaaa",
+          "eddaabaaaaaaaaaa",
+          "eddaabaaaaaaaaaa",
+          "eddaabaaaaaaaaaa",
+          "edddabaaaaaaaaaa",
+          "edddabaaaaaaaaaa",
+          "eddaabaaaaaaaaaa",
+          "edddabaaaaaaaaaa",
+          "eddaabaaaaaaaaaa",
+          "eddaabaaaaaaaaaa",
+          "eddaabaaaaaaaaaa",
+          "eddcabaaaaaaaaaa",
+          "eddaabaaaaaaaaaa"
+        ]
+      }
+    },
+    "night_block_l_b": {
+      "solid": true,
+      "color": "#201f34",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#201f34","b":"#362e4f","c":"#534672","d":"#8275a7"},
+        "pixels": [
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabacccd"
+        ]
+      }
+    },
+    "night_block_hole_tl": {
+      "solid": true,
+      "color": "#211e35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e35","b":"#382c50","c":"#514470","d":"#534673","e":"#8071a6"},
+        "pixels": [
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaabbbbabbbbb",
+          "aaaaabbaaaaaaaaa",
+          "aaaaabaacccccddc",
+          "aaaaabacdddddddd",
+          "aaaaabadddeeeeee",
+          "aaaaabaddea.....",
+          "aaaaabadcea.....",
+          "aaaaabacdea.....",
+          "aaaaabaddea.....",
+          "aaaaabaddea.....",
+          "aaaaabaddea.....",
+          "aaaaabaddea.....",
+          "aaaaabaddea....."
+        ]
+      }
+    },
+    "night_block_hole_tr": {
+      "solid": true,
+      "color": "#211e35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e35","b":"#362c4f","c":"#524572","d":"#8375aa"},
+        "pixels": [
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "bbbbbabbbbaaaaaa",
+          "aaaaaaaaabbaaaaa",
+          "cccccccccabaaaaa",
+          "cccccccccabaaaaa",
+          "ddddddcccabaaaaa",
+          ".....acccabaaaaa",
+          ".....acccabaaaaa",
+          ".....acccabbaaaa",
+          ".....acccabbaaaa",
+          ".....acccabaaaaa",
+          ".....acccabbaaaa",
+          ".....acccabaaaaa",
+          ".....acccabaaaaa"
+        ]
+      }
+    },
+    "night_block_r_b": {
+      "solid": true,
+      "color": "#201e34",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#201e34","b":"#221e36","c":"#352d4e","d":"#524572","e":"#8375a8"},
+        "pixels": [
+          "edddacaaaaaaaaaa",
+          "edddacaabaaaaaaa",
+          "edddbcaaaaaaaaaa",
+          "edddbcaaaaaaaaaa",
+          "edddbcaaaaaaaaaa",
+          "edddbcaaaaaaaaaa",
+          "edddbcbaaaaaaaaa",
+          "edddbcaaaaaaaaab",
+          "edddbcaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddbbbaaaaaaaaa",
+          "edddbcaaaaaaaaaa",
+          "edddbcaaabaaaaab",
+          "edddbcaaaaaaaaaa",
+          "edddbcaaaaaaaaaa",
+          "edddacaaaaaaaaaa"
+        ]
+      }
+    },
+    "night_block_bl": {
+      "solid": true,
+      "color": "#211f35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211f35","b":"#392a50","c":"#534572","d":"#7e70a5"},
+        "pixels": [
+          "................",
+          "aaaaaaaaaabacccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccc",
+          "aaaaaaaaaabaaccc",
+          "aaaaaaaaaaabaaaa",
+          "aaaaaaaaaaabbbbb",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa"
+        ]
+      }
+    },
+    "night_block_hole_bl": {
+      "solid": true,
+      "color": "#211f35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211f35","b":"#393152","c":"#514571","d":"#8074ab"},
+        "pixels": [
+          "................",
+          "................",
+          "................",
+          "dddddddddddddddd",
+          "cccccccccccccccc",
+          "cccccccccccccccc",
+          "aaaaaaaaaaaaaaaa",
+          "bbbbbbbbbbbabbbb",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa"
+        ]
+      }
+    },
+    "night_block_hole_br": {
+      "solid": true,
+      "color": "#211f35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211f35","b":"#393152","c":"#514572","d":"#8074ab"},
+        "pixels": [
+          "................",
+          "................",
+          "................",
+          "dddddddddddddddd",
+          "cccccccccccccccc",
+          "cccccccccccccccc",
+          "aaaaaaaaaaaaaaaa",
+          "bbbbbbbbbbbabbbb",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa"
+        ]
+      }
+    },
+    "night_block_br": {
+      "solid": true,
+      "color": "#211f35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211f35","b":"#372e4f","c":"#544573","d":"#8371a8"},
+        "pixels": [
+          "................",
+          "dccaabaaaaaaaaaa",
+          "dccaabaaaaaaaaaa",
+          "dccaabaaaaaaaaaa",
+          "cccaabaaaaaaaaaa",
+          "cccaabaaaaaaaaaa",
+          "aaaabbaaaaaaaaaa",
+          "bbbbbbaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa"
+        ]
+      }
+    },
+    "night_slab_tl": {
+      "solid": true,
+      "color": "#50436f",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e35","b":"#382f51","c":"#50436f","d":"#8274a8"},
+        "pixels": [
+          "addddddddddddddd",
+          "dccccccccccccccc",
+          "dccccccccccccccc",
+          "dccccccccccccccc",
+          "dccccaaaaaaaaaaa",
+          "dccccaabbbbbbbbb",
+          "dccccabbbbbbbbbb",
+          "dccccabbbbbbbbbb",
+          "dccccabbbbbbbbbb",
+          "dccccabbbbaaaaaa",
+          "dccccabbbbaaaaaa",
+          "dccccabbbbaaaaaa",
+          "dccccabbbbaaaaaa",
+          "dccccabbbbaaaaaa",
+          "dccccabbbbaaaaaa",
+          "dccccabbbbaaaaaa"
+        ]
+      }
+    },
+    "night_slab_t_a": {
+      "solid": true,
+      "color": "#382f51",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211f36","b":"#382f51","c":"#3a2f53","d":"#4e416d","e":"#7e72a6"},
+        "pixels": [
+          "eeeeeeeeeeeeeeee",
+          "dddddddddddddddd",
+          "dddddddddddddddd",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbccbbbbbbcbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb"
+        ]
+      }
+    },
+    "night_slab_t_b": {
+      "solid": true,
+      "color": "#382f52",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e35","b":"#382f52","c":"#3a2e52","d":"#4e416d","e":"#7d70a5"},
+        "pixels": [
+          "eeeeeeeeeeeeeeee",
+          "dddddddddddddddd",
+          "dddddddddddddddd",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "bbbbbbbbbbcbbbbb",
+          "bbbbbcccbbbbbbbb",
+          "bbbbbcbbbbbbbbbc",
+          "bbcbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbcbbbbbbb",
+          "bbbbbcbbbbbbbbbc",
+          "bbbbbcbbbbbbbbbc",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb"
+        ]
+      }
+    },
+    "night_slab_tr": {
+      "solid": true,
+      "color": "#504470",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e35","b":"#372e50","c":"#504470","d":"#8073a7"},
+        "pixels": [
+          "ddddddddddddddda",
+          "cccccccccccccccd",
+          "cccccccccccccccd",
+          "cccccccccccccccd",
+          "aaaaaaaaaaaccccd",
+          "bbbbbbbbbbaccccd",
+          "bbbbbbbbbbaccccd",
+          "bbbbbbbbbbaccccd",
+          "bbbbbbbbbbaccccd",
+          "aaaaaabbbbaccccd",
+          "aaaaaabbbbaccccd",
+          "aaaaaabbbbaccccd",
+          "aaaaaabbbbaccccd",
+          "aaaaaabbbbaccccd",
+          "aaaaaabbbbaccccd",
+          "aaaaaabbbbaccccd"
+        ]
+      }
+    },
+    "night_slab_l": {
+      "solid": true,
+      "color": "#211e34",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e34","b":"#362f50","c":"#514671","d":"#8377aa"},
+        "pixels": [
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaaaaaccd",
+          "aaaaaaaaaaaaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd",
+          "aaaaaaaaaabaaccd"
+        ]
+      }
+    },
+    "night_slab_ceil_a": {
+      "solid": true,
+      "color": "#211e35",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#201e33","b":"#211e35","c":"#372f50","d":"#514371","e":"#8173a9"},
+        "pixels": [
+          "eeeeeeeeeeeeeeee",
+          "dddddddddddddddd",
+          "cccccccccccccccc",
+          "aabbbbbbbbbbabbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbba",
+          "bbbbbbbbbbabbbbb",
+          "bbbbaaabbbbbbbbb",
+          "bbbbabbbbbbbbbbb",
+          "bbbbaaabbbbbbbbb",
+          "bbbbbbbbbbaaabbb",
+          "bbbbbbabbbabbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "aabbbbbbbbbbbbbb"
+        ]
+      }
+    },
+    "night_slab_ceil_b": {
+      "solid": true,
+      "color": "#201e34",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#201e34","b":"#221e36","c":"#372f50","d":"#514471","e":"#8173a9"},
+        "pixels": [
+          "eeeeeeeeeeeeeeee",
+          "dddddddddddddddd",
+          "cccccccccccccccc",
+          "aaaaaaaaabaaaaaa",
+          "aaaabbaaaaaaaaaa",
+          "aaaaabaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaabaaaaaaaab",
+          "aaababaaaaaaaaab",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaababaaaaaaaaa",
+          "aaababaaaaaaaaaa"
+        ]
+      }
+    },
+    "night_slab_r": {
+      "solid": true,
+      "color": "#201e34",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#201e34","b":"#221f37","c":"#342d4c","d":"#524573","e":"#8677ac"},
+        "pixels": [
+          "edddacaaaaaaaaaa",
+          "edddbaaaaaaaaaaa",
+          "edddaaaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa",
+          "edddacaaaaaaaaaa"
+        ]
+      }
+    },
+    "night_ladder_a": {
+      "solid": false,
+      "color": "#241938",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#241938","b":"#463964","c":"#7b6fa0"},
+        "pixels": [
+          "..aaa......aaa..",
+          "..aca......aba..",
+          "..aca......aba..",
+          "..aca......aba..",
+          "..aca......aba..",
+          "..aca......aba..",
+          "..acaaaaaaaaba..",
+          "..acaccccccaba..",
+          "..acaaaaaaaaba..",
+          "..aca......aba..",
+          "..aca......aba..",
+          "..aca......aba..",
+          "..acaaaaaaaaba..",
+          "..acabbbbbbaba..",
+          "..acaaaaaaaaba..",
+          "..aca......aba.."
+        ]
+      }
+    },
+    "night_ladder_b": {
+      "solid": false,
+      "color": "#221c37",
+      "source": "art/inbox/Gemini_Generated_Image_eyc7r7eyc7r7eyc7.jpg",
+      "art": {
+        "palette": {".":null,"a":"#2c143e","b":"#221c37","c":"#483a64","d":"#7c70a0"},
+        "pixels": [
+          "..adb......bcb..",
+          "..bdbbdddddbcb..",
+          "..adbccccccbcb..",
+          "..adba.....bcb..",
+          "..adb......bcb..",
+          "..adb......bcb..",
+          "..adbddddddbcb..",
+          "..adbccccccbcb..",
+          "..adb......bcb..",
+          "..adb......bcb..",
+          "..adb......bcb..",
+          "..adbddddddbcb..",
+          "..adbccccccbcb..",
+          "..acb......bcb..",
+          "..acb......bcb..",
+          "..bbb......bbb.."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "log",
+  "name": "丸太",
+  "icon": "item_log",
+  "weight": 3,
+  "maxStack": 99
+}

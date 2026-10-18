@@ -1,0 +1,17 @@
+{
+  "id": "chest",
+  "name": "倉庫の箱",
+  "sprite": "chest",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true,
+  "interact": {
+    "type": "storage",
+    "label": "開ける",
+    "openSprite": "chest_open"
+  }
+}

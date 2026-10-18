@@ -1,0 +1,18 @@
+{
+  "id": "dark_planks",
+  "output": {
+    "item": "dark_planks",
+    "count": 2
+  },
+  "inputs": [
+    {
+      "item": "planks",
+      "count": 2
+    },
+    {
+      "item": "coal",
+      "count": 1
+    }
+  ],
+  "station": "workbench"
+}

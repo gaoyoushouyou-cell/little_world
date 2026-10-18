@@ -1,0 +1,12 @@
+{
+  "id": "sf_capsule_c",
+  "name": "光の詰まった箱",
+  "sprite": "sf_capsule_c",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

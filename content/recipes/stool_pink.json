@@ -1,0 +1,18 @@
+{
+  "id": "stool_pink",
+  "output": {
+    "item": "stool_pink",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "planks",
+      "count": 2
+    },
+    {
+      "item": "fiber",
+      "count": 1
+    }
+  ],
+  "station": "workbench"
+}

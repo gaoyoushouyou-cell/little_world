@@ -4,27 +4,80 @@ import { STEP_MS, TILE, VIEW_H, VIEW_W } from '../engine/constants';
 import { dirFromVelocity, resolveAnimation, type Dir } from '../engine/facing';
 import { Controls, type FrameInput } from '../engine/input';
 import { gravityFrame, stepBody, type Body, type SolidQuery, type StepParams } from '../engine/physics';
-import { gridToCanvas } from '../engine/pixelart';
+import { gridToCanvas, makeCanvas } from '../engine/pixelart';
+import { compareFrame, pickBackground, toScreen, type FrameReport, type Screen } from '../engine/rendercheck';
 import { checkEdge, placeArrival, stepParamsFor, type Arrival } from '../engine/travel';
 import { makeSolidQuery, wrapsX, wrapsY } from '../engine/world';
-import { layerPlugins } from '../registry';
+import type { PlacedObject } from '../engine/content';
+import { interactionPlugins, layerPlugins } from '../registry';
 import type { LayerInstance } from '../plugins/layers/_types';
+import type { GameServices } from '../plugins/interactions/_types';
 import type { Trigger } from '../schema/area';
+import { ensureInitialBases } from '../systems/bases';
+import { scatterPickups, type Pickup } from '../systems/gather';
+import { addItem, emptySlots, resize } from '../systems/inventory';
+import type { SaveStore } from '../systems/save';
+import { openMap } from '../ui/mapscreen';
 import { setDebug, setPrompt, showAreaTitle } from '../ui/overlay';
+import type { Ui } from '../ui/ui';
+import { BuildMode } from './buildmode';
+import { composeObjects, composeSolid, type SceneObject, type Tile } from '../systems/building';
+import type { SolidMap } from '../engine/tilegrid';
+import type { PlacedRecord } from '../systems/save';
+import { grantStarter, stageOf, storageOf } from '../systems/bases';
+import { openCrafting } from '../plugins/interactions/_crafting';
 
 export interface AreaSceneData {
   areaId: string;
   arrival: Arrival;
 }
 
+interface Rect {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
 interface Portal {
   kind: 'exit' | 'warp';
-  rect: { x: number; y: number; w: number; h: number };
+  /** map.json のワープの id（地図に線を出すために記録する） */
+  warpId?: string;
+  rect: Rect;
   trigger: Trigger;
   to: { areaId: string; tile: [number, number] };
 }
 
+/** 近くで「調べる」ことができる物 */
+interface Interactable {
+  obj: PlacedObject;
+  /** この範囲にプレイヤーが重なると調べられる（当たり判定のまわり1マス） */
+  zone: Rect;
+}
+
+const overlaps = (a: Rect, b: Rect) => a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h;
+
 const DEV_STATE_KEY = 'little-world:dev-position';
+
+/** 何も押していない入力 */
+const NEUTRAL: FrameInput = {
+  x: 0,
+  y: 0,
+  jumpHeld: false,
+  jumpPressed: false,
+  interactPressed: false,
+  debugPressed: false,
+  inventoryPressed: false,
+  mapPressed: false,
+  buildPressed: false,
+  prevPressed: false,
+  nextPressed: false,
+  placePressed: false,
+  pickupPressed: false,
+  flipPressed: false,
+  cancelPressed: false,
+  craftPressed: false,
+};
 
 export class AreaScene extends Phaser.Scene {
   private content!: Content;
@@ -35,11 +88,24 @@ export class AreaScene extends Phaser.Scene {
   private solid!: SolidQuery;
   private params!: StepParams;
   private layers: LayerInstance[] = [];
+  /** layers と同じ順の名前（"番号:種類"。描画の検証の報告に使う） */
+  private layerNames: string[] = [];
   private portals: Portal[] = [];
   private portalGfx!: Phaser.GameObjects.Graphics;
   private player!: Phaser.GameObjects.Image;
   private tracked: string[] = [];
-  private objectImages: { image: Phaser.GameObjects.Image; sprite: string; animation: string }[] = [];
+  private objectImages: { obj: PlacedObject; image: Phaser.GameObjects.Image; sprite: string; animation: string }[] = [];
+  /** 画面にある物（原本の物からしまったものを除き、置いた物を足したもの） */
+  private sceneObjects: SceneObject[] = [];
+  /** タイルと物を合わせた当たり判定 */
+  private solidMap!: SolidMap;
+  private build!: BuildMode;
+  private interactables: Interactable[] = [];
+  private pickups: { p: Pickup; image: Phaser.GameObjects.Image; baseY: number }[] = [];
+  private save!: SaveStore;
+  private ui!: Ui;
+  private services!: GameServices;
+  private fullWarned = 0;
   private playerDepth = 0;
 
   private acc = 0;
@@ -53,6 +119,8 @@ export class AreaScene extends Phaser.Scene {
   private facing = 1;
   private dir: Dir = 'down';
   private debug = false;
+  /** 描画の検証中はゲームを止める（カメラと時刻を動かさない） */
+  private renderChecking = false;
 
   constructor() {
     super('area');
@@ -61,9 +129,12 @@ export class AreaScene extends Phaser.Scene {
   init(data: AreaSceneData): void {
     this.sceneData = data;
     this.layers = [];
+    this.layerNames = [];
     this.portals = [];
     this.tracked = [];
     this.objectImages = [];
+    this.interactables = [];
+    this.pickups = [];
     this.acc = 0;
     this.worldTime = 0;
     this.transitioning = false;
@@ -72,11 +143,19 @@ export class AreaScene extends Phaser.Scene {
 
   create(): void {
     this.content = this.registry.get('content') as Content;
+    this.save = this.registry.get('save') as SaveStore;
+    this.ui = this.registry.get('ui') as Ui;
     this.debug = this.registry.get('debug') === true;
     const area = this.content.getLoaded(this.sceneData.areaId);
     if (!area) throw new Error(`エリア ${this.sceneData.areaId} が読み込まれていない`);
     this.area = area;
     const def = area.def;
+
+    ensureInitialBases(this.save.data, [...this.content.bases.values()]);
+    grantStarter(this.save.data, [...this.content.bases.values()], this.content.economy, (item) => this.content.items.get(item)?.maxStack ?? 99);
+    this.save.markVisited(def.id);
+    this.save.save();
+    this.services = this.makeServices();
 
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
       for (const key of this.tracked) this.textures.remove(key);
@@ -91,14 +170,15 @@ export class AreaScene extends Phaser.Scene {
       if (!plugin || params === undefined) return;
       this.layers.push(
         plugin.create(
-          { scene: this, area, tiles: this.content.tiles, depth: i * 10, track: (key) => this.tracked.push(key) },
+          { scene: this, area, tiles: this.content.tiles, images: this.content.images, depth: i * 10, track: (key) => this.tracked.push(key) },
           params,
         ),
       );
+      this.layerNames.push(`${i}:${layer.type}`);
     });
 
     this.params = stepParamsFor(def);
-    this.solid = makeSolidQuery({ id: def.id, solid: area.solid, wrap: def.physics.wrap }, this.content.world, (id) => this.content.getLoaded(id)?.solid);
+    this.composeWorld();
 
     this.body = placeArrival(this.sceneData.arrival, this.params, this.solid);
     this.buildPortals();
@@ -107,6 +187,11 @@ export class AreaScene extends Phaser.Scene {
     this.portalGfx = this.add.graphics().setDepth(playerDepth - 5);
     this.player = this.add.image(0, 0, this.playerFrame('idle', 0)).setOrigin(0.5, 1).setDepth(playerDepth);
     this.buildObjects();
+    this.buildInteractables();
+    this.buildPickups();
+    this.build = new BuildMode(this.buildHost());
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => this.build.exit());
+    this.input.on('pointermove', (p: Phaser.Input.Pointer) => this.build.pointAt([Math.floor(p.worldX / TILE), Math.floor(p.worldY / TILE)]));
 
     this.controls = new Controls(this);
     this.cameras.main.setRoundPixels(true);
@@ -140,7 +225,7 @@ export class AreaScene extends Phaser.Scene {
     const H = def.size[1] * TILE;
     const copiesX = wrapsX(def.physics.wrap) ? [-W, 0, W] : [0];
     const copiesY = wrapsY(def.physics.wrap) ? [-H, 0, H] : [0];
-    for (const obj of this.area.objects) {
+    for (const obj of this.sceneObjects) {
       const { layout, placement } = obj;
       for (const ox of copiesX) {
         for (const oy of copiesY) {
@@ -150,10 +235,147 @@ export class AreaScene extends Phaser.Scene {
             .setAngle(layout.angle)
             .setFlipX(placement.flipX)
             .setDepth(this.depthFor(layout.anchorY + oy, placement.front));
-          this.objectImages.push({ image, sprite: obj.def.sprite, animation: obj.def.animation });
+          this.objectImages.push({ obj, image, sprite: obj.def.sprite, animation: obj.def.animation });
         }
       }
     }
+  }
+
+  /** 調べられる物と、その範囲（当たり判定のまわり1マス。当たり判定がなければ絵のまわり） */
+  private buildInteractables(): void {
+    for (const obj of this.sceneObjects) {
+      if (!obj.def.interact) continue;
+      const cells = obj.layout.cells;
+      let zone: Rect;
+      if (cells.length) {
+        const xs = cells.map((c) => c[0]);
+        const ys = cells.map((c) => c[1]);
+        const x0 = Math.min(...xs) - 1;
+        const y0 = Math.min(...ys) - 1;
+        zone = { x: x0 * TILE, y: y0 * TILE, w: (Math.max(...xs) - x0 + 2) * TILE, h: (Math.max(...ys) - y0 + 2) * TILE };
+      } else {
+        const size = this.content.spriteSize(obj.def.sprite, obj.def.animation) ?? { w: 16, h: 16 };
+        const r = Math.max(size.w, size.h) / 2 + TILE / 2;
+        const cy = obj.layout.anchorY + (obj.layout.angle === 180 ? size.h / 2 : -size.h / 2);
+        zone = { x: obj.layout.anchorX - r, y: cy - r, w: r * 2, h: r * 2 };
+      }
+      this.interactables.push({ obj, zone });
+    }
+  }
+
+  private nearInteractable(): { it: Interactable; label: string } | undefined {
+    const b = { x: this.body.x, y: this.body.y, w: this.body.w, h: this.body.h };
+    for (const it of this.interactables) {
+      if (!overlaps(b, it.zone)) continue;
+      const interact = it.obj.def.interact!;
+      const plugin = interactionPlugins.get(interact.type);
+      if (!plugin) continue;
+      const params = plugin.params.parse(interact);
+      const label = plugin.label(this.services, it.obj, params);
+      if (label) return { it, label };
+    }
+    return undefined;
+  }
+
+  /** 揺らぎ区域：入るたびに素材が散らばる（拾った物は、出て入り直すと別の並びになる） */
+  private buildPickups(): void {
+    const def = this.area.def;
+    if (!def.resetOnEnter || !def.gather) return;
+    const start = { x: this.body.x, y: this.body.y, w: this.body.w, h: this.body.h };
+    const list = scatterPickups(def.gather, {
+      areaId: def.id,
+      visit: this.save.data.visits[def.id] ?? 0,
+      depth: def.depth,
+      solid: this.solidMap,
+      avoid: (x, y) => {
+        const r = { x: x * TILE, y: y * TILE, w: TILE, h: TILE };
+        const near = { x: start.x - TILE * 2, y: start.y - TILE * 2, w: start.w + TILE * 4, h: start.h + TILE * 4 };
+        return overlaps(r, near) || this.portals.some((p) => overlaps(r, p.rect));
+      },
+    });
+    for (const p of list) {
+      const icon = this.content.items.get(p.item)?.icon;
+      if (!icon) continue;
+      const x = p.tile[0] * TILE + TILE / 2;
+      const y = (p.tile[1] + 1) * TILE - 1;
+      const image = this.add.image(x, y, this.spriteFrame(icon, 'idle', 0)).setOrigin(0.5, 1).setDepth(this.depthFor(y));
+      this.pickups.push({ p, image, baseY: y });
+    }
+  }
+
+  private collectPickups(): void {
+    const b = { x: this.body.x, y: this.body.y, w: this.body.w, h: this.body.h };
+    for (let i = this.pickups.length - 1; i >= 0; i--) {
+      const pk = this.pickups[i]!;
+      const r = { x: pk.p.tile[0] * TILE + 3, y: pk.p.tile[1] * TILE + 3, w: TILE - 6, h: TILE - 6 };
+      if (!overlaps(b, r)) continue;
+      const item = this.content.items.get(pk.p.item)!;
+      if (addItem(this.save.data.pocket, item.id, pk.p.quality, 1, item.maxStack) > 0) {
+        if (this.stepCount - this.fullWarned > 120) {
+          this.ui.toast('持ち物がいっぱい');
+          this.fullWarned = this.stepCount;
+        }
+        continue;
+      }
+      pk.image.destroy();
+      this.pickups.splice(i, 1);
+      this.save.save();
+      this.ui.toast(`${item.name} ×1`);
+    }
+    for (const pk of this.pickups) pk.image.y = pk.baseY - Math.round((Math.sin(this.worldTime / 400 + pk.p.tile[0]) + 1) * 1.5);
+  }
+
+  private makeServices(): GameServices {
+    return {
+      content: this.content,
+      save: this.save,
+      area: this.area,
+      ui: this.ui,
+      sleep: (baseArea, bed) => {
+        const base = this.content.bases.get(baseArea);
+        if (!base) return;
+        this.ui.close();
+        // 置いたベッドなら、そのベッドのところで目覚める（原本のベッドは拠点の決まった場所）
+        const placedBed = bed && 'source' in bed && (bed as SceneObject).source.kind === 'placed' ? bed.placement.at : null;
+        this.save.data.respawn = placedBed ? { area: baseArea, tile: [placedBed[0], placedBed[1]] } : { area: baseArea, spawn: base.spawn };
+        this.save.save();
+        const tile = placedBed ?? this.content.areas.get(baseArea)!.spawns[base.spawn]!;
+        this.goTo({ areaId: baseArea, arrival: { kind: 'tile', tile } }, 900, () => this.ui.toast('眠った。ここで目覚める'));
+      },
+      travelToBase: (baseArea) => {
+        const base = this.content.bases.get(baseArea);
+        if (!base) return;
+        this.ui.close();
+        const tile = this.content.areas.get(baseArea)!.spawns[base.spawn]!;
+        this.goTo({ areaId: baseArea, arrival: { kind: 'tile', tile } }, 500);
+      },
+      craftSources: () => {
+        const id = this.area.def.id;
+        if (stageOf(this.save.data, id) <= 0) return [this.save.data.pocket];
+        const chests = (this.save.data.placed[id] ?? []).flatMap((r) => (r.contents ? [r.contents] : []));
+        return [this.save.data.pocket, storageOf(this.save.data, id, this.content.economy), ...chests];
+      },
+      craftOutputs: () => {
+        const id = this.area.def.id;
+        return stageOf(this.save.data, id) > 0 ? [this.save.data.pocket, storageOf(this.save.data, id, this.content.economy)] : [this.save.data.pocket];
+      },
+      containerOf: (obj, capacity) => {
+        const o = obj as Partial<SceneObject>;
+        if (o.source?.kind !== 'placed') return null;
+        const rec = this.save.data.placed[this.area.def.id]?.[o.source.index];
+        if (!rec) return null;
+        rec.contents = resize(rec.contents ?? emptySlots(capacity), capacity);
+        return rec.contents;
+      },
+      setObjectSprite: (obj, spriteId) => {
+        for (const o of this.objectImages) {
+          if (o.obj !== obj) continue;
+          o.sprite = spriteId ?? obj.def.sprite;
+          o.animation = spriteId ? 'idle' : obj.def.animation;
+          o.image.setTexture(this.spriteFrame(o.sprite, o.animation, 0));
+        }
+      },
+    };
   }
 
   private animateObjects(): void {
@@ -190,10 +412,10 @@ export class AreaScene extends Phaser.Scene {
     }
     for (const warp of this.content.map.warps) {
       if (warp.from.area === id) {
-        this.portals.push({ kind: 'warp', rect: this.portalRect(warp.from.at, undefined), trigger: warp.trigger, to: { areaId: warp.to.area, tile: warp.to.at } });
+        this.portals.push({ kind: 'warp', warpId: warp.id, rect: this.portalRect(warp.from.at, undefined), trigger: warp.trigger, to: { areaId: warp.to.area, tile: warp.to.at } });
       }
       if (warp.bidirectional && warp.to.area === id) {
-        this.portals.push({ kind: 'warp', rect: this.portalRect(warp.to.at, undefined), trigger: warp.trigger, to: { areaId: warp.from.area, tile: warp.from.at } });
+        this.portals.push({ kind: 'warp', warpId: warp.id, rect: this.portalRect(warp.to.at, undefined), trigger: warp.trigger, to: { areaId: warp.from.area, tile: warp.from.at } });
       }
     }
   }
@@ -223,7 +445,7 @@ export class AreaScene extends Phaser.Scene {
 
   // ---- 移動 -------------------------------------------------------------
 
-  private goTo(data: AreaSceneData, fadeMs: number): void {
+  private goTo(data: AreaSceneData, fadeMs: number, after?: () => void): void {
     if (this.transitioning) return;
     this.transitioning = true;
     setPrompt(null);
@@ -232,7 +454,10 @@ export class AreaScene extends Phaser.Scene {
       this.cameras.main.fadeOut(fadeMs, 0, 0, 0);
     });
     Promise.all([fade, this.content.loadWithNeighbors(data.areaId)])
-      .then(() => this.scene.restart(data))
+      .then(() => {
+        this.scene.restart(data);
+        after?.();
+      })
       .catch((e: unknown) => {
         console.error(e);
         this.transitioning = false;
@@ -258,7 +483,49 @@ export class AreaScene extends Phaser.Scene {
       this.registry.set('debug', this.debug);
       if (!this.debug) setDebug(null);
     }
-    if (this.transitioning) return;
+    if (this.transitioning || this.renderChecking) return;
+    // 画面（一覧・倉庫・地図）を開いている間はゲームを止める
+    if (this.ui.isOpen()) {
+      setPrompt(null);
+      return;
+    }
+    if (input.inventoryPressed) {
+      const id = this.area.def.id;
+      const stage = stageOf(this.save.data, id);
+      // 拠点の中なら、Q で倉庫とこのエリアに置いた箱へ同じ物をまとめて入れられる（決定 61）
+      const quickTargets =
+        stage > 0
+          ? [
+              { title: stage >= 2 ? '夢の回廊' : '倉庫', slots: storageOf(this.save.data, id, this.content.economy) },
+              ...(this.save.data.placed[id] ?? []).filter((r) => r.contents).map((r) => ({ title: this.content.objects.get(r.object)?.name ?? '箱', slots: r.contents! })),
+            ]
+          : [];
+      this.ui.storage({ title: '手持ち', slots: this.save.data.pocket, showWeight: true }, null, () => this.save.save(), undefined, {
+        quickTargets,
+        onCraft: () => {
+          this.ui.close();
+          openCrafting(this.services, 'hand');
+        },
+      });
+      return;
+    }
+    if (this.build.active) {
+      this.build.update(input);
+      this.advance(NEUTRAL, 0);
+      return;
+    }
+    if (input.buildPressed) {
+      this.build.enter();
+      return;
+    }
+    if (input.craftPressed) {
+      openCrafting(this.services, 'hand');
+      return;
+    }
+    if (input.mapPressed) {
+      void openMap(this.content, this.save.data, { area: this.area.def.id, x: this.body.x + this.body.w / 2, y: this.body.y + this.body.h / 2 });
+      return;
+    }
 
     this.acc += Math.min(delta, 100) * this.area.def.physics.timeScale;
     let steps = 0;
@@ -281,15 +548,30 @@ export class AreaScene extends Phaser.Scene {
 
     const portal = this.overlappingPortal();
     if (!portal) this.touchArmed = true;
+    const enter = (p: Portal) => {
+      if (p.warpId) {
+        this.save.markWarp(p.warpId);
+        this.save.save();
+      }
+      this.goTo({ areaId: p.to.areaId, arrival: { kind: 'tile', tile: p.to.tile } }, 400);
+    };
     if (portal?.trigger === 'interact') {
       setPrompt('E', portal.kind === 'warp' ? 'ふれる' : '入る');
-      if (input.interactPressed) this.goTo({ areaId: portal.to.areaId, arrival: { kind: 'tile', tile: portal.to.tile } }, 400);
-    } else {
+      if (input.interactPressed) enter(portal);
+    } else if (portal?.trigger === 'touch' && this.touchArmed) {
       setPrompt(null);
-      if (portal?.trigger === 'touch' && this.touchArmed) {
-        this.goTo({ areaId: portal.to.areaId, arrival: { kind: 'tile', tile: portal.to.tile } }, 400);
+      enter(portal);
+    } else {
+      const near = this.nearInteractable();
+      setPrompt(near ? 'E' : null, near?.label ?? '');
+      if (near && input.interactPressed) {
+        const interact = near.it.obj.def.interact!;
+        const plugin = interactionPlugins.get(interact.type)!;
+        setPrompt(null);
+        plugin.run(this.services, near.it.obj, plugin.params.parse(interact));
       }
     }
+    this.collectPickups();
 
     this.updateCamera(false);
     this.updatePlayerSprite();
@@ -402,15 +684,163 @@ export class AreaScene extends Phaser.Scene {
    *   __lw.run({ x: 1 }, 120)          右へ 120 ステップ
    *   __lw.run({ interactPressed: true }, 1)
    *   __lw.state()
+   *   __lw.craft('workbench')          加工の一覧を開く
+   *   await __lw.checkRender()          描画の検証（レイヤーごとに、期待する画面と実際の画面を1ドットずつ比べる）
    */
   private installDevHook(): void {
-    const idle: FrameInput = { x: 0, y: 0, jumpHeld: false, jumpPressed: false, interactPressed: false, debugPressed: false };
+    const idle = NEUTRAL;
     (window as unknown as { __lw: unknown }).__lw = {
       run: (input: Partial<FrameInput>, steps: number) => {
         if (!this.transitioning) this.advance({ ...idle, ...input }, steps);
         return this.devState();
       },
       state: () => this.devState(),
+      /** 描画の検証。画面が表示されていないと描画が止まるので、組み込みブラウザの画面を出した状態で実行する */
+      checkRender: () => this.checkRender(),
+      /** 加工の一覧を開く（C・作業台と同じ。画面が隠れていてゲームが止まっていても開ける） */
+      craft: (station: 'hand' | 'workbench' = 'hand') => openCrafting(this.services, station),
+      /** 地図を開く（M と同じ） */
+      map: () => openMap(this.content, this.save.data, { area: this.area.def.id, x: this.body.x + this.body.w / 2, y: this.body.y + this.body.h / 2 }),
+    };
+  }
+
+  /**
+   * 描画の検証（engine/rendercheck.ts）。expect を持つレイヤーごとに、そのレイヤーだけを見えるようにし、
+   * 背景をレイヤーで使っていない色にして画面を撮り、期待した画面と1ドットずつ比べる
+   */
+  private async checkRender(): Promise<(FrameReport & { layer: string })[]> {
+    if (this.renderChecking) throw new Error('描画の検証はすでに実行中');
+    const cam = this.cameras.main;
+    if (this.transitioning || cam.fadeEffect.isRunning) throw new Error('エリアの切り替え中・フェード中は検証できない');
+    this.renderChecking = true;
+    const children = [...this.children.list] as (Phaser.GameObjects.GameObject & Phaser.GameObjects.Components.Visible)[];
+    const visible = children.map((o) => o.visible);
+    const bg = cam.backgroundColor.color32;
+    const reports: (FrameReport & { layer: string })[] = [];
+    try {
+      for (const [i, layer] of this.layers.entries()) {
+        const name = this.layerNames[i]!;
+        if (!layer.expect || !layer.objects) continue;
+        const expected = layer.expect(cam, this.worldTime);
+        if (expected.skip) {
+          reports.push({ layer: name, ...compareFrame({ width: 0, height: 0, data: new Uint8Array() }, expected, [0, 0, 0]) });
+          continue;
+        }
+        const background = pickBackground(expected.colors);
+        const own = new Set<Phaser.GameObjects.GameObject>(layer.objects);
+        children.forEach((o) => o.setVisible?.(own.has(o)));
+        cam.setBackgroundColor(Phaser.Display.Color.GetColor(...background));
+        layer.update?.(cam, this.worldTime);
+        const shot = toScreen(await this.snapshot(), VIEW_W, VIEW_H);
+        reports.push({ layer: name, ...compareFrame(shot, expected, background) });
+      }
+    } finally {
+      children.forEach((o, k) => o.setVisible?.(visible[k]!));
+      cam.setBackgroundColor(bg);
+      this.renderChecking = false;
+    }
+    return reports;
+  }
+
+  /** 次に描かれた画面を RGBA で受け取る */
+  private snapshot(): Promise<Screen> {
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => reject(new Error('画面が描かれない（画面が隠れていると描画が止まる）')), 3000);
+      this.game.renderer.snapshot((img) => {
+        clearTimeout(timer);
+        const el = img as HTMLImageElement;
+        const done = () => {
+          const [canvas, c2d] = makeCanvas(el.width, el.height);
+          c2d.drawImage(el, 0, 0);
+          resolve({ width: el.width, height: el.height, data: c2d.getImageData(0, 0, el.width, el.height).data });
+        };
+        if (el.complete) done();
+        else el.onload = done;
+      });
+    });
+  }
+
+  // ---- 建築モード -------------------------------------------------------
+
+  /** 物と当たり判定を、原本と上書き層（置いた物・しまった物）から組み立てる */
+  private composeWorld(): void {
+    const def = this.area.def;
+    this.sceneObjects = composeObjects(this.area, this.save.data.placed[def.id] ?? [], this.save.data.hidden[def.id] ?? [], (rec) => this.placedObject(rec));
+    this.solidMap = composeSolid(this.area.tileSolid, this.sceneObjects.map((o) => o.layout.cells));
+    this.solid = makeSolidQuery({ id: def.id, solid: this.solidMap, wrap: def.physics.wrap }, this.content.world, (id) => (id === def.id ? this.solidMap : this.content.getLoaded(id)?.solid));
+  }
+
+  private placedObject(rec: PlacedRecord): PlacedObject | undefined {
+    const def = this.content.objects.get(rec.object);
+    if (!def) return undefined;
+    const placement = { object: rec.object, at: rec.at, offset: [0, 0] as [number, number], flipX: rec.flipX, front: false };
+    const layout = this.content.layoutIn(this.area.def, placement);
+    return layout ? { placement, def, layout } : undefined;
+  }
+
+  /** 物を置いた・しまったあと：表示・調べられる物・当たり判定を作り直す */
+  private rebuildObjects(): void {
+    for (const o of this.objectImages) o.image.destroy();
+    this.objectImages = [];
+    this.interactables = [];
+    this.composeWorld();
+    this.buildObjects();
+    this.buildInteractables();
+  }
+
+  private buildHost() {
+    const tilesOf = (r: Rect): Tile[] => {
+      const out: Tile[] = [];
+      for (let y = Math.floor(r.y / TILE); y < Math.ceil((r.y + r.h) / TILE); y++) for (let x = Math.floor(r.x / TILE); x < Math.ceil((r.x + r.w) / TILE); x++) out.push([x, y]);
+      return out;
+    };
+    const edgeOpenings = (): Tile[] => {
+      const { w, h } = this.area.tileSolid;
+      const out: Tile[] = [];
+      for (let x = 0; x < w; x++) for (const y of [0, h - 1]) if (!this.area.tileSolid.isSolid(x, y)) out.push([x, y]);
+      for (let y = 1; y < h - 1; y++) for (const x of [0, w - 1]) if (!this.area.tileSolid.isSolid(x, y)) out.push([x, y]);
+      return out;
+    };
+    const spawnTiles = (): Tile[] => {
+      const out: Tile[] = [];
+      for (const t of Object.values(this.area.def.spawns)) {
+        out.push([t[0], t[1]]);
+        // 横視点では体が 2 マスの高さなので、重力と逆の向きのマスもあける
+        if (this.params.view === 'side') out.push([t[0], t[1] - gravityFrame(this.params.gravity).sign]);
+      }
+      return out;
+    };
+    return {
+      scene: this,
+      content: this.content,
+      save: this.save,
+      ui: this.ui,
+      area: this.area,
+      objects: () => this.sceneObjects,
+      rebuild: () => this.rebuildObjects(),
+      playerTiles: () => tilesOf(this.body),
+      frontTile: (): Tile => {
+        const b = this.body;
+        const cx = Math.floor((b.x + b.w / 2) / TILE);
+        if (this.params.view === 'top') {
+          const feet = Math.floor((b.y + b.h - 1) / TILE);
+          const d = { down: [0, 1], up: [0, -1], left: [-1, 0], right: [1, 0] }[this.dir];
+          return [cx + d[0]!, feet + d[1]!];
+        }
+        const down = gravityFrame(this.params.gravity).sign > 0;
+        return [cx + this.facing, Math.floor((down ? b.y + b.h - 1 : b.y) / TILE)];
+      },
+      blockedTiles: () => [...this.portals.flatMap((p) => tilesOf(p.rect)), ...spawnTiles()],
+      routeTiles: () => ({
+        starts: Object.values(this.area.def.spawns).map((t): Tile => [t[0], t[1]]),
+        targets: [
+          ...this.portals.map((p): Tile => [Math.floor(p.rect.x / TILE), Math.floor((p.rect.y + p.rect.h - 1) / TILE)]),
+          ...Object.values(this.area.def.spawns).map((t): Tile => [t[0], t[1]]),
+          // 端を越えて隣のエリアへ出る道（壁の切れ目）もふさがない
+          ...edgeOpenings(),
+        ],
+      }),
+      spriteFrame: (sprite: string, anim: string, i: number) => this.spriteFrame(sprite, anim, i),
     };
   }
 
@@ -425,6 +855,10 @@ export class AreaScene extends Phaser.Scene {
       sprite: this.player.texture.key,
       flipX: this.player.flipX,
       transitioning: this.transitioning,
+      prompt: document.querySelector('.prompt')?.textContent ?? '',
+      pickups: this.pickups.length,
+      pickupTiles: this.pickups.map((p) => p.p.tile),
+      pocket: this.save.data.pocket.filter(Boolean).map((s) => `${s!.item}:${s!.quality}x${s!.count}`),
     };
   }
 

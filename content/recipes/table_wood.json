@@ -1,0 +1,14 @@
+{
+  "id": "table_wood",
+  "output": {
+    "item": "table_wood",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "planks",
+      "count": 5
+    }
+  ],
+  "station": "workbench"
+}

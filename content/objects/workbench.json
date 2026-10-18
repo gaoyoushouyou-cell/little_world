@@ -1,0 +1,16 @@
+{
+  "id": "workbench",
+  "name": "作業台",
+  "sprite": "workbench",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true,
+  "interact": {
+    "type": "workbench",
+    "label": "作る"
+  }
+}

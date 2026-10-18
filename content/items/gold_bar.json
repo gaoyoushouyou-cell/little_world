@@ -1,0 +1,7 @@
+{
+  "id": "gold_bar",
+  "name": "金の延べ棒",
+  "icon": "item_gold_bar",
+  "weight": 6,
+  "maxStack": 99
+}

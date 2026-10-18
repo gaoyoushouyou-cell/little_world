@@ -1,0 +1,9 @@
+{
+  "id": "workbench",
+  "name": "作業台",
+  "icon": "workbench",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "workbench"
+}

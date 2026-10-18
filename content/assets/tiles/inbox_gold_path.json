@@ -1,0 +1,264 @@
+{
+  "tiles": {
+    "gold_path_h_a": {
+      "solid": false,
+      "color": "#2f221e",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#2f221e","b":"#75523e","c":"#aa8059","d":"#fdd78c"},
+        "pixels": [
+          "dddddddddddddddd",
+          "cccccccccccccccc",
+          "bbbbbbbbbbbbbbbb",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "aaaaaaaaaaaaaaaa",
+          "bbbbbbbbbbbbbbbb",
+          "cccccccccccccccc"
+        ]
+      }
+    },
+    "gold_path_h_b": {
+      "solid": false,
+      "color": "#30231e",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#110913","b":"#30231e","c":"#74513e","d":"#aa7e58"},
+        "pixels": [
+          "dddddddddddddddd",
+          "dddddddddddddddd",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbabbbbbbbbbbbbb",
+          "cccccccccccccccc",
+          "dddddddddddddddd"
+        ]
+      }
+    },
+    "gold_path_v": {
+      "solid": false,
+      "color": "#2f221d",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#2f221d","b":"#77523d","c":"#ae835a","d":"#fbd58b"},
+        "pixels": [
+          "dcaaaaaaaaaaabcd",
+          "ccaaaaaaaaaaabcd",
+          "dcaaaaaaaaaaabcd",
+          "ccaaaaaaaaaaabcd",
+          "dcaaaaaaaaaaabcd",
+          "dcaaaaaaaaaaabcd",
+          "dcaaaaaaaaaaabcd",
+          "ccaaaaaaaaaaabcd",
+          "ccaaaaaaaaaaabcd",
+          "dcaaaaaaaaaaabcd",
+          "dcaaaaaaaaaaabcd",
+          "dcaaaaaaaaaaabcd",
+          "dcaaaaaaaaaaabcd",
+          "ccaaaaaaaaaaabcd",
+          "dcaaaaaaaaaaabcd",
+          "dcaaaaaaaaaaabcd"
+        ]
+      }
+    },
+    "gold_frame_ne_a": {
+      "solid": false,
+      "color": "#30231e",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#120915","b":"#30231e","c":"#76523e","d":"#ac8059","e":"#fcd78a"},
+        "pixels": [
+          "eeeeeeeeeeeeeeec",
+          "ddddddddddddddde",
+          "cccccccccccccdde",
+          "bbbbbbbaaabbacde",
+          "bbbbbbbbbbbbbcde",
+          "bbbbbbbbbbbbbcde",
+          "bbbbbbbbbbbbbcde",
+          "bbbbbbbbbbbbbcde",
+          "bbbbbbbbbbbbbcde",
+          "bbbbbbbbbbbbbcde",
+          "bbbbbbbbbbbbbcde",
+          "bbbbbbbbbbbbbcde",
+          "cabbbbbbbbbbbcde",
+          "dcabbbbbbbbbbcde",
+          "ddbbbbbbbbbbbcde",
+          "ddbbbbbbbbbbbcde"
+        ]
+      }
+    },
+    "gold_frame_ne_b": {
+      "solid": false,
+      "color": "#31221e",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#120a14","b":"#31221e","c":"#77523d","d":"#af845a","e":"#f3cc8c"},
+        "pixels": [
+          "ddddddddddddddec",
+          "ddddddddddddddde",
+          "bbbbbbbbaaaaaccd",
+          "babbaabbbbbbaacd",
+          "bbbbbbbbbbbbbacd",
+          "bbbbbbbbbbbbbacd",
+          "bbbbbbbbbbbbbacd",
+          "bbbbbbbbbbbbbacd",
+          "bbbbbbbbbbbbbbcd",
+          "babbbabbbbbbbbcd",
+          "bbbbbbbbbbbbbbcd",
+          "bbbbbbbbbbbbbbcd",
+          "bbbbbabbbbbbbbcd",
+          "bbabababbbbbbbcd",
+          "bbbbbbbbbbbbbbcd",
+          "bbbbbbbbbbbbbbcd"
+        ]
+      }
+    },
+    "gold_frame_n": {
+      "solid": false,
+      "color": "#31221d",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#140b14","b":"#31221d","c":"#ac815a","d":"#f9d192"},
+        "pixels": [
+          "dddddddddddddddd",
+          "cccccccccccccccc",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbaaabbbbbbaab",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "babbbabbbbbbbbbb",
+          "bbbbbbbbbbbabbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbabb",
+          "bbabababbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb"
+        ]
+      }
+    },
+    "gold_frame_w": {
+      "solid": false,
+      "color": "#31221e",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#120917","b":"#31221e","c":"#956c4e","d":"#f1cb85"},
+        "pixels": [
+          "dcbbbbbbbbbbbbbb",
+          "dcbbbbbbbbbbbbbb",
+          "dcbbbbbbbbbbbbbb",
+          "dcbbbbbbbbbbbbbb",
+          "dcbbbbbbbbbbbbbb",
+          "dcbbbbbbbbbbbbbb",
+          "dcbabbbbbbbbbbbb",
+          "dcbbbbbbbbbbbbbb",
+          "dcbbbbbbcccccccc",
+          "dcbbbbbbcddccccc",
+          "dcbbbbbbcdcccccc",
+          "dcbbbbbbccccccba",
+          "dcbbbbbbccccaaaa",
+          "dcbabbbbcccbabbb",
+          "dcbabbbbcccbabbb",
+          "dcbbbbbbcccaabbb"
+        ]
+      }
+    },
+    "earth_crack_c": {
+      "solid": false,
+      "color": "#604439",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#190e15","b":"#31211f","c":"#49332c","d":"#604439","e":"#704f3f","f":"#7d5c49"},
+        "pixels": [
+          "ddddddddcdddfeee",
+          "dddaddddddbbeeee",
+          "dddadddddddbeeee",
+          "deacdddddddbeeee",
+          "bdddddddddadbbbb",
+          "dddddddddbddbbdd",
+          "dddddddddddddddd",
+          "dddddddddddddddd",
+          "dddddbdddddddddd",
+          "dddcddddddddacdd",
+          "ddddddddddbddddd",
+          "daaadebddadddddd",
+          "deebbeededdddddd",
+          "deeebeeeddeddddd",
+          "deeebeeeddbdddcd",
+          "ddeeceeedddddddd"
+        ]
+      }
+    },
+    "earth_border_e": {
+      "solid": false,
+      "color": "#624539",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#150b13","b":"#33221f","c":"#4f3730","d":"#624539","e":"#ac8159"},
+        "pixels": [
+          "ddddddddddddabee",
+          "dddcddddddddabee",
+          "ddccccbddddddbee",
+          "dccccccbdddddbee",
+          "dccccccbdddadbee",
+          "ddccccdddddadbee",
+          "ddbbcadddddddbee",
+          "dddddddddddddbee",
+          "dddddddddddddbee",
+          "ddddddaddddddbee",
+          "daadddaddddddbee",
+          "ddabbbbddddddbee",
+          "dddbbbbddddddbee",
+          "ddddaddddddddbee",
+          "ddddcddddddddbee",
+          "dddcdddddddddbee"
+        ]
+      }
+    },
+    "earth_hole": {
+      "solid": false,
+      "color": "#805d48",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm.jpg",
+      "art": {
+        "palette": {".":null,"a":"#110712","b":"#231517","c":"#31221d","d":"#4e362d","e":"#805d48"},
+        "pixels": [
+          "eeeeeeeeaeeeaeee",
+          "eeeceeeeeaeeaeee",
+          "eeeddeeaeaaaeeee",
+          "aedddaeaecccaeee",
+          "eaaccccbecccceee",
+          "eeeccccceccccaee",
+          "eeecccccccccccec",
+          "eeeeccccccccceee",
+          "eeeaccccccceeeee",
+          "eaacaccceeeeeece",
+          "ececcccaeeeeeeee",
+          "eeeeaccceeeeeeee",
+          "eeeacceceeeeeeee",
+          "eeaeeeeceeecaeee",
+          "eeeeeeeeeeeeaeee",
+          "eeeeeeeeeeeeeeee"
+        ]
+      }
+    }
+  }
+}

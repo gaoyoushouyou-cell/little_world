@@ -1,0 +1,9 @@
+{
+  "id": "bed_cyan",
+  "name": "水色のベッド",
+  "icon": "bed_cyan",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "bed_cyan"
+}

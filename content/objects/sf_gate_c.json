@@ -1,0 +1,7 @@
+{
+  "id": "sf_gate_c",
+  "name": "門",
+  "sprite": "sf_gate_c",
+  "collision": {},
+  "provisional": true
+}

@@ -1,0 +1,9 @@
+{
+  "id": "stool_pink",
+  "name": "桃色の腰掛け",
+  "icon": "stool_pink",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "stool_pink"
+}

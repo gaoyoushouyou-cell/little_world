@@ -1,0 +1,12 @@
+{
+  "id": "statue_angel_sleep",
+  "name": "眠る天使の像",
+  "sprite": "statue_angel_sleep",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

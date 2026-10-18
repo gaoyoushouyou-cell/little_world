@@ -1,0 +1,7 @@
+{
+  "id": "fiber",
+  "name": "繊維",
+  "icon": "item_fiber",
+  "weight": 1,
+  "maxStack": 99
+}

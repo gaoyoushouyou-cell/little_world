@@ -1,0 +1,12 @@
+{
+  "id": "diary_shelf",
+  "name": "日記の棚",
+  "sprite": "diary_shelf",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

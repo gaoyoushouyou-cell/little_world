@@ -1,0 +1,7 @@
+{
+  "id": "rock",
+  "name": "岩",
+  "icon": "item_rock",
+  "weight": 4,
+  "maxStack": 99
+}

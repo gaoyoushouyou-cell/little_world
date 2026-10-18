@@ -1,0 +1,7 @@
+{
+  "id": "stairs_down",
+  "name": "下り階段",
+  "sprite": "stairs_down",
+  "collision": {},
+  "provisional": true
+}

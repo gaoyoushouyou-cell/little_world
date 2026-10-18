@@ -1,0 +1,7 @@
+{
+  "id": "iron_bar",
+  "name": "鉄の延べ棒",
+  "icon": "item_iron_bar",
+  "weight": 5,
+  "maxStack": 99
+}

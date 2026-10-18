@@ -1,0 +1,9 @@
+{
+  "id": "table_wood",
+  "name": "木の机",
+  "icon": "table_wood",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "table_wood"
+}

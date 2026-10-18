@@ -1,0 +1,12 @@
+{
+  "id": "streetlamp_curved",
+  "name": "曲がった街灯",
+  "sprite": "streetlamp_curved",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": false
+}

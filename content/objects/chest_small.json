@@ -1,0 +1,18 @@
+{
+  "id": "chest_small",
+  "name": "小さな箱",
+  "sprite": "chest",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true,
+  "interact": {
+    "type": "chest",
+    "label": "開ける",
+    "openSprite": "chest_open",
+    "slots": 18
+  }
+}

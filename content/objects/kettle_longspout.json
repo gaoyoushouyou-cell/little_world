@@ -1,0 +1,12 @@
+{
+  "id": "kettle_longspout",
+  "name": "注ぎ口の長いやかん",
+  "sprite": "kettle_longspout",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

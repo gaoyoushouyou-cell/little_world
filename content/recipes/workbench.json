@@ -1,0 +1,18 @@
+{
+  "id": "workbench",
+  "output": {
+    "item": "workbench",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "log",
+      "count": 4
+    },
+    {
+      "item": "rock",
+      "count": 2
+    }
+  ],
+  "station": "hand"
+}

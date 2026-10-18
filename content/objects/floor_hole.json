@@ -1,0 +1,7 @@
+{
+  "id": "floor_hole",
+  "name": "床の穴",
+  "sprite": "floor_hole",
+  "collision": {},
+  "provisional": true
+}

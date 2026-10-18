@@ -1,0 +1,9 @@
+{
+  "id": "nightstand_lamp",
+  "name": "灯りの載った台",
+  "icon": "nightstand_lamp",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "nightstand_lamp"
+}

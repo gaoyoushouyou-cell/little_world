@@ -1,0 +1,12 @@
+{
+  "id": "door_wall",
+  "name": "壁の扉",
+  "sprite": "door_wall",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

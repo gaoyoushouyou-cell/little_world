@@ -1,0 +1,9 @@
+{
+  "id": "mirror_cyan",
+  "name": "水色の鏡",
+  "icon": "mirror_cyan",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "mirror_cyan"
+}

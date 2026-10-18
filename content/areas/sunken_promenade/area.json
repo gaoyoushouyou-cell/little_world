@@ -2,26 +2,126 @@
   "id": "sunken_promenade",
   "name": "沈んだ遊歩道",
   "view": "side",
-  "size": [90, 30],
+  "size": [
+    90,
+    30
+  ],
   "depth": 2,
   "physics": {
-    "gravity": [0, 0.3],
+    "gravity": [
+      0,
+      0.3
+    ],
     "maxSpeed": 2
   },
   "layers": [
-    { "type": "gradient", "colors": ["#07061a", "#1b1240", "#3d1f5c", "#6b2f6a"], "steps": 8 },
-    { "type": "stars", "scroll": 0.04, "density": 0.003 },
-    { "type": "silhouette", "kind": "towers", "color": "#1a1436", "accent": "#ffd88a", "scroll": 0.12, "height": 130, "baseline": 0.86, "period": 640 },
-    { "type": "silhouette", "kind": "hills", "color": "#120e28", "scroll": 0.35, "height": 70, "baseline": 0.92 },
-    { "type": "particles", "count": 30, "colors": ["#cdb8ff", "#ffe2f4"], "velocity": [3, -5], "scroll": 0.6, "alpha": 0.6, "seed": "motes" },
-    { "type": "tiles", "id": "deco" },
-    { "type": "tiles", "id": "ground", "collide": true },
-    { "type": "particles", "count": 14, "colors": ["#ffffff"], "size": 2, "velocity": [6, -2], "scroll": 1.4, "alpha": 0.35, "seed": "near" },
-    { "type": "silhouette", "kind": "spikes", "color": "#05040c", "scroll": 1.25, "height": 34, "baseline": 1.0, "alpha": 0.92 },
-    { "type": "fog", "color": "#2a0f3a", "density": 0.22, "drift": [5, 0] }
+    {
+      "type": "gradient",
+      "colors": [
+        "#392263",
+        "#392263",
+        "#40266d",
+        "#5a2f6e"
+      ],
+      "steps": 8
+    },
+    {
+      "type": "stars",
+      "scroll": 0.04,
+      "density": 0.003
+    },
+    {
+      "type": "image",
+      "image": "backgrounds/promenade_far",
+      "scale": 2,
+      "scroll": 0.05,
+      "baseline": 0.62
+    },
+    {
+      "type": "image",
+      "image": "backgrounds/promenade_mid",
+      "scale": 2,
+      "scroll": 0.25,
+      "baseline": 0.8125
+    },
+    {
+      "type": "image",
+      "image": "backgrounds/promenade_near",
+      "scale": 2,
+      "scroll": 0.5,
+      "baseline": 0.833
+    },
+    {
+      "type": "particles",
+      "count": 30,
+      "colors": [
+        "#cdb8ff",
+        "#ffe2f4"
+      ],
+      "velocity": [
+        3,
+        -5
+      ],
+      "scroll": 0.6,
+      "alpha": 0.6,
+      "seed": "motes"
+    },
+    {
+      "type": "tiles",
+      "id": "deco"
+    },
+    {
+      "type": "tiles",
+      "id": "ground",
+      "collide": true
+    },
+    {
+      "type": "particles",
+      "count": 14,
+      "colors": [
+        "#ffffff"
+      ],
+      "size": 2,
+      "velocity": [
+        6,
+        -2
+      ],
+      "scroll": 1.4,
+      "alpha": 0.35,
+      "seed": "near"
+    },
+    {
+      "type": "silhouette",
+      "kind": "spikes",
+      "color": "#05040c",
+      "scroll": 1.25,
+      "height": 34,
+      "baseline": 1,
+      "alpha": 0.92
+    },
+    {
+      "type": "fog",
+      "color": "#2a0f3a",
+      "density": 0.22,
+      "drift": [
+        5,
+        0
+      ]
+    }
   ],
   "spawns": {
-    "west": [2, 23],
-    "east": [87, 23]
-  }
+    "west": [
+      2,
+      23
+    ],
+    "east": [
+      87,
+      23
+    ],
+    "core": [
+      36,
+      23
+    ]
+  },
+  "basable": true
 }

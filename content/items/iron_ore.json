@@ -1,0 +1,7 @@
+{
+  "id": "iron_ore",
+  "name": "鉄の鉱石",
+  "icon": "item_iron_ore",
+  "weight": 4,
+  "maxStack": 99
+}

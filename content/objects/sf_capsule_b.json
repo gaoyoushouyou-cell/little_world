@@ -1,0 +1,12 @@
+{
+  "id": "sf_capsule_b",
+  "name": "機械の箱",
+  "sprite": "sf_capsule_b",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

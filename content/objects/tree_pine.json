@@ -1,0 +1,12 @@
+{
+  "id": "tree_pine",
+  "name": "針葉樹",
+  "sprite": "tree_pine",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": false
+}

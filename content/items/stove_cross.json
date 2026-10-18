@@ -1,0 +1,9 @@
+{
+  "id": "stove_cross",
+  "name": "十字の暖炉",
+  "icon": "stove_cross",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "stove_cross"
+}

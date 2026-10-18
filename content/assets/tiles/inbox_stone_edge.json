@@ -1,0 +1,498 @@
+{
+  "tiles": {
+    "stone_frame_nw": {
+      "solid": true,
+      "color": "#605b6c",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#221d2e","b":"#504b5d","c":"#605b6c","d":"#8e879a","e":"#aea9ba"},
+        "pixels": [
+          "aeeeeeeeeeeeeeea",
+          "ebddddddddddddda",
+          "edbdddddddddddda",
+          "eddaaaaaaaaaaaaa",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca"
+        ]
+      }
+    },
+    "stone_frame_n_a": {
+      "solid": true,
+      "color": "#605b6c",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#201b2d","b":"#605b6c","c":"#8d889a","d":"#ada9ba"},
+        "pixels": [
+          "dddddddddddddddd",
+          "cccccccccccccccc",
+          "cccccccccccccccc",
+          "aaaaaaaaaaaaaaaa",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb"
+        ]
+      }
+    },
+    "stone_frame_n_b": {
+      "solid": true,
+      "color": "#5f5a6c",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#201b2d","b":"#5f5a6c","c":"#8c8698","d":"#aca9b9"},
+        "pixels": [
+          "addddddddddddddd",
+          "accccccccccccccc",
+          "accccccccccccccc",
+          "aaaaaaaaaaaaaaaa",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb"
+        ]
+      }
+    },
+    "stone_frame_ne": {
+      "solid": true,
+      "color": "#605b6d",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#221c2e","b":"#514c5d","c":"#605b6d","d":"#8e889a","e":"#ada9b9"},
+        "pixels": [
+          "aeeeeeeeeeeeeeaa",
+          "addddddddddddddd",
+          "addddddddddddbdd",
+          "aaaaaaaaaaaaaddd",
+          "acccccccccccaddd",
+          "acccccccccccaddd",
+          "acccccccccccaddd",
+          "acccccccccccaddd",
+          "acccccccccccaddd",
+          "acccccccccccaddd",
+          "acccccccccccaddd",
+          "acccccccccccaddd",
+          "acccccccccccaddd",
+          "acccccccccccaddd",
+          "acccccccccccaddd",
+          "acccccccccccadda"
+        ]
+      }
+    },
+    "stone_frame_sw": {
+      "solid": true,
+      "color": "#605b6c",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#1f1b2b","b":"#504b5c","c":"#605b6c","d":"#8c8798","e":"#afaabb"},
+        "pixels": [
+          "aaaaaaaaaaaaaaaa",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaccccccccccca",
+          "eddaaaaaaaaaaaaa",
+          "edddddddddddddda",
+          "edddddddddddddda",
+          "bdddddddddddddda"
+        ]
+      }
+    },
+    "stone_frame_s_a": {
+      "solid": true,
+      "color": "#605b6c",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e2d","b":"#605b6c","c":"#625d6e","d":"#8d889a"},
+        "pixels": [
+          "aaaaaaaaaaaaaaaa",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "bbbbbbbbbbbbbbbb",
+          "cbbbbbbbbbbbbbbb",
+          "cbbbbbbbbbbbbbbb",
+          "cbbbbbbbbbbbbbbb",
+          "aaaaaaaaaaaaaaaa",
+          "dddddddddddddddd",
+          "dddddddddddddddd",
+          "dddddddddddddddd"
+        ]
+      }
+    },
+    "stone_frame_s_b": {
+      "solid": true,
+      "color": "#605b6c",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#1f1b2b","b":"#605b6c","c":"#8d889a"},
+        "pixels": [
+          "aaaaaaaaaaaaaaaa",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "abbbbbbbbbbbbbbb",
+          "aaaaaaaaaaaaaaaa",
+          "accccccccccccccc",
+          "accccccccccccccc",
+          "accccccccccccccc"
+        ]
+      }
+    },
+    "stone_frame_se": {
+      "solid": true,
+      "color": "#605b6c",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#181424","b":"#221d2e","c":"#605b6c","d":"#8e889a"},
+        "pixels": [
+          "bbcbbcbbbbbcbbbb",
+          "bcccccccccccbddd",
+          "bcccccccccccbddd",
+          "ccccccccccccbddd",
+          "ccccccccccccbddd",
+          "bcccccccccccbddd",
+          "bcccccccccccbddd",
+          "ccccccccccccbddd",
+          "bcccccccccccbddd",
+          "bcccccccccccbddd",
+          "bcccccccccccbddd",
+          "bcccccccccccbddd",
+          "bbbbbbbbbbbbaddd",
+          "bddddddddddddcdd",
+          "dddddddddddddddd",
+          "bddddddddddddddc"
+        ]
+      }
+    },
+    "stone_crack_c": {
+      "solid": true,
+      "color": "#918c9e",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#221e2e","b":"#534e60","c":"#726d7e","d":"#918c9e","e":"#aeaaba"},
+        "pixels": [
+          "aeeeeeeeeeeeeeea",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "eddddbddddddcddb",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "eddddddddddddddb",
+          "abbbbbbbbbbbbbba"
+        ]
+      }
+    },
+    "stone_crack_d": {
+      "solid": true,
+      "color": "#918c9e",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#211e2e","b":"#4f4a5c","c":"#575264","d":"#918c9e","e":"#aba7b7"},
+        "pixels": [
+          "aeeeeeeeeeeaaeea",
+          "eddddddddddaedda",
+          "eddddddddddaddda",
+          "edddddddddadddda",
+          "edddddddddadddda",
+          "edddddddcedcddda",
+          "edddddddddddddda",
+          "edddddddddddddda",
+          "edddddddddddddda",
+          "edddddddddddddda",
+          "edddddddddddddda",
+          "edddddddddddddda",
+          "edddddddddddddda",
+          "edddddddddddddda",
+          "adddddddddddddda",
+          "acbccccccccbbcca"
+        ]
+      }
+    },
+    "stone_crack_e": {
+      "solid": true,
+      "color": "#918b9e",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#201b2d","b":"#555062","c":"#918b9e","d":"#aba6b6","e":"#b6b3c1"},
+        "pixels": [
+          "adddddddddaeddea",
+          "dcccccccccaccccb",
+          "dccccccccccbcccb",
+          "dccccccccccbcccb",
+          "dcccccccccbdcccb",
+          "dcccccccccbccccb",
+          "dccccccccccccccb",
+          "dccccccccccccccb",
+          "dccccccccccccccb",
+          "dccccccccccccccb",
+          "dccccccccccccccb",
+          "bbcccccccccccccb",
+          "ecbcccccccccbbcb",
+          "dcccccccccccbdcb",
+          "dccccccccccccccb",
+          "abbbbbbbbbbbbbba"
+        ]
+      }
+    },
+    "stone_crack_f": {
+      "solid": true,
+      "color": "#908b9d",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#20192c","b":"#565163","c":"#908b9d","d":"#aca7b8"},
+        "pixels": [
+          "ddccccccccdadccb",
+          "dccccccccccdcccb",
+          "dccccccccccccccb",
+          "dccccccccccccccb",
+          "dccbcccccccccccb",
+          "dccccccccccccccb",
+          "dccccccccccbcccb",
+          "accccccccccbbccb",
+          "dcbccccccbbbcccb",
+          "dcbccccccccccccb",
+          "dccccccccccccccb",
+          "dccccccccccccccb",
+          "dccccccccccccccb",
+          "dccccccccccccccb",
+          "dccccccccccccccb",
+          "abbbbbbbbbbbbbba"
+        ]
+      }
+    },
+    "stone_crack_g": {
+      "solid": true,
+      "color": "#908b9d",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#211b2e","b":"#554f62","c":"#908b9d","d":"#9a94a7","e":"#aca7b8"},
+        "pixels": [
+          "ecccccccccccccca",
+          "eccccccccccccccc",
+          "eccccccccccccccc",
+          "accccccccccccccc",
+          "aaadcccccccccccc",
+          "ecceaaccbccccccc",
+          "eccccccbcccccccc",
+          "eccccccbcccccccc",
+          "ecccccccbbcccccc",
+          "eccccccccccccccc",
+          "eccccccccccccccc",
+          "eccccccccccccccc",
+          "eccccccccccccccc",
+          "eccccccccccccccc",
+          "eccccccccccccccc",
+          "abbbbbbbbbbbbbba"
+        ]
+      }
+    },
+    "stone_crack_h": {
+      "solid": true,
+      "color": "#908a9d",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#201b2d","b":"#3a3647","c":"#534e61","d":"#6a6577","e":"#908a9d","f":"#a9a5b5"},
+        "pixels": [
+          "afeeeeeeeeeeeeda",
+          "feeeeeeeeeeeeeea",
+          "feeebceeeeeeeeea",
+          "feebdeeeeeeedeea",
+          "feeeeeeeeeeeeeea",
+          "feeeeeeeeeeeeeea",
+          "feeeeeeeeeeeeeea",
+          "feeeeeeeeeeeeeea",
+          "feeeeeeeeeeeeeea",
+          "feeeeeeeeeeeeeea",
+          "feedeeeeeeeeeeea",
+          "feeeeeeeeeeeeeea",
+          "feeeeeeeeeefeeea",
+          "feeeeeeeeeeeeeea",
+          "feeeeeeeeeeeeeea",
+          "acccccccccccccaa"
+        ]
+      }
+    },
+    "stone_broken_b": {
+      "solid": true,
+      "color": "#8f899c",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#221d2e","b":"#464252","c":"#575263","d":"#8f899c","e":"#a39eaf","f":"#b0abbc"},
+        "pixels": [
+          "aaaaaaaaaaaaaaaa",
+          "ffddfacccffedccd",
+          "fddddcccfddddccc",
+          "fdddddcaddddddcc",
+          "fdddddcadddddddc",
+          "fddddddddddddddc",
+          "fddddddddddddddc",
+          "fddddddddddddddc",
+          "fddddddddddddddc",
+          "fddddddddddddddc",
+          "fddddddddddddddc",
+          "fddddddddddddddc",
+          "fddddddddddddddc",
+          "edddddddddddddcc",
+          "edddcdddddddddcc",
+          "abcccccccaacbbba"
+        ]
+      }
+    },
+    "stone_broken_c": {
+      "solid": true,
+      "color": "#8f899c",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#211c2d","b":"#474253","c":"#565163","d":"#8f899c","e":"#aca7b8"},
+        "pixels": [
+          "aaaaaaaaaaaaaaaa",
+          "aeddaaeddddddddd",
+          "addddddddddddddc",
+          "adddddddddabaedc",
+          "addddddddabbbedc",
+          "addddddddbbbbedc",
+          "aaddddddabbbbddc",
+          "aaddddddeeeddadc",
+          "aadddddcddddddaa",
+          "aedddddddddddddc",
+          "aeaebedddddddddc",
+          "aedddddddddddddc",
+          "addddddddddddddc",
+          "adddddcddddddddc",
+          "adddddcddddddddc",
+          "acccccaaccccccca"
+        ]
+      }
+    },
+    "stone_broken_d": {
+      "solid": true,
+      "color": "#8f899c",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#1f1b2b","b":"#3e394a","c":"#565063","d":"#777183","e":"#8f899c","f":"#aea9b9"},
+        "pixels": [
+          "aaaaaaaaaaaaaaaa",
+          "feeeeeeeaafeeeea",
+          "feeeeeeeafeeeeea",
+          "feeeeeeeafeeeeea",
+          "feeeeeeeaeeeeeea",
+          "feeeeeeaeecceeaa",
+          "feeeeeafeeeeebaa",
+          "eeedaffeeeeeeeaa",
+          "caaaeeeceeeeeeea",
+          "aefeeeeaeeeeeeea",
+          "feeeeeefaeeeeeea",
+          "feeeeeeeeaeeeeea",
+          "feeeebeeeaeeeeea",
+          "feeeebeeeeeeeeea",
+          "feeebeeeeeeeeeca",
+          "acccacccccacccca"
+        ]
+      }
+    },
+    "stone_hole": {
+      "solid": true,
+      "color": "#8e889a",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#211c2c","b":"#494454","c":"#5a5567","d":"#8e889a","e":"#9791a2","f":"#aea9b9"},
+        "pixels": [
+          "aaaaaaaaaaaaaaaa",
+          "ffccccdddddadddd",
+          "fdcfddddddacaddd",
+          "fdfddddddabbbfdd",
+          "fdddddaaabbbafdd",
+          "fddddabbbbbbbfdd",
+          "fdddaabbbbbabbdc",
+          "aadeabbbbbbbbddc",
+          "ffddbbbbbbbdcddb",
+          "fdddbbbbbbccccda",
+          "fdddcdddbccccddd",
+          "fddddddddbcccbdd",
+          "fddbdddddbbccbdc",
+          "fddddddddddddbdc",
+          "fddddddddddddbdc",
+          "accccccaaaccccca"
+        ]
+      }
+    },
+    "stone_pit": {
+      "solid": true,
+      "color": "#8e899b",
+      "source": "art/inbox/Gemini_Generated_Image_2hzmcb2hzmcb2hzm (2).jpg",
+      "art": {
+        "palette": {".":null,"a":"#201b2c","b":"#363141","c":"#504b5c","d":"#666072","e":"#8e899b","f":"#aca8b8"},
+        "pixels": [
+          "aaaaaaaaaaaaaaaa",
+          "afeeeeeeeeeeeecc",
+          "aeeeeeeeeededeec",
+          "aeeeeeeeeeeeeeed",
+          "aeeeeaaaeeeeeeeb",
+          "aeeeaaccaeeeeeda",
+          "aeeeaccccfeeeeca",
+          "aeeeaccccfeeeeda",
+          "aeeeeaccfeeeeecc",
+          "aeeeeeffeeeeeeec",
+          "aeeeeeeeeddeeeec",
+          "aeeeeeeeeeeeeeec",
+          "aeeeeeeeeeeeeeec",
+          "addeeeeeeeeeeeec",
+          "adddceeeeeeeeeec",
+          "acccacccccccccca"
+        ]
+      }
+    }
+  }
+}

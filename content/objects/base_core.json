@@ -1,0 +1,11 @@
+{
+  "id": "base_core",
+  "name": "誰も座っていない椅子（拠点の核）",
+  "sprite": "chair_wood",
+  "collision": {},
+  "provisional": false,
+  "interact": {
+    "type": "base_core",
+    "label": "調べる"
+  }
+}

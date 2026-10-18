@@ -1,0 +1,12 @@
+{
+  "id": "sf_door_a",
+  "name": "自動扉",
+  "sprite": "sf_door_a",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

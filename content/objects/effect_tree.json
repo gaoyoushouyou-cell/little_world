@@ -1,0 +1,13 @@
+{
+  "id": "effect_tree",
+  "name": "エフェクトの木",
+  "sprite": "effect_tree",
+  "animation": "stage0",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": true
+}

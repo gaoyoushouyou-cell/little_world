@@ -1,0 +1,12 @@
+{
+  "id": "tree_willow_b",
+  "name": "水辺の柳",
+  "sprite": "tree_willow_b",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": false
+}

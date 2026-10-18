@@ -1,0 +1,9 @@
+{
+  "id": "cabinet_wood",
+  "name": "木の戸棚",
+  "icon": "cabinet_wood",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "cabinet_wood"
+}

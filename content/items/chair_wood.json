@@ -1,0 +1,9 @@
+{
+  "id": "chair_wood",
+  "name": "木の椅子",
+  "icon": "chair_wood",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "chair_wood"
+}

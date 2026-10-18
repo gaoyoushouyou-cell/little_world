@@ -1,0 +1,14 @@
+{
+  "id": "planks",
+  "output": {
+    "item": "planks",
+    "count": 2
+  },
+  "inputs": [
+    {
+      "item": "log",
+      "count": 1
+    }
+  ],
+  "station": "workbench"
+}

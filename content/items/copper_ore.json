@@ -1,0 +1,7 @@
+{
+  "id": "copper_ore",
+  "name": "銅の鉱石",
+  "icon": "item_copper_ore",
+  "weight": 4,
+  "maxStack": 99
+}

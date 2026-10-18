@@ -1,0 +1,9 @@
+{
+  "id": "table_face",
+  "name": "顔のある台",
+  "icon": "table_face",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "table_face"
+}

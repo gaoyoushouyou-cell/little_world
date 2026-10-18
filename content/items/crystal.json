@@ -1,0 +1,7 @@
+{
+  "id": "crystal",
+  "name": "水晶",
+  "icon": "item_crystal",
+  "weight": 2,
+  "maxStack": 99
+}

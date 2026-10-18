@@ -1,0 +1,12 @@
+{
+  "id": "tree_birch",
+  "name": "白樺",
+  "sprite": "tree_birch",
+  "collision": {
+    "top": [
+      1,
+      1
+    ]
+  },
+  "provisional": false
+}

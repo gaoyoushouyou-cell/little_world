@@ -1,0 +1,9 @@
+{
+  "id": "piano",
+  "name": "ピアノ",
+  "icon": "piano",
+  "weight": 0,
+  "maxStack": 1,
+  "kind": "furniture",
+  "places": "piano"
+}

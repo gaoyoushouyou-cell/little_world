@@ -1,0 +1,12 @@
+{
+  "id": "sf_console_a",
+  "name": "操作卓",
+  "sprite": "sf_console_a",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

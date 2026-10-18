@@ -1,0 +1,51 @@
+{
+  "palette": {".":null,"a":"#08060e","b":"#14101b","c":"#2b052f","d":"#1e1d27","e":"#540355","f":"#282833","g":"#2e303a","h":"#3a3b48","i":"#4a4c56"},
+  "frameSteps": 12,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_vwtoaxvwtoaxvwto.jpg"},
+  "animations": {
+    "idle": [
+      [
+        "..ii......................",
+        "iiiiie....................",
+        "ggiiiiia..................",
+        "ggggiiiiic................",
+        "aggggghiiiic..............",
+        "ghbgggggiiiiia............",
+        "ggifagggggiiiia...........",
+        "ggifgfaggggiiiiii.........",
+        "ggigaggfagggfiiiiii.......",
+        "ggigaddbffagfggiiiid......",
+        "ggigaggddfffaggggidd......",
+        "ggdfbggggdagfagggidd......",
+        "ggigbggggggdagfaghdb......",
+        "ggigbggggggggdgggidd......",
+        "ggigbgggggggggggggdd......",
+        "ggigaggggggdgggggddd......",
+        "agggaggggggggghggddd......",
+        "ghbgaggggggggggggddd......",
+        "gghgagggggggggfaghdd......",
+        "ggigbggggggggggggddd......",
+        "ggigaggggggggggggddd......",
+        "ggigagggggggggggggdd......",
+        "ggigaggggggggggggddd......",
+        "gghgadgggggggggggidd......",
+        "gghgaggggggggggagddb......",
+        "gghgagdgggggfggbddbd......",
+        "hhdgagggggggggggggdd......",
+        "gghgaggggggggggggddd......",
+        "ggigbggggggggghggddd......",
+        "ggigbggggggggfgggddd......",
+        "agihgbdggggggggggidd......",
+        "..bbgggbfggggggaggdd......",
+        ".....adggidgggfdgiddc.....",
+        ".......agggbdfgdgiddccc...",
+        ".........bgggbgabbbdccccc.",
+        "...........bgggagiddcccccc",
+        ".............ggaggddcccc..",
+        "...............agiddcc....",
+        "...............agidd......",
+        ".................aa......."
+      ]
+    ]
+  }
+}

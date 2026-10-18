@@ -1,0 +1,18 @@
+{
+  "id": "chest_small",
+  "output": {
+    "item": "chest_small",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "planks",
+      "count": 6
+    },
+    {
+      "item": "pebbles",
+      "count": 2
+    }
+  ],
+  "station": "workbench"
+}

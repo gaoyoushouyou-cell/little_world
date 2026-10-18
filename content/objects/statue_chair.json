@@ -1,0 +1,12 @@
+{
+  "id": "statue_chair",
+  "name": "空の椅子の像",
+  "sprite": "statue_chair",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": true
+}

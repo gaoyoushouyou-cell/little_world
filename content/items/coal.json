@@ -1,0 +1,7 @@
+{
+  "id": "coal",
+  "name": "石炭",
+  "icon": "item_coal",
+  "weight": 2,
+  "maxStack": 99
+}

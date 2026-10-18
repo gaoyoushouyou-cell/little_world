@@ -3,7 +3,10 @@ import { Area } from '../schema/area';
 import { MapDef } from '../schema/map';
 import { AreaTiles, Sprite, Tileset, type TileDef } from '../schema/assets';
 import { Entities, ObjectDef, type Placement } from '../schema/objects';
-import { layerPlugins } from '../registry';
+import { BaseDef, Economy, ItemDef } from '../schema/economy';
+import { RecipeDef } from '../schema/recipes';
+import { interactionPlugins, layerPlugins } from '../registry';
+import { analyzeImage, checkImage, decodeInBrowser, imagePath, type ImageDecoder, type LoadedImage } from './images';
 import { layoutObject, type ObjectLayout } from './objects';
 import { SolidMap, TileGrid } from './tilegrid';
 import { WorldMap, type PlacedArea } from './world';
@@ -11,8 +14,13 @@ import { WorldMap, type PlacedArea } from './world';
 /**
  * content/ の読み込みと検証。
  * area.json などの小さいファイルは起動時にすべて読み、重い tiles.json だけを
- * エリアに入るとき（と隣のエリアの分）に遅延読み込みする。
+ * エリアに入るとき（と隣のエリアの分）に遅延読み込みする。レイヤーが使う画像（PNG）も同じときに読む。
  */
+
+export interface ContentOptions {
+  /** PNG を RGBA にする方法（既定はブラウザの createImageBitmap。テストではファイルを読むものを渡す） */
+  decodeImage?: ImageDecoder;
+}
 
 export interface ContentIssue {
   level: 'error' | 'warning';
@@ -26,6 +34,8 @@ export interface LoadedArea {
   /** tiles レイヤーの id → 格子 */
   grids: Record<string, TileGrid>;
   solid: SolidMap;
+  /** タイルだけの当たり判定（物を足す前。建築モードで物を置き直すときに使う） */
+  tileSolid: SolidMap;
   /** layers[i] をプラグインのスキーマで検証した結果 */
   layerParams: unknown[];
   /** 置いた物（entities.json） */
@@ -45,6 +55,12 @@ const tilesetFiles = import.meta.glob('/content/assets/tiles/*.json', { eager: t
 const spriteFiles = import.meta.glob('/content/assets/sprites/*.json', { eager: true, import: 'default' });
 const objectFiles = import.meta.glob('/content/objects/*.json', { eager: true, import: 'default' });
 const entitiesFiles = import.meta.glob('/content/areas/*/entities.json', { import: 'default' });
+const itemFiles = import.meta.glob('/content/items/*.json', { eager: true, import: 'default' });
+const baseFiles = import.meta.glob('/content/bases/*.json', { eager: true, import: 'default' });
+const economyFiles = import.meta.glob('/content/world/economy.json', { eager: true, import: 'default' });
+const recipeFiles = import.meta.glob('/content/recipes/*.json', { eager: true, import: 'default' });
+/** 画像は URL だけを持っておき、使うエリアに入るときに読む */
+const imageFiles = import.meta.glob<string>('/content/assets/images/**/*.png', { query: '?url', import: 'default' });
 
 const fileName = (path: string) => (path.split('/').pop() ?? path).replace(/\.json$/, '');
 const folderName = (path: string) => path.split('/').at(-2) ?? path;
@@ -57,19 +73,135 @@ export class Content {
   readonly tiles = new Map<string, TileDef>();
   readonly sprites = new Map<string, Sprite>();
   readonly objects = new Map<string, ObjectDef>();
+  readonly items = new Map<string, ItemDef>();
+  /** エリア id → 拠点の設定 */
+  readonly bases = new Map<string, BaseDef>();
+  economy: Economy = { pocketSlots: 12, storageSlots: [24], baseCostGrowth: 1.5, starter: [] };
   map!: MapDef;
   world!: WorldMap;
+  /** 加工のレシピ（読み込んだ順） */
+  readonly recipes = new Map<string, RecipeDef>();
+  /** 読み込み済みの画像（id → 画素）。エリアに入るときに増える */
+  readonly images = new Map<string, LoadedImage>();
 
   private readonly layerParams = new Map<string, unknown[]>();
   private readonly pending = new Map<string, Promise<LoadedArea>>();
   private readonly loaded = new Map<string, LoadedArea>();
+  /** エリア id → そのエリアのレイヤーが使う画像 */
+  private readonly areaImages = new Map<string, string[]>();
+  private readonly imagePending = new Map<string, Promise<LoadedImage>>();
+  private readonly decodeImage: ImageDecoder;
 
-  constructor() {
+  constructor(options: ContentOptions = {}) {
+    this.decodeImage = options.decodeImage ?? decodeInBrowser;
     this.loadTilesets();
     this.loadSprites();
     this.loadObjects();
     this.loadAreas();
     this.loadMap();
+    this.loadEconomy();
+    this.checkFurniture();
+    this.loadRecipes();
+  }
+
+  private loadRecipes() {
+    for (const [path, raw] of Object.entries(recipeFiles)) {
+      const r = RecipeDef.safeParse(raw);
+      if (!r.success) {
+        describe(r.error).forEach((m) => this.error(path, m));
+        continue;
+      }
+      const rec = r.data;
+      if (rec.id !== fileName(path)) this.error(path, `id "${rec.id}" がファイル名と違う`);
+      if (!this.items.has(rec.output.item)) this.error(path, `できる物 "${rec.output.item}" が content/items/ にない`);
+      for (const c of rec.inputs) if (!this.items.has(c.item)) this.error(path, `材料 "${c.item}" が content/items/ にない`);
+      const out = this.items.get(rec.output.item);
+      if (out && rec.output.count > out.maxStack) this.error(path, `できる数 ${rec.output.count} が 1 マスに入る数 ${out.maxStack} を超える`);
+      this.recipes.set(rec.id, rec);
+    }
+  }
+
+  /** 家具の持ち物と、しまえる物の対応を確かめる（決定 51・54） */
+  private checkFurniture() {
+    for (const s of this.economy.starter) if (!this.items.has(s.item)) this.error('/content/world/economy.json', `starter の持ち物 "${s.item}" が content/items/ にない`);
+    for (const item of this.items.values()) {
+      const file = `/content/items/${item.id}.json`;
+      if (item.kind === 'furniture') {
+        if (!item.places) this.error(file, '家具（kind: furniture）には places（置く物）が要る');
+        else if (!this.objects.has(item.places)) this.error(file, `places の物 "${item.places}" が content/objects/ にない`);
+        if (item.weight !== 0) this.error(file, '家具の重さは 0 にする');
+        if (item.maxStack !== 1) this.error(file, '家具は 1 マスに 1 つ（maxStack: 1）');
+      } else if (item.places) this.error(file, 'places は家具（kind: furniture）だけに書く');
+    }
+    for (const obj of this.objects.values()) {
+      if (!obj.movable) continue;
+      const item = this.items.get(obj.item ?? obj.id);
+      const file = `/content/objects/${obj.id}.json`;
+      if (!item) this.error(file, `しまえる物（movable）の家具の持ち物 "${obj.item ?? obj.id}" が content/items/ にない`);
+      else if (item.kind !== 'furniture' || item.places !== obj.id) this.error(file, `持ち物 "${item.id}" が、この物を置く家具になっていない`);
+    }
+  }
+
+  /** 物をしまったときに入る家具の持ち物（しまえない物なら undefined） */
+  furnitureItemOf(objectId: string): string | undefined {
+    const obj = this.objects.get(objectId);
+    if (!obj) return undefined;
+    const id = obj.item ?? obj.id;
+    const item = this.items.get(id);
+    return item?.kind === 'furniture' && item.places === objectId ? id : undefined;
+  }
+
+  /** エリアの中での物の置き方（当たり判定のマスと足元の位置） */
+  layoutIn(def: Area, placement: Placement): ObjectLayout | undefined {
+    const obj = this.objects.get(placement.object);
+    if (!obj) return undefined;
+    const gravity: [number, number] = def.view === 'top' ? [0, 0] : def.physics.gravity;
+    return layoutObject(placement, obj, this.spriteSize(obj.sprite, obj.animation)?.w ?? 16, def.view, gravity);
+  }
+
+  private loadEconomy() {
+    const path = '/content/world/economy.json';
+    const raw = economyFiles[path];
+    if (raw) {
+      const r = Economy.safeParse(raw);
+      if (r.success) this.economy = r.data;
+      else describe(r.error).forEach((m) => this.error(path, m));
+    }
+    for (const [file, rawItem] of Object.entries(itemFiles)) {
+      const r = ItemDef.safeParse(rawItem);
+      if (!r.success) {
+        describe(r.error).forEach((m) => this.error(file, m));
+        continue;
+      }
+      if (r.data.id !== fileName(file)) this.error(file, `id "${r.data.id}" がファイル名と違う`);
+      if (!this.sprites.has(r.data.icon)) this.error(file, `アイコンのスプライト "${r.data.icon}" がない`);
+      this.items.set(r.data.id, r.data);
+    }
+    for (const [file, rawBase] of Object.entries(baseFiles)) {
+      const r = BaseDef.safeParse(rawBase);
+      if (!r.success) {
+        describe(r.error).forEach((m) => this.error(file, m));
+        continue;
+      }
+      const b = r.data;
+      const area = this.areas.get(b.area);
+      if (b.area !== fileName(file)) this.error(file, `area "${b.area}" がファイル名と違う`);
+      if (!area) {
+        this.error(file, `エリア "${b.area}" がない`);
+        continue;
+      }
+      if (!area.basable) this.error(file, `${b.area} は basable でない`);
+      if (area.resetOnEnter) this.error(file, `${b.area} は揺らぎ区域なので拠点にできない`);
+      if (!(b.spawn in area.spawns)) this.error(file, `spawn "${b.spawn}" が ${b.area} にない`);
+      if (!b.initial && !b.stages.some((s) => s.stage === 1)) this.error(file, '拠点にするとき（stage 1）の費用がない');
+      for (const s of b.stages) for (const c of s.cost) if (!this.items.has(c.item)) this.error(file, `費用の素材 "${c.item}" がない`);
+      this.bases.set(b.area, b);
+    }
+    for (const area of this.areas.values()) {
+      const file = `/content/areas/${area.id}/area.json`;
+      for (const g of area.gather?.items ?? []) if (!this.items.has(g.item)) this.error(file, `gather の素材 "${g.item}" がない`);
+      if (area.gather && !area.resetOnEnter) this.warn(file, 'gather は揺らぎ区域（resetOnEnter: true）でだけ使われる');
+    }
   }
 
   get hasErrors(): boolean {
@@ -150,6 +282,14 @@ export class Content {
       const sprite = this.sprites.get(def.sprite);
       if (!sprite) this.error(path, `スプライト "${def.sprite}" がない`);
       else if (!sprite.animations[def.animation]) this.error(path, `スプライト "${def.sprite}" にアニメーション "${def.animation}" がない`);
+      if (def.interact) {
+        const plugin = interactionPlugins.get(def.interact.type);
+        if (!plugin) this.error(path, `未登録の interact "${def.interact.type}"（登録済み: ${interactionPlugins.types().join(', ')}）`);
+        else {
+          const p = plugin.params.safeParse(def.interact);
+          if (!p.success) describe(p.error).forEach((m) => this.error(path, `interact ${m}`));
+        }
+      }
       this.objects.set(def.id, def);
     }
   }
@@ -167,6 +307,7 @@ export class Content {
         continue;
       }
       const params: unknown[] = [];
+      const images: string[] = [];
       area.layers.forEach((layer, i) => {
         const plugin = layerPlugins.get(layer.type);
         if (!plugin) {
@@ -178,7 +319,14 @@ export class Content {
         const p = plugin.params.safeParse(rest);
         if (!p.success) describe(p.error).forEach((m) => this.error(path, `layers[${i}] (${layer.type}) ${m}`));
         params.push(p.success ? p.data : undefined);
+        if (p.success && plugin.images) {
+          for (const id of plugin.images(p.data)) {
+            if (!imageFiles[imagePath(id)]) this.error(path, `layers[${i}] (${layer.type}) 画像 "${id}" が content/assets/images/ にない`);
+            else if (!images.includes(id)) images.push(id);
+          }
+        }
       });
+      this.areaImages.set(area.id, images);
       const [w, h] = area.size;
       const inBounds = ([x, y]: [number, number]) => x >= 0 && y >= 0 && x < w && y < h;
       for (const [name, at] of Object.entries(area.spawns)) {
@@ -324,10 +472,41 @@ export class Content {
     }
     if (problems.length) throw this.fail(file, problems.join(' / '));
 
+    await Promise.all((this.areaImages.get(id) ?? []).map((img) => this.loadImage(img)));
+    def.layers.forEach((layer, i) => {
+      const plugin = layerPlugins.get(layer.type);
+      if (!plugin?.check || params[i] === undefined) return;
+      for (const m of plugin.check(params[i], this.images)) this.error(`/content/areas/${id}/area.json`, `layers[${i}] (${layer.type}) ${m}`);
+    });
+
+    const tileSolid = new SolidMap(w, h);
+    tileSolid.data.set(solid.data);
     const objects = await this.loadEntities(def, solid);
-    const loaded: LoadedArea = { def, placed, grids, solid, layerParams: params, objects };
+    const loaded: LoadedArea = { def, placed, grids, solid, tileSolid, layerParams: params, objects };
     this.loaded.set(id, loaded);
     return loaded;
+  }
+
+  /** 画像を読み、検証して images に入れる（同じ画像は一度だけ読む） */
+  loadImage(id: string): Promise<LoadedImage> {
+    let p = this.imagePending.get(id);
+    if (!p) {
+      p = this.doLoadImage(id);
+      this.imagePending.set(id, p);
+      p.catch(() => this.imagePending.delete(id));
+    }
+    return p;
+  }
+
+  private async doLoadImage(id: string): Promise<LoadedImage> {
+    const path = imagePath(id);
+    const url = imageFiles[path];
+    if (!url) throw this.fail(path, '画像がない');
+    const pixels = await this.decodeImage(await url());
+    for (const m of checkImage(pixels)) this.error(path, m);
+    const image: LoadedImage = { ...pixels, id, palette: analyzeImage(pixels).palette };
+    this.images.set(id, image);
+    return image;
   }
 
   /** 置いた物を読み、当たり判定のマスを solid に足す */

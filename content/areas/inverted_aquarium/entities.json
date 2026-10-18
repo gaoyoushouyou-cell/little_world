@@ -6,5 +6,6 @@
   {"object":"kettle_set","at":[40,4]},
   {"object":"chair_wood","at":[46,4]},
   {"object":"glass_cabinet","at":[53,4]},
-  {"object":"floor_lamp","at":[56,4]}
+  {"object":"floor_lamp","at":[56,4]},
+  {"object":"chest_iso","at":[33,4]}
 ]

@@ -1,0 +1,53 @@
+{
+  "palette": {".":null,"a":"#312f51","b":"#4d6079","c":"#6b7790","d":"#96a1a6","e":"#e1d39d","f":"#edf3f7"},
+  "frameSteps": 20,
+  "source": {"idle":"art/inbox/Gemini_Generated_Image_xv1u3xxv1u3xxv1u.jpg","shimmer":"art/inbox/Gemini_Generated_Image_xv1u3xxv1u3xxv1u.jpg"},
+  "animations": {
+    "idle": [
+      [
+        "...........aaaaaaaaa........",
+        "......aaaaabbbbbbbbbaaaa....",
+        ".....aabbbbbbbbeeebbbbbbaa..",
+        "....aabbbbbbbbeebbbbbbbbbba.",
+        ".aaabbbbbbbbbbebbbbbbbbbbbba",
+        "aabbbbbbbbbbbbebbbbbbbbbbbba",
+        "abbbbbbbbbbbbbeebbbbbbbbbaa.",
+        ".abbbbbbbbbbbbbeeebbbbbaa...",
+        "..aabbbbbbbbbbbbbbbbbbbba...",
+        ".....aabbbbbbbbbbbbbbbbba...",
+        "........abbbbbbbbbbbaaaa....",
+        ".........aaaaaaaaaaa........"
+      ]
+    ],
+    "shimmer": [
+      [
+        "...........aaaaaaaaa........",
+        "......aaaaaabbbbbbbbaaaa....",
+        ".....aabbbbbbbbeeebbbbbaaa..",
+        "....aabbcbbbbbeebbbbbbbbbba.",
+        ".aabbbbbbbbbbbebbbbbbbbbbbba",
+        "abbbbbbbbbbbbbebbbbbbbbbbbba",
+        "acbbbbbbbbbbbbeebbbbbbbbcaa.",
+        ".acbbbbbbbbbbbbeeebbbbbaa...",
+        "..aabccbbbbbbbbbbbbbbbbba...",
+        "....aaabbbbbbbbbbbbbbbbba...",
+        ".......aabccbbbbbbcbaaaa....",
+        ".........aaaaaaaaaaa........"
+      ],
+      [
+        "...........aaaaaaaaa........",
+        "......aaaaabbbbbbbbbaaaa....",
+        ".....aabbbbbbbcffdbbbbbbaa..",
+        "....aabbbbbbbcffcbbbbbfbbba.",
+        ".aaabbbbbbbbbdfbbbbbbbbbbbba",
+        "aabbbbbbbbbbbffbbbbbbbbbbbba",
+        "accbbbbbbbbbbbffcbdbbbbbbaa.",
+        ".aacbbbbbbbbbbcfffcbbbcba...",
+        "..aabccbbbbbbbbbcbbbbbdba...",
+        ".....aaacbfbbbbbbbbbffbba...",
+        ".......aabccbbbbbbcbaaaa....",
+        ".........aaaaaaaaaaa........"
+      ]
+    ]
+  }
+}

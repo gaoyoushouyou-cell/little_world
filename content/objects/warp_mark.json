@@ -1,0 +1,7 @@
+{
+  "id": "warp_mark",
+  "name": "ワープの印",
+  "sprite": "warp_mark",
+  "collision": {},
+  "provisional": true
+}

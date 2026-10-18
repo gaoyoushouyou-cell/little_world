@@ -1,0 +1,12 @@
+{
+  "id": "tree_glow_blue",
+  "name": "光る雫の木",
+  "sprite": "tree_glow_blue",
+  "collision": {
+    "top": [
+      2,
+      1
+    ]
+  },
+  "provisional": false
+}

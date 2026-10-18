@@ -1,0 +1,22 @@
+{
+  "id": "bed_vine",
+  "output": {
+    "item": "bed_vine",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "planks",
+      "count": 6
+    },
+    {
+      "item": "fiber",
+      "count": 4
+    },
+    {
+      "item": "sap",
+      "count": 2
+    }
+  ],
+  "station": "workbench"
+}

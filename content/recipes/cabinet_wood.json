@@ -1,0 +1,14 @@
+{
+  "id": "cabinet_wood",
+  "output": {
+    "item": "cabinet_wood",
+    "count": 1
+  },
+  "inputs": [
+    {
+      "item": "dark_planks",
+      "count": 6
+    }
+  ],
+  "station": "workbench"
+}
